@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Http;
 
 class Apartment extends Model
 {
@@ -41,5 +42,20 @@ class Apartment extends Model
         $this->hasMany(ApartmentPic::class);
     }
 
-    //TODO Funzione per le coordinate
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::saving(function ($apartment) {
+            $address = $apartment->address;
+            $response = Http::get("https://api.tomtom.com/search/2/geocode/$address.json?key=lCdijgMp1lmgVifAWwN8K9Jrfa9XcFzm");
+            $data = $response->json();
+
+            $latitude = $data->result->position->lat;
+            $longitude = $data->result->position->lon;
+
+            $apartment->latitude = $latitude;
+            $apartment->longitude = $longitude;
+        });
+    }
 }
