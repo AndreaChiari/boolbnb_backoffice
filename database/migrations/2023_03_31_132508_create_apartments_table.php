@@ -23,7 +23,7 @@ return new class extends Migration
             $table->float('longitude', 10, 6)->nullable();
             $table->text('thumb');
             $table->text('description')->nullable();
-            $table->boolean('visibility')->default(1);
+            $table->boolean('visibility')->default(0);
             $table->timestamps();
         });
     }
