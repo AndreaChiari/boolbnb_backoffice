@@ -19,7 +19,7 @@ class ApartmentSeeder extends Seeder
         $apartment->beds = 2;
         $apartment->bathrooms = 3;
         $apartment->square_meters = 100;
-        $apartment->address = 'Via 2 Giugno, 5, 73048, Nardò';
+        $apartment->address = 'Corso Magenta 16, 20025, Legnano';
         $apartment->thumb = 'fanculo';
         $apartment->description = 'dio chencher in memoriam';
         $apartment->save();

@@ -51,8 +51,8 @@ class Apartment extends Model
             $response = Http::get("https://api.tomtom.com/search/2/geocode/$address.json?key=lCdijgMp1lmgVifAWwN8K9Jrfa9XcFzm");
             $data = $response->json();
 
-            $latitude = $data->result->position->lat;
-            $longitude = $data->result->position->lon;
+            $latitude = $data['results'][0]['position']['lat'];
+            $longitude = $data['results'][0]['position']['lon'];
 
             $apartment->latitude = $latitude;
             $apartment->longitude = $longitude;

@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('address');
             $table->float('latitude', 10, 6)->nullable();
             $table->float('longitude', 10, 6)->nullable();
-            $table->string('thumb');
+            $table->text('thumb');
             $table->text('description')->nullable();
             $table->boolean('visibility')->default(1);
             $table->timestamps();
