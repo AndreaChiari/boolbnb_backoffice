@@ -62,9 +62,8 @@ class MessageController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Messsage $id)
+    public function update(Request $request, Message $message)
     {
-
         $data = $request->all();
 
         $message->update($data);
