@@ -55,7 +55,8 @@ class ApartmentController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $apartment = Apartment::findOrFail($id);
+        return view('admin.apartments.edit', compact('apartment'));
     }
 
     /**
