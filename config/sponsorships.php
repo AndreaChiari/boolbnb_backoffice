@@ -14,7 +14,7 @@ return [
     ],
     [
         'name' => 'Advanced',
-        'duration' => 72,
+        'duration' => 144,
         'price' => 9.99,
         'icon' => 'https://cdn-icons-png.flaticon.com/512/3135/3135783.png',
     ],
