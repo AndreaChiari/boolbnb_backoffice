@@ -40,5 +40,3 @@ Route::middleware('auth')->group(function () {
 
 
 require __DIR__ . '/auth.php';
-
-Route::resource('admin/apartments', App\Http\Controllers\Admin\ApartmentController::class, ['as' => 'admin']);
