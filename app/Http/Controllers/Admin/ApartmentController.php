@@ -62,16 +62,22 @@ class ApartmentController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Apartment $apartment)
     {
-        //
+        $data = $request->all();
+
+        $apartment->update($data);
+
+        return redirect()->route('admin.apartments.show', $apartment->id);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Apartment $apartment)
     {
-        //
+        $apartment->delete();
+
+        return to_route('admin.apartments.index');
     }
 }
