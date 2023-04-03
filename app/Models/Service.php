@@ -9,7 +9,10 @@ class Service extends Model
 {
     use HasFactory;
 
-    protected $fillable = [];
+    protected $fillable = [
+        'name',
+        'icon',
+    ];
 
     public function apartments()
     {

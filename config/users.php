@@ -11,7 +11,7 @@ return [
     ],
     [
         'name' => 'AlessandroVillani',
-        'email' => 'alessandro.villani@example.com',
+        'email' => 'alessvill@libero.it',
         'password' => 'password',
         'first_name' => 'Alessandro',
         'last_name' => 'Villani',

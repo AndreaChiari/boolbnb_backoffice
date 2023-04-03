@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Apartment;
 use Illuminate\Http\Request;
 
 class ApartmentController extends Controller
@@ -12,7 +13,9 @@ class ApartmentController extends Controller
      */
     public function index()
     {
-        return view('admin.apartments.index');
+        $apartments = Apartment::all();
+
+        return view('admin.apartments.index', compact('apartments'));
     }
 
     /**
@@ -20,7 +23,9 @@ class ApartmentController extends Controller
      */
     public function create()
     {
-        //
+        $apartment = new Apartment();
+
+        return view('admin.apartments.create', compact('apartment'));
     }
 
     /**
@@ -28,15 +33,23 @@ class ApartmentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $apartment = new Apartment();
+
+        $apartment->fill($data);
+
+        $apartment->save();
+
+        return redirect()->route('admin.apartments.show', $apartment->id);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Apartment $apartment)
     {
-        //
+        return view('admin.apartments.show', compact('apartment'));
     }
 
     /**
@@ -44,22 +57,29 @@ class ApartmentController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $apartment = Apartment::findOrFail($id);
+        return view('admin.apartments.edit', compact('apartment'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Apartment $apartment)
     {
-        //
+        $data = $request->all();
+
+        $apartment->update($data);
+
+        return redirect()->route('admin.apartments.show', $apartment->id);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Apartment $apartment)
     {
-        //
+        $apartment->delete();
+
+        return to_route('admin.apartments.index');
     }
 }
