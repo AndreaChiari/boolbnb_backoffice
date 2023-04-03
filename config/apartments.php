@@ -71,4 +71,50 @@ return [
         Lajen-Ried ist eine Streusiedlung.",
 
     ],
+    [
+        'price' => 82,
+        'rooms' => 4,
+        'beds' => 4,
+        'bathrooms' => 1,
+        'square_meters' => 28,
+        'address' => "via dei Cappuccini 12, 39100, Bolzano",
+        'thumb' => "https://a0.muscache.com/im/pictures/miso/Hosting-707803329507708164/original/ebf69816-73e8-4138-a8b9-d214e03fbcf0.jpeg?im_w=1200",
+        'description' => "Wandern und Radfahren sehr beliebt in unseren Bergen....ideal fuer gross und Klein!
+        Sehr ruhige FeWo mit Garten und Gartenmöbel, wunderbarer Blick zum Schlern. Erhohlung pur, weit weg vom alltaeglichen Stress.",
+
+    ],
+    [
+        'price' => 105,
+        'rooms' => 1,
+        'beds' => 2,
+        'bathrooms' => 1,
+        'square_meters' => 28,
+        'address' => "via Cavour 6, 39100, Bolzano",
+        'thumb' => "https://a0.muscache.com/im/pictures/2ac5d6b9-fc7a-4e45-9435-916fd1ddd59e.jpg?im_w=1200",
+        'description' => "Located in the center of the Val di Fiemme, surrounded by nature and completely renovated combining contemporary designer furniture, antique wood and marble. Private garden, independent access, car parking with video surveillance complete the offer.",
+
+    ],
+    [
+        'price' => 144,
+        'rooms' => 1,
+        'beds' => 1,
+        'bathrooms' => 1,
+        'square_meters' => 40,
+        'address' => "via Dante, 39100, Bolzano",
+        'thumb' => "https://a0.muscache.com/im/pictures/99420083/63792fcb_original.jpg?im_w=720",
+        'description' => "L'attico India è composto da un'ampia camera da letto dotata di letto a due piazze matrimoniale, cassettone guardaroba, e finestra che guarda sul cortile. La cucina dispone di un ampio bancone con piano cottura, lavatrice, divano e accesso alla terrazzina. L'anti bagno precede il bagno dotato di vasca.",
+
+    ],
+    [
+        'price' => 54,
+        'rooms' => 1,
+        'beds' => 2,
+        'bathrooms' => 1,
+        'square_meters' => 20,
+        'address' => "Via Molini 7, 39100, Bolzano",
+        'thumb' => "https://a0.muscache.com/im/pictures/miso/Hosting-52067293/original/0e7dd49d-f4a6-47b1-94f9-3be3c8d33c4f.jpeg?im_w=1200",
+        'description' => "Appartamento per 2-3 persone, recentemente ristrutturato in zona panoramica e soleggiata (il centro è tranquillamente raggiungibile a piedi in 5-10 minuti) con camera matrimoniale.",
+
+    ],
+
 ];
