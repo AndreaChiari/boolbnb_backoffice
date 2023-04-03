@@ -62,9 +62,15 @@ class MessageController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Messsage $id)
     {
-        //
+        
+        $data = $request->all();
+
+        $message->update($data);
+
+        return redirect()->route('admin.messages.show', $message->id);
+    }
     }
 
     /**
