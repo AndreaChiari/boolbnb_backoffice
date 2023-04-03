@@ -9,7 +9,12 @@ class Sponsorship extends Model
 {
     use HasFactory;
 
-    protected $fillable = [];
+    protected $fillable = [
+        'name',
+        'duration',
+        'price',
+        'icon',
+    ];
 
     public function apartments()
     {
