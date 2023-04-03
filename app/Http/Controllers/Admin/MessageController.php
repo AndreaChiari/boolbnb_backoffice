@@ -15,7 +15,7 @@ class MessageController extends Controller
     {
         $messages = Message::all();
 
-        return view('admin.apartments.index', compact('apartments'));
+        return view('admin.messages.index', compact('messages'));
     }
 
     /**
@@ -23,7 +23,7 @@ class MessageController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.messages.create');
     }
 
     /**
@@ -31,7 +31,15 @@ class MessageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $message = new Message();
+
+        $message->fill($data);
+
+        $message->save();
+
+        return redirect()->route('admin.messages.show', $message->id);
     }
 
     /**
@@ -39,7 +47,7 @@ class MessageController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return view('admin.messages.show', compact('message'));
     }
 
     /**
@@ -47,7 +55,8 @@ class MessageController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $message = Message::findOrFail($id);
+        return view('admin.messages.edit', compact('message'));
     }
 
     /**
