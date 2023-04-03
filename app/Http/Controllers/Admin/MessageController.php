@@ -76,8 +76,10 @@ class MessageController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
-        //
+        $apartment->delete();
+
+        return to_route('admin.apartments.index');
     }
 }
