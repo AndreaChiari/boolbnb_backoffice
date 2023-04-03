@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 use App\Models\Apartment;
+use Faker\Generator;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -14,13 +16,15 @@ class ApartmentSeeder extends Seeder
     /**
      * Run the database seeds.
      */
-    public function run(): void
+    public function run(Generator $faker): void
     {
         $apartments = config('apartments');
+        $users = User::pluck('id')->toArray();
+        $max_user = count($users) - 1;
 
         foreach ($apartments as $apartment) {
             $new_apartment = new Apartment();
-
+            $new_apartment->user_id = $users[$faker->numberBetween(0, $max_user)];
             $new_apartment->price = $apartment['price'];
             $new_apartment->rooms = $apartment['rooms'];
             $new_apartment->beds = $apartment['beds'];
