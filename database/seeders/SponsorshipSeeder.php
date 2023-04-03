@@ -20,8 +20,8 @@ class SponsorshipSeeder extends Seeder
 
             $new_sponsorship->name = $sponsorship['name'];
             $new_sponsorship->duration = $sponsorship['duration'];
-            $new_sponsorship->beds = $sponsorship['price'];
-            $new_sponsorship->bathrooms = $sponsorship['icon'];
+            $new_sponsorship->price = $sponsorship['price'];
+            $new_sponsorship->icon = $sponsorship['icon'];
             $new_sponsorship->save();
         }
     }
