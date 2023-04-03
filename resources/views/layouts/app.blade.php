@@ -7,13 +7,11 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="icon" href="@yield('icon', asset())" type="image/png">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'BoolBnb') }} | @yield('title') </title>
 
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    @yield('cdns')
 
     <!-- Usando Vite -->
     @vite(['resources/js/app.js'])
