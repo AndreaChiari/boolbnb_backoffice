@@ -64,22 +64,22 @@ class MessageController extends Controller
      */
     public function update(Request $request, Messsage $id)
     {
-        
+
         $data = $request->all();
 
         $message->update($data);
 
         return redirect()->route('admin.messages.show', $message->id);
     }
-    }
+
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy($id)
+    public function destroy(Message $message)
     {
-        $apartment->delete();
+        $message->delete();
 
-        return to_route('admin.apartments.index');
+        return to_route('admin.messages.index');
     }
 }
