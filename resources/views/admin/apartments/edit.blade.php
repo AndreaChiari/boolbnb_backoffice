@@ -8,5 +8,5 @@
     </header>
 
     {{-- FORM --}}
-    @include('includes.apartments.form')
+    @include('includes.form')
 @endsection

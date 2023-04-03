@@ -1,34 +1,34 @@
 @if ($apartment->exists)
-    <form action="{{ route('admin.apartments.update', $apartment->id) }}" method="POST" class="text-white"
+    <form action="{{ route('admin.apartments.update', $apartment->id) }}" method="POST" class="container"
         enctype="multipart/form-data">
         @method('PUT')
     @else
-        <form action="{{ route('admin.apartments.store') }}" method="POST" class="text-white" enctype="multipart/form-data"
+        <form action="{{ route('admin.apartments.store') }}" method="POST" class="container" enctype="multipart/form-data"
             novalidate>
 @endif
 @csrf
 
-<div>
+<div class="mb-3">
     <label for="price">Prezzo:</label>
     <input type="text" name="price" id="price" required>
 </div>
-<div>
+<div class="mb-3">
     <label for="rooms">Stanze:</label>
     <input type="number" name="rooms" id="rooms" required>
 </div>
-<div>
+<div class="mb-3">
     <label for="beds">Letti:</label>
     <input type="number" name="beds" id="beds">
 </div>
-<div>
+<div class="mb-3">
     <label for="bathrooms">Bagni:</label>
     <input type="number" name="bathrooms" id="bathrooms" required>
 </div>
-<div>
+<div class="mb-3">
     <label for="square_meters">Metri quadrati:</label>
     <input type="number" name="square_meters" id="square_meters">
 </div>
-<div>
+<div class="mb-3">
     <label for="address">Indirizzo:</label>
     <input type="text" name="address" id="address" required>
 </div>
@@ -63,9 +63,9 @@
     <input type="checkbox" name="visibility" id="visibility" value="1">
 </div>
  {{-- Servizi --}}
-    <div class="row mb-5">
+    {{-- <div class="row mb-5">
         <div class="col-10">
-            {{-- @foreach ($ as $) --}}
+            @foreach ($ as $)
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="tag-{{ $loop->iteration }}"
                         value="{{ $->id }}" name="s[]" @if (in_array($->id, old('s', $apartment_s ?? []))) checked @endif>
@@ -78,7 +78,7 @@
                 </div>
             @enderror
         </div>
-    </div>
+    </div> --}}
 {{-- Bottone --}}
 <footer class="d-flex justify-content-between mb-3">
     <a href="{{ route('admin.apartments.index') }}" class="btn btn-secondary">
