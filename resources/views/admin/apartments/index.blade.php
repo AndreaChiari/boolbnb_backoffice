@@ -17,7 +17,7 @@
                             style="text-decoration: none; color:black">
                             <div class="card d-flex flex-column-reverse align-items-center h-100 justify-content-between">
                                 <figure class="text-center h-50 w-100">
-                                    <img src="{{ asset('storage/' . $apartment->thumb) }}" alt="{{ $apartment->address }}"
+                                    <img src="{{ $apartment->thumb }}" alt="{{ $apartment->address }}"
                                         class="img-fluid h-100">
                                 </figure>
                                 <div class="info text-center">
