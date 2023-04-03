@@ -13,6 +13,6 @@ class Service extends Model
 
     public function apartments()
     {
-        $this->belongsToMany(Apartment::class);
+        return $this->belongsToMany(Apartment::class)->withTimestamps();
     }
 }

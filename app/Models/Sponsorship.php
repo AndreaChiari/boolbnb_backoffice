@@ -13,7 +13,7 @@ class Sponsorship extends Model
 
     public function apartments()
     {
-        $this->belongsToMany(Apartment::class)
-            ->withPivot('start_date', 'end_date');
+        return $this->belongsToMany(Apartment::class)
+            ->withPivot('start_date', 'end_date')->withTimestamps();
     }
 }

@@ -14,32 +14,32 @@ class Apartment extends Model
 
     public function user()
     {
-        $this->belongsTo(User::class);
+        return $this->belongsTo(User::class);
     }
 
     public function messages()
     {
-        $this->hasMany(Message::class);
+        return $this->hasMany(Message::class);
     }
 
     public function services()
     {
-        $this->belongsToMany(Service::class);
+        return $this->belongsToMany(Service::class)->withTimestamps();
     }
 
     public function sponsorships()
     {
-        $this->belongsToMany(Sponsorship::class);
+        return $this->belongsToMany(Sponsorship::class)->withTimestamps();
     }
 
     public function views()
     {
-        $this->hasMany(View::class);
+        return $this->hasMany(View::class);
     }
 
     public function apartmentPics()
     {
-        $this->hasMany(ApartmentPic::class);
+        return $this->hasMany(ApartmentPic::class);
     }
 
     protected static function boot()
