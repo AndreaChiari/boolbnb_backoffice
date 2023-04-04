@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Apartment;
+use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
@@ -27,8 +28,9 @@ class ApartmentController extends Controller
     public function create()
     {
         $apartment = new Apartment();
+        $services = Service::orderBy('id')->get();
 
-        return view('admin.apartments.create', compact('apartment'));
+        return view('admin.apartments.create', compact('apartment', 'services'));
     }
 
     /**
@@ -76,6 +78,8 @@ class ApartmentController extends Controller
 
         $apartment->save();
 
+        if (Arr::exists($data, 'services')) $apartment->services()->sync($data['services']);
+
         return redirect()->route('admin.apartments.show', $apartment->id);
     }
 
@@ -93,7 +97,10 @@ class ApartmentController extends Controller
     public function edit(string $id)
     {
         $apartment = Apartment::findOrFail($id);
-        return view('admin.apartments.edit', compact('apartment'));
+        $services = Service::orderBy('id')->get();
+        $apartment_services = $apartment->services->pluck('id')->toArray();
+
+        return view('admin.apartments.edit', compact('apartment', 'services', 'apartment_services'));
     }
 
     /**
@@ -135,6 +142,9 @@ class ApartmentController extends Controller
         };
 
         $apartment->update($data);
+
+        if (Arr::exists($data, 'services')) $apartment->services()->sync($data['services']);
+        else if (count($apartment->services)) $apartment->services()->detach();
 
         return redirect()->route('admin.apartments.show', $apartment->id);
     }
