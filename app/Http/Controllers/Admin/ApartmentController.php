@@ -37,11 +37,11 @@ class ApartmentController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'price' => ['number', 'required'],
-            'rooms' => ['number', 'required'],
-            'beds' => ['number', 'required'],
-            'square_meters' => ['number', 'nullable'],
-            'bathrooms' => ['number', 'nullable'],
+            'price' => ['numeric', 'required'],
+            'rooms' => ['numeric', 'required'],
+            'beds' => ['numeric', 'required'],
+            'square_meters' => ['numeric', 'nullable'],
+            'bathrooms' => ['numeric', 'nullable'],
             'address' => ['string', 'required'],
             'thumb' => ['file'],
             'description' => ['string', 'nullable'],
