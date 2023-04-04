@@ -7,34 +7,39 @@
             novalidate>
 @endif
 @csrf
-
-<div class="mb-3">
-    <label for="price">Prezzo:</label>
-    <input type="text" name="price" id="price" required>
-</div>
-<div class="mb-3">
-    <label for="rooms">Stanze:</label>
-    <input type="number" name="rooms" id="rooms" required>
-</div>
-<div class="mb-3">
-    <label for="beds">Letti:</label>
-    <input type="number" name="beds" id="beds">
-</div>
-<div class="mb-3">
-    <label for="bathrooms">Bagni:</label>
-    <input type="number" name="bathrooms" id="bathrooms" required>
-</div>
-<div class="mb-3">
-    <label for="square_meters">Metri quadrati:</label>
-    <input type="number" name="square_meters" id="square_meters">
-</div>
-<div class="mb-3">
-    <label for="address">Indirizzo:</label>
-    <input type="text" name="address" id="address" required>
-</div>
-
-{{-- Immagine --}}
-<div class="col-md-7">
+<div class="row">
+    <div class="col-md-3">
+        <div class="mb-3">
+            <label class="d-block" for="price">Prezzo:</label>
+            <input type="text" name="price" id="price" required>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="mb-3">
+            <label class="d-block" for="rooms">Stanze:</label>
+            <input type="number" name="rooms" id="rooms" required>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="mb-3">
+            <label class="d-block" for="beds">Letti:</label>
+            <input type="number" name="beds" id="beds">
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="mb-3">
+            <label class="d-block" for="square_meters">Metri quadrati:</label>
+            <input type="number" name="square_meters" id="square_meters">
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="mb-3">
+            <label class="d-block" for="address">Indirizzo:</label>
+            <input class="" type="text" name="address" id="address" required>
+        </div>
+    </div>
+    {{-- Immagine --}}
+<div class="col-md-9">
     <div class="mb-3">
         <label for="thumb" class="form-label">Immagine</label>
         <input type="file" name="thumb" id="thumb" class="form-control @error('thumb') is-invalid @enderror"
@@ -49,19 +54,28 @@
     </div>
 </div>
 {{-- Anteprima immagine --}}
-<div class="col-md-1">
-    <img class="img-fluid" id="img-preview"
+<div class="col-md-2">
+    <img class="img-fluid" id="thumb-preview"
         src="{{ $apartment->thumb ? asset('storage/' . $apartment->thumb) : 'https://marcolanci.it/utils/placeholder.jpg' }}"
         alt="">
 </div>
-<div>
-    <label for="description">Descrizione:</label>
-    <textarea name="description" id="description"></textarea>
+{{-- Descrizione --}}
+<div class="col-md-12">
+    <label class="d-block" for="description">Descrizione:</label>
+    <textarea name="description" id="description" cols="100" rows="5"></textarea>
 </div>
 <div>
     <label for="visibility">Visibilità:</label>
     <input type="checkbox" name="visibility" id="visibility" value="1">
 </div>
+</div>
+
+
+
+
+
+<div class="row align-items-center">
+
  {{-- Servizi --}}
     {{-- <div class="row mb-5">
         <div class="col-10">
@@ -80,7 +94,7 @@
         </div>
     </div> --}}
 {{-- Bottone --}}
-<footer class="d-flex justify-content-between mb-3">
+<footer class=" d-flex justify-content-between mb-3">
     <a href="{{ route('admin.apartments.index') }}" class="btn btn-secondary">
         <i class="fa-solid fa-arrow-left"></i>
     </a>
@@ -93,20 +107,15 @@
 
 
 @section('scripts')
- 
-
-
-
-
-
+ {{-- todo Inserire lo yield nel file principale --}}
     {{-- ! Script per la gestione dell'anteprima immagine --}}
     <script>
         // Creo una constante d'appoggio
         const placeholder = 'https://marcolanci.it/utils/placeholder.jpg';
 
         // Prendo gli elementi dal dom
-        const imageInput = document.getElementById('image');
-        const imagePreview = document.getElementById('img-preview');
+        const imageInput = document.getElementById('thumb');
+        const imagePreview = document.getElementById('thumb-preview');
 
         // Ascolto il cambio del caricamento file
         imageInput.addEventListener('change', () => {
