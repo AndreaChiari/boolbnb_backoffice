@@ -56,8 +56,8 @@ class Apartment extends Model
 
     public function getThumbUrl()
     {
-        if (substr($this->thumb_url, 0, 9) === 'apartments') return asset('storage/' . $this->thumb_url);
-        return $this->thumb_url;
+        if (substr($this->thumb, 0, 10) === 'apartments') return asset('storage/' . $this->thumb);
+        return $this->thumb;
     }
 
     protected static function boot()

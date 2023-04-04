@@ -23,7 +23,7 @@
                                     <p>Numero bagni: {{ $apartment->bathrooms }}</p>
                                 </div>
                                 <figure class="text-center h-50 w-100">
-                                    <img src="{{ $apartment->thumb }}" alt="{{ $apartment->address }}"
+                                    <img src="{{ $apartment->getThumbUrl() }}" alt="{{ $apartment->address }}"
                                         class="img-fluid h-100">
                                 </figure>
                                 <p class="fw-bold fs-4">{{ $apartment->price }} € / notte </p>
