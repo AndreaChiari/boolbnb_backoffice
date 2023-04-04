@@ -257,7 +257,7 @@ return [
         'bathrooms' => 1,
         'square_meters' => 50,
         'address' => "Via delle Carrozze, 00187, Roma",
-        'thumb' => "https://media-cdn.tripadvisor.com/media/vr-splice-j/0a/8e/60/1a.jpg",
+        'thumb' => "https://st4.depositphotos.com/6297298/22718/i/600/depositphotos_227187730-stock-photo-small-living-room-table-couch.jpg",
         'description' => "Elegante appartamento nel cuore di Roma, a pochi passi dalla Fontana di Trevi e dal Pantheon. Dispone di una camera da letto matrimoniale, una cucina completamente attrezzata, un bagno e un soggiorno con divano letto. Wi-Fi gratuito.",
 
     ],
