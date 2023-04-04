@@ -44,27 +44,29 @@
             <input class="form-control" class="" type="text" name="address" id="address" required value="{{ old('title', $apartment->address) }}">
         </div>
     </div>
-    {{-- Immagine --}}
-<div class="col-md-10">
-    <div class="mb-3">
-        <label for="thumb" class="form-label">Immagine</label>
-        <input class="form-control" type="file" name="thumb" id="thumb" class="form-control @error('thumb') is-invalid @enderror"
-             value="{{ old('thumb', $apartment->thumb) }}">
-        @error('thumb')
-            <div class="invalid-feedback">
-                {{ $message }}
+    
+            {{-- Immagine --}}
+        <div class="col-md-10">
+            <div class="mb-3">
+                <label for="thumb" class="form-label">Immagine</label>
+                <input class="form-control" type="file" name="thumb" id="thumb" class="form-control @error('thumb') is-invalid @enderror"
+                    value="{{ old('thumb', $apartment->thumb) }}">
+                @error('thumb')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @else
+                    <div class="text-muted">Inserisci l'immagine</div>
+                @enderror
             </div>
-        @else
-            <div class="text-muted">Inserisci l'immagine</div>
-        @enderror
-    </div>
-</div>
-{{-- Anteprima immagine --}}
-<div class="col-md-2">
-    <img class="img-fluid" id="thumb-preview"
-        src="{{ $apartment->thumb ? asset('storage/' . $apartment->thumb) : 'https://marcolanci.it/utils/placeholder.jpg' }}"
-        alt="">
-</div>
+        </div>
+        
+        {{-- Anteprima immagine --}}
+        <div class="col-md-2">
+            <img class="img-fluid shadow" id="thumb-preview"
+                src="{{ $apartment->thumb ? asset('storage/' . $apartment->thumb) : 'https://marcolanci.it/utils/placeholder.jpg' }}"
+                alt="">
+        </div>
 {{-- Descrizione --}}
 <div class="col-md-12">
     <label class="form-label" for="description">Descrizione:</label>
