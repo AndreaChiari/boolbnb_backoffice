@@ -36,16 +36,30 @@ class ApartmentController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'price' => ['numeric', 'required'],
-            'rooms' => ['numeric', 'required'],
-            'beds' => ['numeric', 'required'],
-            'square_meters' => ['numeric', 'nullable'],
-            'bathrooms' => ['numeric', 'nullable'],
-            'address' => ['string', 'required'],
-            'thumb' => ['file'],
-            'description' => ['string', 'nullable'],
-        ]);
+        $request->validate(
+            [
+                'price' => ['numeric', 'required'],
+                'rooms' => ['numeric', 'required'],
+                'beds' => ['numeric', 'required'],
+                'square_meters' => ['numeric', 'nullable'],
+                'bathrooms' => ['numeric', 'nullable'],
+                'address' => ['string', 'required'],
+                'thumb' => ['file'],
+                'description' => ['string', 'nullable'],
+            ],
+            [
+                'price.numeric' => 'Il deve essere un valore numerico.',
+                'price.required' => 'Il prezzo è un campo obbligatorio..',
+                'beds.numeric' => 'I letti devono essere valori numerici.',
+                'beds.required' => 'I letti sono un campo obbligatorio.',
+                'suqare_meters.numeric' => 'I metri quadrati devono essere valori numerici.',
+                'bathrooms.numeric' => 'I bagni devono essere valori numerici.',
+                'bathrooms.required' => 'I bagni sono un campo obbligatorio.',
+                'address.string' => "L'indirizzo deve essere una stringa.",
+                'address.required' => "L'indirizzo è un campo obbligatorio.",
+                'description.string' => "La descrizione deve essere una stringa.",
+            ]
+        );
 
         $data = $request->all();
 
@@ -87,16 +101,30 @@ class ApartmentController extends Controller
      */
     public function update(Request $request, Apartment $apartment)
     {
-        $request->validate([
-            'price' => ['numeric', 'required'],
-            'rooms' => ['numeric', 'required'],
-            'beds' => ['numeric', 'required'],
-            'square_meters' => ['numeric', 'nullable'],
-            'bathrooms' => ['numeric', 'nullable'],
-            'address' => ['string', 'required'],
-            'thumb' => ['file'],
-            'description' => ['string', 'nullable'],
-        ]);
+        $request->validate(
+            [
+                'price' => ['numeric', 'required'],
+                'rooms' => ['numeric', 'required'],
+                'beds' => ['numeric', 'required'],
+                'square_meters' => ['numeric', 'nullable'],
+                'bathrooms' => ['numeric', 'required'],
+                'address' => ['string', 'required'],
+                'thumb' => ['file'],
+                'description' => ['string', 'nullable'],
+            ],
+            [
+                'price.numeric' => 'Il deve essere un valore numerico.',
+                'price.required' => 'Il prezzo è un campo obbligatorio..',
+                'beds.numeric' => 'I letti devono essere valori numerici.',
+                'beds.required' => 'I letti sono un campo obbligatorio.',
+                'suqare_meters.numeric' => 'I metri quadrati devono essere valori numerici.',
+                'bathrooms.numeric' => 'I bagni devono essere valori numerici.',
+                'bathrooms.required' => 'I bagni sono un campo obbligatorio.',
+                'address.string' => "L'indirizzo deve essere una stringa.",
+                'address.required' => "L'indirizzo è un campo obbligatorio.",
+                'description.string' => "La descrizione deve essere una stringa.",
+            ]
+        );
 
         $data = $request->all();
 
