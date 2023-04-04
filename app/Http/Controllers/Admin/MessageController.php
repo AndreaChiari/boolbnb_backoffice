@@ -15,8 +15,11 @@ class MessageController extends Controller
     public function index(Apartment $apartment)
     {
         $messages = Message::where('apartment_id', $apartment->id)->get();
+        $messages_count = count($messages);
+        $unread_messages_count = Message::where('is_read', 0)->where('apartment_id', $apartment->id)->count();
+        $apartment_id = $apartment->id;
 
-        return view('admin.messages.index', compact('messages'));
+        return view('admin.messages.index', compact('messages', 'messages_count', 'unread_messages_count', 'apartment_id'));
     }
 
     /**
@@ -46,8 +49,10 @@ class MessageController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Message $message)
     {
+        $message->is_read = 1;
+        $message->save();
         return view('admin.messages.show', compact('message'));
     }
 
