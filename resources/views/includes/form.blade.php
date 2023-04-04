@@ -64,7 +64,7 @@
         {{-- Anteprima immagine --}}
         <div class="col-md-2">
             <img class="img-fluid shadow" id="thumb-preview"
-                src="{{ $apartment->thumb ? asset('storage/' . $apartment->thumb) : 'https://marcolanci.it/utils/placeholder.jpg' }}"
+                src="{{ $apartment->thumb ? $apartment->getThumbUrl() : 'https://marcolanci.it/utils/placeholder.jpg' }}"
                 alt="">
         </div>
 {{-- Descrizione --}}
