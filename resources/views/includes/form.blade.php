@@ -8,41 +8,47 @@
 @endif
 @csrf
 <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-4">
         <div class="mb-3">
-            <label class="d-block" for="price">Prezzo:</label>
-            <input type="text" name="price" id="price" required>
+            <label class="form-label" for="price">Prezzo:</label>
+            <input  class="form-control" type="text" name="price" id="price" required>
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-2">
         <div class="mb-3">
-            <label class="d-block" for="rooms">Stanze:</label>
-            <input type="number" name="rooms" id="rooms" required>
+            <label class="form-label" for="rooms">Stanze:</label>
+            <input class="form-control" type="number" name="rooms" id="rooms" required>
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-2">
         <div class="mb-3">
-            <label class="d-block" for="beds">Letti:</label>
-            <input type="number" name="beds" id="beds">
+            <label class="form-label" for="beds">Letti:</label>
+            <input class="form-control" type="number" name="beds" id="beds">
         </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-2">
         <div class="mb-3">
-            <label class="d-block" for="square_meters">Metri quadrati:</label>
-            <input type="number" name="square_meters" id="square_meters">
+            <label class="form-label" for="square_meters">Metratura:</label>
+            <input class="form-control" type="number" name="square_meters" id="square_meters">
+        </div>
+    </div>
+        <div class="col-md-2">
+        <div class="mb-3">
+            <label class="form-label" for="bathrooms">Bagni:</label>
+            <input class="form-control" type="number" name="bathrooms" id="bathrooms">
         </div>
     </div>
     <div class="col-md-12">
         <div class="mb-3">
-            <label class="d-block" for="address">Indirizzo:</label>
-            <input class="" type="text" name="address" id="address" required>
+            <label class="form-label" for="address">Indirizzo:</label>
+            <input class="form-control" class="" type="text" name="address" id="address" required>
         </div>
     </div>
     {{-- Immagine --}}
-<div class="col-md-9">
+<div class="col-md-10">
     <div class="mb-3">
         <label for="thumb" class="form-label">Immagine</label>
-        <input type="file" name="thumb" id="thumb" class="form-control @error('thumb') is-invalid @enderror"
+        <input class="form-control" type="file" name="thumb" id="thumb" class="form-control @error('thumb') is-invalid @enderror"
             value="{{ old('thumb', $apartment->thumb) }}">
         @error('thumb')
             <div class="invalid-feedback">
@@ -61,12 +67,12 @@
 </div>
 {{-- Descrizione --}}
 <div class="col-md-12">
-    <label class="d-block" for="description">Descrizione:</label>
-    <textarea name="description" id="description" cols="100" rows="5"></textarea>
+    <label class="form-label" for="description">Descrizione:</label>
+    <textarea class="form-control" name="description" id="description" cols="100" rows="5"></textarea>
 </div>
-<div>
+<div class="my-3">
     <label for="visibility">Visibilità:</label>
-    <input type="checkbox" name="visibility" id="visibility" value="1">
+    <input  type="checkbox" name="visibility" id="visibility" value="1">
 </div>
 </div>
 
@@ -107,7 +113,7 @@
 
 
 @section('scripts')
- {{-- todo Inserire lo yield nel file principale --}}
+ 
     {{-- ! Script per la gestione dell'anteprima immagine --}}
     <script>
         // Creo una constante d'appoggio
