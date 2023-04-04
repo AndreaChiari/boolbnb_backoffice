@@ -55,8 +55,7 @@ return [
         'square_meters' => 34,
         'address' => "via Brennero, 39100, Bolzano",
         'thumb' => "https://a0.muscache.com/im/pictures/miso/Hosting-619440242279649568/original/b929a104-ea44-4cf8-8c58-5b2d45f4b374.jpeg?im_w=1200",
-        'description' => "Unser Haus befindet sich in Lajen-Ried, auf 780 Höhenmetern, am sonnigen Südhang am Eingang  ins Grödnertal - der idaele Ausgangspunkt für Ihren Schi- und Wanderurlaub.
-        Lajen-Ried ist eine Streusiedlung.",
+        'description' => "Vieni a soggiornare nel nostro bellissimo appartamento su BnB! Lasciati incantare dall'atmosfera accogliente e confortevole che troverai non appena varcherai la soglia. L'appartamento è dotato di tutti i comfort necessari per un soggiorno indimenticabile e la sua posizione centralissima ti permetterà di esplorare la città in tutta comodità. Non perdere l'occasione di vivere un'esperienza unica e prenota subito il tuo soggiorno!.",
 
     ],
     [
@@ -67,8 +66,7 @@ return [
         'square_meters' => 25,
         'address' => "via del Calvario 4, 39100, Bolzano",
         'thumb' => "https://a0.muscache.com/im/pictures/miso/Hosting-765166979913672752/original/0da9f863-2b1c-4414-b401-8677339bc876.jpeg?im_w=1200",
-        'description' => "Unser Haus befindet sich in Lajen-Ried, auf 780 Höhenmetern, am sonnigen Südhang am Eingang  ins Grödnertal - der idaele Ausgangspunkt für Ihren Schi- und Wanderurlaub.
-        Lajen-Ried ist eine Streusiedlung.",
+        'description' => "Vuoi vivere una vacanza da favola? Il nostro appartamento su BnB ti aspetta! Con i suoi interni raffinati e l'atmosfera romantica, è la scelta perfetta per una fuga d'amore o una vacanza di relax in compagnia. Non lasciartelo sfuggire!",
 
     ],
     [
@@ -79,8 +77,7 @@ return [
         'square_meters' => 28,
         'address' => "via dei Cappuccini 12, 39100, Bolzano",
         'thumb' => "https://a0.muscache.com/im/pictures/miso/Hosting-707803329507708164/original/ebf69816-73e8-4138-a8b9-d214e03fbcf0.jpeg?im_w=1200",
-        'description' => "Wandern und Radfahren sehr beliebt in unseren Bergen....ideal fuer gross und Klein!
-        Sehr ruhige FeWo mit Garten und Gartenmöbel, wunderbarer Blick zum Schlern. Erhohlung pur, weit weg vom alltaeglichen Stress.",
+        'description' => "Se stai cercando un alloggio centrale ed economico, il nostro appartamento su BnB è la scelta ideale! Con la sua posizione strategica, potrai raggiungere a piedi i principali luoghi di interesse della città senza spendere una fortuna.",
 
     ],
     [
@@ -91,7 +88,7 @@ return [
         'square_meters' => 28,
         'address' => "via Cavour 6, 39100, Bolzano",
         'thumb' => "https://a0.muscache.com/im/pictures/2ac5d6b9-fc7a-4e45-9435-916fd1ddd59e.jpg?im_w=1200",
-        'description' => "Located in the center of the Val di Fiemme, surrounded by nature and completely renovated combining contemporary designer furniture, antique wood and marble. Private garden, independent access, car parking with video surveillance complete the offer.",
+        'description' => "Scegli il nostro appartamento su BnB per una vacanza rilassante e confortevole. Goditi la pace e la tranquillità della sua posizione isolata, immersa nella natura, senza rinunciare ai comfort moderni come la connessione Wi-Fi e la TV satellitare.",
 
     ],
     [
