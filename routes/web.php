@@ -28,7 +28,8 @@ Route::middleware(['auth', 'verified'])->name('admin.')->prefix('admin')->group(
     //Rotte degli apartments
     Route::resource('apartments', ApartmentController::class);
     //Rotte dei messages
-    Route::resource('messages', MessageController::class);
+    // Route::resource('messages', MessageController::class);
+    Route::get('/messages/{apartment}', [MessageController::class, 'index'])->name('messages.index');
 });
 
 
