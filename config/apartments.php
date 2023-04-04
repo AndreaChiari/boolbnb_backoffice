@@ -116,5 +116,300 @@ return [
         'description' => "Appartamento per 2-3 persone, recentemente ristrutturato in zona panoramica e soleggiata (il centro è tranquillamente raggiungibile a piedi in 5-10 minuti) con camera matrimoniale.",
 
     ],
+    [
+        'price' => 16,
+        'rooms' => 3,
+        'beds' => 2,
+        'bathrooms' => 1,
+        'square_meters' => 40,
+        'address' => "Via San Lorenzo 5, 73048, Nardò",
+        'thumb' => "https://a0.muscache.com/im/pictures/55d75bcd-2251-45d3-9ece-7a09efe97335.jpg?im_w=1440",
+        'description' => "si tratta di una camera matrimoniale ampia  (40mq) con la possibilità di un terzo letto, arredata con stile e confort. 
+        la stanza fa parte di una casa antica, con spazi condivisi tra cui un ampia cucina,  wifi, un giardino di 100 mq arredato.",
 
+    ],
+    [
+        'price' => 130,
+        'rooms' => 4,
+        'beds' => 4,
+        'bathrooms' => 1,
+        'square_meters' => 200,
+        'address' => "Via barletta 32, 73048, Nardò",
+        'thumb' => "https://a0.muscache.com/im/pictures/miso/Hosting-707984392483065231/original/680507e6-7a81-496c-938d-7dd823a43328.jpeg?im_w=1440",
+        'description' => "si tratta di una camera matrimoniale ampia  (40mq) con la possibilità di un terzo letto, arredata con stile e confort. 
+        la stanza fa parte di una casa antica, con spazi condivisi tra cui un ampia cucina,  wifi, un giardino di 100 mq arredato.",
+
+    ],
+    [
+        'price' => 98,
+        'rooms' => 3,
+        'beds' => 5,
+        'bathrooms' => 1,
+        'square_meters' => 70,
+        'address' => "Via Guicciardini 41, 50125, Firenze FI",
+        'thumb' => "https://a0.muscache.com/im/pictures/3324ee72-2ef9-4e09-a7a1-51a20807c6db.jpg?im_w=720",
+        'description' => "L'appartamento si trova nel cuore di Firenze, a pochi passi dal centro storico. Dispone di tre camere da letto, un bagno, una cucina attrezzata e un soggiorno con vista panoramica sulla città. Ideale per famiglie o gruppi di amici.",
+
+    ],
+    [
+        'price' => 85,
+        'rooms' => 2,
+        'beds' => 3,
+        'bathrooms' => 1,
+        'square_meters' => 45,
+        'address' => "Via del Governo Vecchio 70, 00186, Roma RM",
+        'thumb' => "https://a0.muscache.com/im/pictures/f36b9a10-3dfe-4885-a5c2-1fcb43cc3d62.jpg?im_w=720",
+        'description' => "Luminoso appartamento nel cuore di Roma, a due passi da Piazza Navona e dal Pantheon. Composto da un soggiorno con divano letto, una camera matrimoniale, una cucina attrezzata e un bagno. Perfetto per una coppia o una piccola famiglia.",
+
+    ],
+    [
+        'price' => 75,
+        'rooms' => 2,
+        'beds' => 4,
+        'bathrooms' => 1,
+        'square_meters' => 50,
+        'address' => "Via Giuseppe Giusti 16, 50121, Firenze FI",
+        'thumb' => "https://a0.muscache.com/im/pictures/57b17a9b-5e6b-4ce4-a682-61750c6d1c80.jpg?im_w=720",
+        'description' => "Accogliente appartamento nel quartiere di Santa Croce, a pochi minuti a piedi dal centro storico di Firenze. Dispone di una camera matrimoniale, una camera doppia, una cucina attrezzata e un bagno. Ideale per famiglie o gruppi di amici.",
+
+    ],
+    [
+        'price' => 120,
+        'rooms' => 3,
+        'beds' => 6,
+        'bathrooms' => 2,
+        'square_meters' => 90,
+        'address' => "Via dell'Umiltà 39, 00187, Roma RM",
+        'thumb' => "https://a0.muscache.com/im/pictures/0df25e38-414c-4844-8a36-3f62f30d515a.jpg?im_w=720",
+        'description' => "Elegante appartamento nel cuore di Roma, a pochi passi dalla Fontana di Trevi e dal Colosseo."
+    ],
+    [
+        'price' => 65,
+        'rooms' => 1,
+        'beds' => 2,
+        'bathrooms' => 1,
+        'square_meters' => 25,
+        'address' => "Via San Giovanni 25, 00186, Roma RM",
+        'thumb' => "https://a0.muscache.com/im/pictures/7d3f72c3-2ea2-4e9b-a50c-90faa697143c.jpg?im_w=720",
+        'description' => "A 5 minuti a piedi dal Colosseo, accogliente monolocale nel cuore di Roma. Dotato di cucina attrezzata, bagno privato, aria condizionata e connessione Wi-Fi gratuita. Luminoso e silenzioso con vista sui tetti della città. Ideale per coppie o singoli viaggiatori.",
+    ],
+
+    [
+        'price' => 110,
+        'rooms' => 3,
+        'beds' => 5,
+        'bathrooms' => 2,
+        'square_meters' => 80,
+        'address' => "Via degli Artisti 12, 50132, Firenze FI",
+        'thumb' => "https://a0.muscache.com/im/pictures/74df4a57-5284-4944-bbd4-4c3d7d9263d1.jpg?im_w=720",
+        'description' => "Appartamento recentemente ristrutturato in un palazzo storico del centro di Firenze, vicino alla stazione Santa Maria Novella. Composto da tre camere da letto, due bagni, salotto con angolo cottura e balcone. Arredato con gusto e dotato di ogni comfort.",
+    ],
+
+    [
+        'price' => 80,
+        'rooms' => 2,
+        'beds' => 4,
+        'bathrooms' => 1,
+        'square_meters' => 50,
+        'address' => "Via di Mezzo 6, 53100, Siena SI",
+        'thumb' => "https://a0.muscache.com/im/pictures/f4b4fa4c-4ad4-4d64-8ba8-71a1a62a9d9e.jpg?im_w=720",
+        'description' => "Grazioso appartamento nel centro storico di Siena, a pochi passi dalla Piazza del Campo. Composto da due camere da letto, soggiorno con angolo cottura, bagno e terrazza panoramica con vista sulla città. Arredato in stile rustico toscano e dotato di ogni comfort.",
+    ],
+    [
+        'price' => 100,
+        'rooms' => 2,
+        'beds' => 4,
+        'bathrooms' => 1,
+        'square_meters' => 50,
+        'address' => "via Cavour 25, 20121, Milano",
+        'thumb' => "https://a0.muscache.com/im/pictures/8ec29a51-693a-4165-b34c-e9fc2fbfe17f.jpg?im_w=1200",
+        'description' => "Appartamento luminoso e spazioso nel cuore di Milano, a pochi passi dalla stazione centrale e dalle principali attrazioni turistiche. L'appartamento è dotato di una camera da letto matrimoniale, un soggiorno con divano letto, una cucina completamente attrezzata e un bagno. È perfetto per coppie o famiglie che desiderano vivere l'esperienza milanese a pieno.",
+
+    ],
+
+    [
+        'price' => 80,
+        'rooms' => 1,
+        'beds' => 2,
+        'bathrooms' => 1,
+        'square_meters' => 35,
+        'address' => "via del Corso 10, 00187, Roma",
+        'thumb' => "https://a0.muscache.com/im/pictures/c93849e5-cc2f-452a-8623-3b75a5f5c1f5.jpg?im_w=1200",
+        'description' => "Grazioso monolocale nel cuore di Roma, a due passi da Piazza del Popolo e da tutti i principali luoghi di interesse della città. L'appartamento è dotato di un letto matrimoniale, un angolo cottura completamente attrezzato e un bagno con doccia. È perfetto per coppie o viaggiatori solitari che desiderano vivere l'esperienza romana a pieno.",
+
+    ],
+
+    [
+        'price' => 110,
+        'rooms' => 3,
+        'beds' => 6,
+        'bathrooms' => 2,
+        'square_meters' => 80,
+        'address' => "via Garibaldi 10, 95121, Catania",
+        'thumb' => "https://a0.muscache.com/im/pictures/219eb955-13f9-49ea-8f97-739af30a278a.jpg?im_w=1200",
+        'description' => "Luminoso e moderno appartamento nel centro storico di Catania, a pochi passi dal Duomo e dal Castello Ursino. L'appartamento è composto da tre camere da letto, un soggiorno con divano letto, una cucina completamente attrezzata e due bagni. È perfetto per gruppi di amici o famiglie che desiderano vivere l'esperienza catanese a pieno.",
+
+    ],
+    [
+        'price' => 55,
+        'rooms' => 2,
+        'beds' => 3,
+        'bathrooms' => 1,
+        'square_meters' => 50,
+        'address' => "Via delle Carrozze, 00187, Roma",
+        'thumb' => "https://a0.muscache.com/im/pictures/760c53e5-c6d5-4857-9986-5aef1d7e9fa9.jpg?im_w=1200",
+        'description' => "Elegante appartamento nel cuore di Roma, a pochi passi dalla Fontana di Trevi e dal Pantheon. Dispone di una camera da letto matrimoniale, una cucina completamente attrezzata, un bagno e un soggiorno con divano letto. Wi-Fi gratuito.",
+
+    ],
+    [
+        'price' => 90,
+        'rooms' => 3,
+        'beds' => 4,
+        'bathrooms' => 2,
+        'square_meters' => 70,
+        'address' => "Piazza della Signoria, 50122, Firenze",
+        'thumb' => "https://a0.muscache.com/im/pictures/0387e080-157f-40df-9648-70e988a814b6.jpg?im_w=1200",
+        'description' => "Splendido appartamento nel cuore di Firenze, a due passi dalla famosa Piazza della Signoria. L'appartamento dispone di due camere da letto matrimoniali, due bagni, una cucina completamente attrezzata e un ampio soggiorno. Wi-Fi gratuito.",
+
+    ],
+    [
+        'price' => 75,
+        'rooms' => 1,
+        'beds' => 2,
+        'bathrooms' => 1,
+        'square_meters' => 35,
+        'address' => "Via Nazionale, 00184, Roma",
+        'thumb' => "https://a0.muscache.com/im/pictures/2d83c1aa-4f28-4b34-9662-b4d6b0bb6b36.jpg?im_w=1200",
+        'description' => "Accogliente monolocale nel cuore di Roma, a pochi passi dal Colosseo e dal Foro Romano. Dispone di una camera da letto con letto matrimoniale, una cucina completamente attrezzata e un bagno. Wi-Fi gratuito.",
+
+    ],
+    [
+        'price' => 130,
+        'rooms' => 2,
+        'beds' => 4,
+        'bathrooms' => 2,
+        'square_meters' => 80,
+        'address' => "Via Roma, 20122, Milano",
+        'thumb' => "https://a0.muscache.com/im/pictures/4497570e-75a2-4d9f-9e63-8a462c6f61d6.jpg?im_w=1200",
+        'description' => "Elegante appartamento nel cuore di Milano, a pochi passi dal Duomo. Dispone di due camere da letto matrimoniali, due bagni, una cucina completamente attrezzata e un ampio soggiorno con vista sulla citta. Wi-Fi gratuito.",
+
+    ],
+    [
+        'price' => 85,
+        'rooms' => 3,
+        'beds' => 4,
+        'bathrooms' => 2,
+        'square_meters' => 40,
+        'address' => "Via della Scala 30, 00153, Roma",
+        'thumb' => "https://a0.muscache.com/im/pictures/166988c1-cc12-47cc-a012-e3e6153df72a.jpg?im_w=1200",
+        'description' => "Luminoso appartamento di 80 mq, situato al 2° piano di un edificio antico, in posizione centralissima nel caratteristico quartiere di Trastevere. L'appartamento è composto da soggiorno con divano letto, cucina attrezzata, due camere da letto matrimoniali, due bagni (uno con vasca e uno con doccia) e una terrazza panoramica con vista sui tetti di Roma.",
+
+    ],
+    [
+        'price' => 110,
+        'rooms' => 2,
+        'beds' => 4,
+        'bathrooms' => 2,
+        'square_meters' => 50,
+        'address' => "Via de' Tornabuoni, 50123, Firenze",
+        'thumb' => "https://a0.muscache.com/im/pictures/66fc2c31-d5d5-491c-bd99-621dfdd64ecf.jpg?im_w=1200",
+        'description' => "Elegante appartamento di 100 mq nel cuore del centro storico di Firenze, situato al 3° piano di un palazzo storico. L'appartamento è composto da soggiorno con divano letto, cucina attrezzata, due camere da letto matrimoniali, due bagni (uno con vasca e uno con doccia) e una terrazza con vista sui monumenti della città.",
+
+    ],
+    [
+        'price' => 70,
+        'rooms' => 1,
+        'beds' => 2,
+        'bathrooms' => 1,
+        'square_meters' => 25,
+        'address' => "Via San Gregorio Armeno, 80138, Napoli",
+        'thumb' => "https://a0.muscache.com/im/pictures/01b1dddb-1528-47c7-af1d-c6a2a6b8ed28.jpg?im_w=1200",
+        'description' => "Accogliente monolocale di 30 mq nel cuore del centro storico di Napoli, a pochi passi dalle principali attrazioni turistiche. L'appartamento è composto da una zona giorno con letto matrimoniale, angolo cottura e bagno con doccia. Ideale per una coppia in vacanza nella città partenopea.",
+
+    ],
+    [
+        'price' => 110,
+        'rooms' => 3,
+        'beds' => 4,
+        'bathrooms' => 2,
+        'square_meters' => 80,
+        'address' => "Via Monte Grappa 10, 00195, Roma",
+        'thumb' => "https://a0.muscache.com/im/pictures/16cecd6c-73d7-4136-a98b-37b1c14241d6.jpg?im_w=1200",
+        'description' => "Appartamento elegante e luminoso nel quartiere Prati, a pochi passi dalla Basilica di San Pietro e dai Musei Vaticani. Composto da soggiorno, cucina attrezzata, due camere da letto, due bagni e balcone. Aria condizionata, riscaldamento autonomo e connessione Wi-Fi gratuita.",
+
+    ],
+    [
+        'price' => 80,
+        'rooms' => 2,
+        'beds' => 4,
+        'bathrooms' => 1,
+        'square_meters' => 50,
+        'address' => "Via Carlo Alberto 13, 20123, Milano",
+        'thumb' => "https://a0.muscache.com/im/pictures/23ef1cb1-7bc7-4b3f-a0de-41afacbc7c3f.jpg?im_w=1200",
+        'description' => "Appartamento raffinato nel cuore di Milano, a pochi passi dal Duomo e dalla Galleria Vittorio Emanuele II. Composto da soggiorno con angolo cottura, camera da letto, bagno e balcone con vista sulla cittÃ . Riscaldamento autonomo e connessione Wi-Fi gratuita.",
+
+    ],
+    [
+        'price' => 120,
+        'rooms' => 4,
+        'beds' => 6,
+        'bathrooms' => 2,
+        'square_meters' => 100,
+        'address' => "Via del Colosseo 12, 00184, Roma",
+        'thumb' => "https://a0.muscache.com/im/pictures/90dc9b2b-2b2a-4f1c-a23f-7c3d3ed1053f.jpg?im_w=1200",
+        'description' => "Appartamento spazioso e luminoso a due passi dal Colosseo, nel cuore di Roma. Composto da soggiorno, cucina abitabile, tre camere da letto, due bagni e balcone con vista sul Colosseo. Aria condizionata, riscaldamento autonomo e connessione Wi-Fi gratuita.",
+
+    ],
+    [
+        'price' => 85,
+        'rooms' => 2,
+        'beds' => 4,
+        'bathrooms' => 1,
+        'square_meters' => 40,
+        'address' => "Via Vittorio Emanuele II, 73100, Lecce LE",
+        'thumb' => "https://a0.muscache.com/im/pictures/pro_photo_tool/Hosting-50541724-unapproved/original/7082d6af-1c87-4b95-8bf4-7e59b17d0fa2.jpeg?im_w=1200",
+        'description' => "Accogliente appartamento nel centro storico di Lecce, a pochi passi dalle principali attrazioni turistiche, bar e ristoranti. L'appartamento è composto da soggiorno con cucina attrezzata, camera matrimoniale e bagno con doccia. Arredato con gusto e dotato di tutti i comfort, incluso Wi-Fi gratuito e aria condizionata. Perfetto per coppie o famiglie con bambini.",
+
+    ],
+    [
+        'price' => 100,
+        'rooms' => 3,
+        'beds' => 6,
+        'bathrooms' => 2,
+        'square_meters' => 80,
+        'address' => "Via A. De Gasperi, 95121, Catania CT",
+        'thumb' => "https://a0.muscache.com/im/pictures/pro_photo_tool/Hosting-14864069-unapproved/original/501ee43e-c937-4a2a-a37d-b4ad2b9f618a.jpeg?im_w=1200",
+        'description' => "Ampio appartamento a pochi passi dal centro storico di Catania e dalla stazione centrale. L'appartamento è composto da un ampio soggiorno con divano-letto, cucina attrezzata, tre camere da letto e due bagni. Arredato con gusto e dotato di tutti i comfort, incluso Wi-Fi gratuito e aria condizionata. Perfetto per famiglie o gruppi di amici che vogliono esplorare la splendida città di Catania.",
+
+    ],
+    [
+        'price' => 80,
+        'rooms' => 2,
+        'beds' => 4,
+        'bathrooms' => 1,
+        'square_meters' => 30,
+        'address' => "Via Sant'Agostino, 45, 70122, Bari BA",
+        'thumb' => "https://a0.muscache.com/im/pictures/62ed9a6f-2c01-48e2-9de7-d4926c452e6b.jpg?im_w=1200",
+        'description' => "Delizioso appartamento completamente ristrutturato nel cuore del centro storico di Bari. A pochi passi dal mare e dal Teatro Petruzzelli. L'appartamento è dotato di tutti i comfort: wifi, aria condizionata, cucina attrezzata, bagno con doccia, phon, ferro da stiro, lavatrice, TV a schermo piatto. Può ospitare fino a 4 persone. "
+    ],
+    [
+        'price' => 60,
+        'rooms' => 2,
+        'beds' => 4,
+        'bathrooms' => 1,
+        'square_meters' => 25,
+        'address' => "Via Salvatore Allende, 73014, Gallipoli LE",
+        'thumb' => "https://a0.muscache.com/im/pictures/8d2c876e-82ed-45a6-aa97-e69c15bdf83d.jpg?im_w=1200",
+        'description' => "Appartamento appena ristrutturato a 2 passi dal mare e dal centro di Gallipoli. Composto da cucina, soggiorno con divano letto, camera da letto matrimoniale e bagno con doccia. Dotato di aria condizionata, TV, lavatrice e cucina attrezzata. Ideale per una coppia o una famiglia con 2 bambini."
+    ],
+    [
+        'price' => 85,
+        'rooms' => 3,
+        'beds' => 5,
+        'bathrooms' => 2,
+        'square_meters' => 40,
+        'address' => "Via Giuseppe Garibaldi, 89125, Reggio Calabria RC",
+        'thumb' => "https://a0.muscache.com/im/pictures/e1fb4ab3-7d1d-4f92-a14b-0110b20ef9e9.jpg?im_w=1200",
+        'description' => "Appartamento luminoso e spazioso nel centro di Reggio Calabria. A pochi minuti a piedi dal Museo Archeologico Nazionale e dal lungomare. L'appartamento è dotato di 3 camere da letto, 2 bagni, cucina attrezzata, salotto con TV e balcone. Connessione Wi-Fi gratuita disponibile in tutta la struttura."
+    ],
 ];
