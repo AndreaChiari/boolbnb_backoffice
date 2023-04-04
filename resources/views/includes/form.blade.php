@@ -11,37 +11,37 @@
     <div class="col-md-4">
         <div class="mb-3">
             <label class="form-label" for="price">Prezzo:</label>
-            <input  class="form-control" type="text" name="price" id="price" required>
+           <input class="form-control" type="number" name="price" id="price" required min="0" value="{{ old('title', $apartment->price) }}">
         </div>
     </div>
     <div class="col-md-2">
         <div class="mb-3">
             <label class="form-label" for="rooms">Stanze:</label>
-            <input class="form-control" type="number" name="rooms" id="rooms" required>
+            <input class="form-control" type="number" name="rooms" id="rooms"  min="1" value="{{ old('title', $apartment->rooms) }}">
         </div>
     </div>
     <div class="col-md-2">
         <div class="mb-3">
             <label class="form-label" for="beds">Letti:</label>
-            <input class="form-control" type="number" name="beds" id="beds">
+             <input class="form-control" type="number" name="beds" id="beds" min="1" value="{{ old('title', $apartment->beds) }}">
         </div>
     </div>
     <div class="col-md-2">
         <div class="mb-3">
             <label class="form-label" for="square_meters">Metratura:</label>
-            <input class="form-control" type="number" name="square_meters" id="square_meters">
+            <input class="form-control" type="number" name="square_meters" id="square_meters" min="1" value="{{ old('title', $apartment->square_meters) }}">
         </div>
     </div>
         <div class="col-md-2">
         <div class="mb-3">
             <label class="form-label" for="bathrooms">Bagni:</label>
-            <input class="form-control" type="number" name="bathrooms" id="bathrooms">
+            <input class="form-control" type="number" name="bathrooms" id="bathrooms" min="0" value="{{ old('title', $apartment->bathrooms) }}">
         </div>
     </div>
     <div class="col-md-12">
         <div class="mb-3">
             <label class="form-label" for="address">Indirizzo:</label>
-            <input class="form-control" class="" type="text" name="address" id="address" required>
+            <input class="form-control" class="" type="text" name="address" id="address" required value="{{ old('title', $apartment->address) }}">
         </div>
     </div>
     {{-- Immagine --}}
@@ -49,7 +49,7 @@
     <div class="mb-3">
         <label for="thumb" class="form-label">Immagine</label>
         <input class="form-control" type="file" name="thumb" id="thumb" class="form-control @error('thumb') is-invalid @enderror"
-            value="{{ old('thumb', $apartment->thumb) }}">
+             value="{{ old('thumb', $apartment->thumb) }}">
         @error('thumb')
             <div class="invalid-feedback">
                 {{ $message }}
@@ -68,7 +68,7 @@
 {{-- Descrizione --}}
 <div class="col-md-12">
     <label class="form-label" for="description">Descrizione:</label>
-    <textarea class="form-control" name="description" id="description" cols="100" rows="5"></textarea>
+    <textarea class="form-control" name="description" id="description" cols="100" rows="5">{{ old('title', $apartment->description) }}</textarea>
 </div>
 <div class="my-3">
     <label for="visibility">Visibilità:</label>
