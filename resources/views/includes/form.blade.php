@@ -49,7 +49,7 @@
         <div class="col-md-10">
             <div class="mb-3">
                 <label for="thumb" class="form-label">Immagine</label>
-                <input class="form-control" type="file" name="thumb" id="thumb" class="form-control @error('thumb') is-invalid @enderror"
+                <input type="file" name="thumb" id="thumb" class="form-control @error('thumb') is-invalid @enderror"
                     value="{{ old('thumb', $apartment->thumb) }}">
                 @error('thumb')
                     <div class="invalid-feedback">
