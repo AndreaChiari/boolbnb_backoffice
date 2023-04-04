@@ -190,7 +190,7 @@ return [
         'bathrooms' => 1,
         'square_meters' => 25,
         'address' => "Via San Giovanni 25, 00186, Roma RM",
-        'thumb' => "https://media-cdn.tripadvisor.com/media/vr-splice-j/09/f0/f9/86.jpg",
+        'thumb' => "https://media.karousell.com/media/photos/products/2022/8/23/freehold_township_property_in__1661254509_47ba0098_progressive",
         'description' => "A 5 minuti a piedi dal Colosseo, accogliente monolocale nel cuore di Roma. Dotato di cucina attrezzata, bagno privato, aria condizionata e connessione Wi-Fi gratuita. Luminoso e silenzioso con vista sui tetti della città. Ideale per coppie o singoli viaggiatori.",
     ],
 
@@ -212,7 +212,7 @@ return [
         'bathrooms' => 1,
         'square_meters' => 50,
         'address' => "Via di Mezzo 6, 53100, Siena SI",
-        'thumb' => "https://media-cdn.tripadvisor.com/media/vr-splice-j/03/3c/be/af.jpg",
+        'thumb' => "https://cdn4.creativecirclemedia.com/riverdalepress/original/20210805-212754-HOTW080521-01_BRIGHT_WEB.jpg",
         'description' => "Grazioso appartamento nel centro storico di Siena, a pochi passi dalla Piazza del Campo. Composto da due camere da letto, soggiorno con angolo cottura, bagno e terrazza panoramica con vista sulla città. Arredato in stile rustico toscano e dotato di ogni comfort.",
     ],
     [
@@ -246,7 +246,7 @@ return [
         'bathrooms' => 2,
         'square_meters' => 80,
         'address' => "via Garibaldi 10, 95121, Catania",
-        'thumb' => "https://media-cdn.tripadvisor.com/media/vr-splice-j/01/1a/61/b9.jpg",
+        'thumb' => "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBD2-1AS_0Yny828gMPzsHsQuVBXSfX9iojw9mQLhJ3GY3vTi9zOi6EcJ0ue2JY2qU7bs&usqp=CAU",
         'description' => "Luminoso e moderno appartamento nel centro storico di Catania, a pochi passi dal Duomo e dal Castello Ursino. L'appartamento è composto da tre camere da letto, un soggiorno con divano letto, una cucina completamente attrezzata e due bagni. È perfetto per gruppi di amici o famiglie che desiderano vivere l'esperienza catanese a pieno.",
 
     ],
@@ -268,7 +268,7 @@ return [
         'bathrooms' => 2,
         'square_meters' => 70,
         'address' => "Piazza della Signoria, 50122, Firenze",
-        'thumb' => "https://media-cdn.tripadvisor.com/media/vr-splice-j/06/e8/bd/3c.jpg",
+        'thumb' => "https://delta.creativecirclecdn.com/riverdalepress/original/20210805-212754-HOTW080521-02_BRIGHT_WEB.jpg",
         'description' => "Splendido appartamento nel cuore di Firenze, a due passi dalla famosa Piazza della Signoria. L'appartamento dispone di due camere da letto matrimoniali, due bagni, una cucina completamente attrezzata e un ampio soggiorno. Wi-Fi gratuito.",
 
     ],
@@ -279,7 +279,7 @@ return [
         'bathrooms' => 1,
         'square_meters' => 35,
         'address' => "Via Nazionale, 00184, Roma",
-        'thumb' => "https://media-cdn.tripadvisor.com/media/vr-splice-j/07/00/29/47.jpg",
+        'thumb' => "",
         'description' => "Accogliente monolocale nel cuore di Roma, a pochi passi dal Colosseo e dal Foro Romano. Dispone di una camera da letto con letto matrimoniale, una cucina completamente attrezzata e un bagno. Wi-Fi gratuito.",
 
     ],
@@ -312,7 +312,7 @@ return [
         'bathrooms' => 2,
         'square_meters' => 50,
         'address' => "Via de' Tornabuoni, 50123, Firenze",
-        'thumb' => "https://media-cdn.tripadvisor.com/media/vr-splice-j/01/a4/b6/f7.jpg",
+        'thumb' => "https://images.homify.com/c_fill,f_auto,q_0,w_740/v1445165453/p/photo/image/1016443/01.jpg",
         'description' => "Elegante appartamento di 100 mq nel cuore del centro storico di Firenze, situato al 3° piano di un palazzo storico. L'appartamento è composto da soggiorno con divano letto, cucina attrezzata, due camere da letto matrimoniali, due bagni (uno con vasca e uno con doccia) e una terrazza con vista sui monumenti della città.",
 
     ],
@@ -323,7 +323,7 @@ return [
         'bathrooms' => 1,
         'square_meters' => 25,
         'address' => "Via San Gregorio Armeno, 80138, Napoli",
-        'thumb' => "https://media-cdn.tripadvisor.com/media/vr-splice-j/0a/38/ad/57.jpg",
+        'thumb' => "https://st.hzcdn.com/simgs/a2b13981058a92b6_4-5012/contemporaneo-soggiorno.jpg",
         'description' => "Accogliente monolocale di 30 mq nel cuore del centro storico di Napoli, a pochi passi dalle principali attrazioni turistiche. L'appartamento è composto da una zona giorno con letto matrimoniale, angolo cottura e bagno con doccia. Ideale per una coppia in vacanza nella città partenopea.",
 
     ],
@@ -356,7 +356,7 @@ return [
         'bathrooms' => 2,
         'square_meters' => 100,
         'address' => "Via del Colosseo 12, 00184, Roma",
-        'thumb' => "https://media-cdn.tripadvisor.com/media/vr-splice-j/02/7a/7e/60.jpg",
+        'thumb' => "https://newpropertyboard.com/wp-content/uploads/DVP-Master-Bedroom-01.jpg",
         'description' => "Appartamento spazioso e luminoso a due passi dal Colosseo, nel cuore di Roma. Composto da soggiorno, cucina abitabile, tre camere da letto, due bagni e balcone con vista sul Colosseo. Aria condizionata, riscaldamento autonomo e connessione Wi-Fi gratuita.",
 
     ],
@@ -409,7 +409,7 @@ return [
         'bathrooms' => 2,
         'square_meters' => 40,
         'address' => "Via Giuseppe Garibaldi, 89125, Reggio Calabria RC",
-        'thumb' => "https://media-cdn.tripadvisor.com/media/vr-ha-splice-j/0d/30/66/0a.jpg",
+        'thumb' => "https://cdn4.creativecirclemedia.com/riverdalepress/original/20210805-212754-HOTW080521-01_BRIGHT_WEB.jpg",
         'description' => "Appartamento luminoso e spazioso nel centro di Reggio Calabria. A pochi minuti a piedi dal Museo Archeologico Nazionale e dal lungomare. L'appartamento è dotato di 3 camere da letto, 2 bagni, cucina attrezzata, salotto con TV e balcone. Connessione Wi-Fi gratuita disponibile in tutta la struttura."
     ],
 ];
