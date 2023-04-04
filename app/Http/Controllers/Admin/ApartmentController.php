@@ -87,6 +87,17 @@ class ApartmentController extends Controller
      */
     public function update(Request $request, Apartment $apartment)
     {
+        $request->validate([
+            'price' => ['numeric', 'required'],
+            'rooms' => ['numeric', 'required'],
+            'beds' => ['numeric', 'required'],
+            'square_meters' => ['numeric', 'nullable'],
+            'bathrooms' => ['numeric', 'nullable'],
+            'address' => ['string', 'required'],
+            'thumb' => ['file'],
+            'description' => ['string', 'nullable'],
+        ]);
+
         $data = $request->all();
 
         if (Arr::exists($data, 'thumb')) {
