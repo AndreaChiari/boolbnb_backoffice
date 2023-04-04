@@ -334,7 +334,7 @@ return [
         'bathrooms' => 2,
         'square_meters' => 80,
         'address' => "Via Monte Grappa 10, 00195, Roma",
-        'thumb' => "https://media-cdn.tripadvisor.com/media/vr-splice-j/06/2c/68/34.jpg",
+        'thumb' => "https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         'description' => "Appartamento elegante e luminoso nel quartiere Prati, a pochi passi dalla Basilica di San Pietro e dai Musei Vaticani. Composto da soggiorno, cucina attrezzata, due camere da letto, due bagni e balcone. Aria condizionata, riscaldamento autonomo e connessione Wi-Fi gratuita.",
 
     ],
