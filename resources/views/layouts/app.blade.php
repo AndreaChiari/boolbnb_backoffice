@@ -27,6 +27,8 @@
 
         @include('includes.navbar')
         @include('includes.validation')
+        @include('includes.confirmation_delete')
+
 
 
         <main class="">
@@ -34,6 +36,7 @@
         </main>
     </div>
     @yield('scripts')
+
 </body>
 
 </html>
