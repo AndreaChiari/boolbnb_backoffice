@@ -201,7 +201,7 @@ return [
         'bathrooms' => 2,
         'square_meters' => 80,
         'address' => "Via degli Artisti 12, 50132, Firenze FI",
-        'thumb' => "https://media-cdn.tripadvisor.com/media/vr-splice-j/04/b8/12/38.jpg",
+        'thumb' => "https://www.designmag.it/fotoimg/appartamento-di-70-mq-luminoso.jpg",
         'description' => "Appartamento recentemente ristrutturato in un palazzo storico del centro di Firenze, vicino alla stazione Santa Maria Novella. Composto da tre camere da letto, due bagni, salotto con angolo cottura e balcone. Arredato con gusto e dotato di ogni comfort.",
     ],
 
@@ -222,7 +222,7 @@ return [
         'bathrooms' => 1,
         'square_meters' => 50,
         'address' => "via Cavour 25, 20121, Milano",
-        'thumb' => "https://media-cdn.tripadvisor.com/media/vr-splice-j/07/a0/4c/a8.jpg",
+        'thumb' => "https://cdn2.hometogo.net/small/v1/43e/5e8/3b0cbc6624279ddb471f95066f.jpg",
         'description' => "Appartamento luminoso e spazioso nel cuore di Milano, a pochi passi dalla stazione centrale e dalle principali attrazioni turistiche. L'appartamento è dotato di una camera da letto matrimoniale, un soggiorno con divano letto, una cucina completamente attrezzata e un bagno. È perfetto per coppie o famiglie che desiderano vivere l'esperienza milanese a pieno.",
 
     ],
@@ -234,7 +234,7 @@ return [
         'bathrooms' => 1,
         'square_meters' => 35,
         'address' => "via del Corso 10, 00187, Roma",
-        'thumb' => "https://media-cdn.tripadvisor.com/media/vr-splice-j/0b/ee/fa/87.jpg",
+        'thumb' => "https://www.arredamento.it/img/452/arredare-un-mini-appartamento_oit_381839.webp",
         'description' => "Grazioso monolocale nel cuore di Roma, a due passi da Piazza del Popolo e da tutti i principali luoghi di interesse della città. L'appartamento è dotato di un letto matrimoniale, un angolo cottura completamente attrezzato e un bagno con doccia. È perfetto per coppie o viaggiatori solitari che desiderano vivere l'esperienza romana a pieno.",
 
     ],
@@ -290,7 +290,7 @@ return [
         'bathrooms' => 2,
         'square_meters' => 80,
         'address' => "Via Roma, 20122, Milano",
-        'thumb' => "https://media-cdn.tripadvisor.com/media/vr-splice-j/0d/08/8a/d3.jpg",
+        'thumb' => "https://www.donnamoderna.com/content/uploads/2021/09/errori-da-evitare-in-una-casa-stretta-830x625.jpg",
         'description' => "Elegante appartamento nel cuore di Milano, a pochi passi dal Duomo. Dispone di due camere da letto matrimoniali, due bagni, una cucina completamente attrezzata e un ampio soggiorno con vista sulla citta. Wi-Fi gratuito.",
 
     ],
@@ -301,7 +301,7 @@ return [
         'bathrooms' => 2,
         'square_meters' => 40,
         'address' => "Via della Scala 30, 00153, Roma",
-        'thumb' => "https://media-cdn.tripadvisor.com/media/vr-splice-j/0c/11/48/73.jpg",
+        'thumb' => "https://images.homify.com/c_fill,f_auto,q_0,w_740/v1484143978/p/photo/image/1768898/cavallasca_como_vanin_2.jpg",
         'description' => "Luminoso appartamento di 80 mq, situato al 2° piano di un edificio antico, in posizione centralissima nel caratteristico quartiere di Trastevere. L'appartamento è composto da soggiorno con divano letto, cucina attrezzata, due camere da letto matrimoniali, due bagni (uno con vasca e uno con doccia) e una terrazza panoramica con vista sui tetti di Roma.",
 
     ],
@@ -389,7 +389,7 @@ return [
         'bathrooms' => 1,
         'square_meters' => 30,
         'address' => "Via Sant'Agostino, 45, 70122, Bari BA",
-        'thumb' => "https://media-cdn.tripadvisor.com/media/vr-splice-j/0d/0b/15/38.jpg",
+        'thumb' => "https://images.homify.com/c_fill,f_auto,q_0,w_740/v1438689614/p/photo/image/367149/1.jpg",
         'description' => "Delizioso appartamento completamente ristrutturato nel cuore del centro storico di Bari. A pochi passi dal mare e dal Teatro Petruzzelli. L'appartamento è dotato di tutti i comfort: wifi, aria condizionata, cucina attrezzata, bagno con doccia, phon, ferro da stiro, lavatrice, TV a schermo piatto. Può ospitare fino a 4 persone. "
     ],
     [
@@ -399,7 +399,7 @@ return [
         'bathrooms' => 1,
         'square_meters' => 25,
         'address' => "Via Salvatore Allende, 73014, Gallipoli LE",
-        'thumb' => "https://media-cdn.tripadvisor.com/media/vr-ha-splice-j/0d/d0/e2/79.jpg",
+        'thumb' => "https://www.domemilano.com/wp-content/uploads/2019/12/interni_moderni_di_lusso_italian_luxury_interiors.jpg",
         'description' => "Appartamento appena ristrutturato a 2 passi dal mare e dal centro di Gallipoli. Composto da cucina, soggiorno con divano letto, camera da letto matrimoniale e bagno con doccia. Dotato di aria condizionata, TV, lavatrice e cucina attrezzata. Ideale per una coppia o una famiglia con 2 bambini."
     ],
     [
