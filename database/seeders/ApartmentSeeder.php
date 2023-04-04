@@ -23,6 +23,7 @@ class ApartmentSeeder extends Seeder
         $max_user = count($users) - 1;
 
         foreach ($apartments as $apartment) {
+            sleep(1);
             $new_apartment = new Apartment();
             $new_apartment->user_id = $users[$faker->numberBetween(0, $max_user)];
             $new_apartment->price = $apartment['price'];
