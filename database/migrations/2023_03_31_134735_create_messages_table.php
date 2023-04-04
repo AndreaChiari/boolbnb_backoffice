@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('object');
             $table->text('content');
+            $table->boolean('is_read')->default(0);
             $table->timestamps();
         });
     }
