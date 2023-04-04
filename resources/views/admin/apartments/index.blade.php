@@ -35,7 +35,8 @@
                         <div class="d-flex justify-content-center align-items-center mt-2 mb-5 gap-3">
                             <a href="{{ route('admin.apartments.edit', $apartment->id) }}" class="btn btn-warning"><i
                                     class="fa-solid fa-arrow-up me-2"></i>Modifica</a>
-                            <form action="{{ route('admin.apartments.destroy', $apartment->id) }}" method="POST">
+                            <form action="{{ route('admin.apartments.destroy', $apartment->id) }}" method="POST"
+                                class="deleteForm">
                                 @method('DELETE')
                                 @csrf
                                 <button class="btn btn-danger" type="submit"><i class="fa-solid fa-trash"></i></button>
@@ -46,5 +47,25 @@
             </div>
         </div>
     </section>
+
+@section('scripts')
+    <script>
+        const deleteForms = document.querySelectorAll('.deleteForm');
+        const deleteModal = document.getElementById('deleteModal');
+        const removeButton = document.getElementById('removeButton');
+        const backButton = document.getElementById('backButton');
+
+        deleteForms.forEach(form => {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                deleteModal.classList.remove("d-none");
+
+                removeButton.addEventListener('click', () => form.submit());
+
+                backButton.addEventListener('click', () => deleteModal.classList.add("d-none"));
+            })
+        });
+    </script>
+@endsection
 
 @endsection

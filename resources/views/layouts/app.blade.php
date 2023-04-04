@@ -27,11 +27,11 @@
 
         @include('includes.navbar')
         @include('includes.validation')
-        @include('includes.confirmation_delete')
 
 
 
         <main class="">
+            @include('includes.confirmation_delete')
             @yield('content')
         </main>
     </div>
