@@ -3,6 +3,9 @@
     &:hover {
         transform: scale(3.1);
         cursor: pointer;
-    
     }
+}
+
+.is-read {
+    background-color: lightgray;
 }
