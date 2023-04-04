@@ -18,6 +18,8 @@
     </div>
 
     <div class="container buttons d-flex my-5 justify-content-end">
+        <a class="btn btn-primary me-2" href="{{ route('admin.messages.index', $apartment->id) }}"><i
+                class="fa-solid fa-envelope"></i></a>
         <a class="btn btn-secondary" href="{{ route('admin.apartments.index') }}">Indietro</a>
     </div>
 
