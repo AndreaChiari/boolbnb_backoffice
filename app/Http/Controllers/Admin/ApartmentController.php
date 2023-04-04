@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Apartment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class ApartmentController extends Controller
 {
@@ -38,7 +40,13 @@ class ApartmentController extends Controller
 
         $apartment = new Apartment();
 
+        if (Arr::exists($data, 'thumb')) {
+            $thumb_url = Storage::put('apartments', $data['thumb']);
+            $data['thumb'] = $thumb_url;
+        };
+
         $apartment->fill($data);
+
         $apartment->user_id = Auth::id();
 
         $apartment->save();
@@ -70,6 +78,12 @@ class ApartmentController extends Controller
     {
         $data = $request->all();
 
+        if (Arr::exists($data, 'thumb')) {
+            if ($apartment->thumb) Storage::delete($apartment->thumb);
+            $thumb_url = Storage::put('apartmentss', $data['thumb']);
+            $data['thumb'] = $thumb_url;
+        };
+
         $apartment->update($data);
 
         return redirect()->route('admin.apartments.show', $apartment->id);
@@ -80,6 +94,8 @@ class ApartmentController extends Controller
      */
     public function destroy(Apartment $apartment)
     {
+        if ($apartment->thumb) Storage::delete($apartment->thumb);
+
         $apartment->delete();
 
         return to_route('admin.apartments.index');
