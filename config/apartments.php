@@ -180,7 +180,7 @@ return [
         'bathrooms' => 2,
         'square_meters' => 90,
         'address' => "Via dell'Umiltà 39, 00187, Roma RM",
-        'thumb' => "https://media-cdn.tripadvisor.com/media/vr-splice-j/00/0c/a8/19.jpg",
+        'thumb' => "https://www.lapassionediarredare.it/wp-content/uploads/2020/12/Appartamento-di-100-mq-4.jpg",
         'description' => "Elegante appartamento nel cuore di Roma, a pochi passi dalla Fontana di Trevi e dal Colosseo."
     ],
     [
@@ -367,7 +367,7 @@ return [
         'bathrooms' => 1,
         'square_meters' => 40,
         'address' => "Via Vittorio Emanuele II, 73100, Lecce LE",
-        'thumb' => "https://media-cdn.tripadvisor.com/media/vr-ha-splice-j/0e/76/93/f2.jpg",
+        'thumb' => "https://www.lapassionediarredare.it/wp-content/uploads/2020/12/Appartamento-di-100-mq-4.jpg",
         'description' => "Accogliente appartamento nel centro storico di Lecce, a pochi passi dalle principali attrazioni turistiche, bar e ristoranti. L'appartamento è composto da soggiorno con cucina attrezzata, camera matrimoniale e bagno con doccia. Arredato con gusto e dotato di tutti i comfort, incluso Wi-Fi gratuito e aria condizionata. Perfetto per coppie o famiglie con bambini.",
 
     ],
