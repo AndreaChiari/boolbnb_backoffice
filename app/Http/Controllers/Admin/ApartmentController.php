@@ -36,6 +36,17 @@ class ApartmentController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'price' => ['number', 'required'],
+            'rooms' => ['number', 'required'],
+            'beds' => ['number', 'required'],
+            'square_meters' => ['number', 'nullable'],
+            'bathrooms' => ['number', 'nullable'],
+            'address' => ['string', 'required'],
+            'thumb' => ['file'],
+            'description' => ['string', 'nullable'],
+        ]);
+
         $data = $request->all();
 
         $apartment = new Apartment();
@@ -80,7 +91,7 @@ class ApartmentController extends Controller
 
         if (Arr::exists($data, 'thumb')) {
             if ($apartment->thumb) Storage::delete($apartment->thumb);
-            $thumb_url = Storage::put('apartmentss', $data['thumb']);
+            $thumb_url = Storage::put('apartments', $data['thumb']);
             $data['thumb'] = $thumb_url;
         };
 
