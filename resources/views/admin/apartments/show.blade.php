@@ -21,6 +21,13 @@
     <div class="container buttons d-flex my-5 justify-content-end">
         <a class="btn btn-primary me-2" href="{{ route('admin.messages.index', $apartment->id) }}"><i
                 class="fa-solid fa-envelope"></i></a>
+        <a href="{{ route('admin.apartments.edit', $apartment->id) }}" class="btn btn-warning me-2"><i
+                class="fa-solid fa-arrow-up me-2"></i>Modifica</a>
+        <form action="{{ route('admin.apartments.destroy', $apartment->id) }}" method="POST">
+            @method('DELETE')
+            @csrf
+            <button class="btn btn-danger me-2" type="submit"><i class="fa-solid fa-trash"></i></button>
+        </form>
         <a class="btn btn-secondary" href="{{ route('admin.apartments.index') }}">Indietro</a>
     </div>
 
