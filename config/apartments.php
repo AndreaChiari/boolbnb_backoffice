@@ -201,7 +201,7 @@ return [
         'bathrooms' => 2,
         'square_meters' => 80,
         'address' => "Via degli Artisti 12, 50132, Firenze FI",
-        'thumb' => "https://www.designmag.it/fotoimg/appartamento-di-70-mq-luminoso.jpg",
+        'thumb' => "https://cdn.trovacasa.it/annunci/vlis/A_77598_58243937_858930946/foto.jpg",
         'description' => "Appartamento recentemente ristrutturato in un palazzo storico del centro di Firenze, vicino alla stazione Santa Maria Novella. Composto da tre camere da letto, due bagni, salotto con angolo cottura e balcone. Arredato con gusto e dotato di ogni comfort.",
     ],
 
@@ -378,7 +378,7 @@ return [
         'bathrooms' => 2,
         'square_meters' => 80,
         'address' => "Via A. De Gasperi, 95121, Catania CT",
-        'thumb' => "https://a0.muscache.com/im/pictures/pro_photo_tool/Hosting-14864069-unapproved/original/501ee43e-c937-4a2a-a37d-b4ad2b9f618a.jpeg?im_w=1200",
+        'thumb' => "https://foto.pcase.it/16736/8366358_1.jpg",
         'description' => "Ampio appartamento a pochi passi dal centro storico di Catania e dalla stazione centrale. L'appartamento è composto da un ampio soggiorno con divano-letto, cucina attrezzata, tre camere da letto e due bagni. Arredato con gusto e dotato di tutti i comfort, incluso Wi-Fi gratuito e aria condizionata. Perfetto per famiglie o gruppi di amici che vogliono esplorare la splendida città di Catania.",
 
     ],
