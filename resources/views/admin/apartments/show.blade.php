@@ -12,6 +12,7 @@
             <div class="info text-center">
                 <h1 class="mb-3">apartment {{ $apartment->address }}</h1>
                 <p>{{ $apartment->description }}</p>
+                <p class="fw-bold fs-4">{{ $apartment->price }} € / notte</p>
             </div>
         </div>
     </div>

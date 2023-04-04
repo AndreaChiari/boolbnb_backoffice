@@ -12,14 +12,21 @@
             </div>
             <div class="row d-flex g-5 flex-wrap">
                 @foreach ($apartments as $apartment)
-                    <div class="col-6 my-5" style="height: 400px;">
+                    <div class="col-6 my-5" style="height: 800px;">
                         <a href="{{ route('admin.apartments.show', $apartment['id']) }}"
                             style="text-decoration: none; color:black">
                             <div class="card d-flex flex-column-reverse align-items-center h-100 justify-content-between">
+                                <div class="info-index">
+                                    <h5>Informazioni generali</h5>
+                                    <p>Numero stanze: {{ $apartment->rooms }}</p>
+                                    <p>Numero letti: {{ $apartment->beds }}</p>
+                                    <p>Numero bagni: {{ $apartment->bathrooms }}</p>
+                                </div>
                                 <figure class="text-center h-50 w-100">
                                     <img src="{{ $apartment->thumb }}" alt="{{ $apartment->address }}"
                                         class="img-fluid h-100">
                                 </figure>
+                                <p class="fw-bold fs-4">{{ $apartment->price }} € / notte </p>
                                 <div class="info text-center">
                                     <h1>apartment {{ $apartment->address }}</h1>
                                 </div>
