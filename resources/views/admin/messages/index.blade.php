@@ -13,7 +13,7 @@
                 <div class="col-5 d-flex align-items-center py-2">
                     <p class="mb-0"><b>Da:</b> {{ $message->email }}</p>
                 </div>
-                <div class="col-2 p-2 d-flex justify-content-center">
+                <div class="col-2 p-2 d-flex justify-content-center align-items-center">
                     <a href="" class="btn btn-primary"><i class="fa-solid fa-eye"></i></a>
                 </div>
             </div>

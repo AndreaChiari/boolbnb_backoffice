@@ -23,6 +23,7 @@ class Apartment extends Model
         'visibility'
     ];
 
+
     public function user()
     {
         return $this->belongsTo(User::class);
@@ -51,6 +52,12 @@ class Apartment extends Model
     public function apartmentPics()
     {
         return $this->hasMany(ApartmentPic::class);
+    }
+
+    public function getThumbUrl()
+    {
+        if (substr($this->thumb_url, 0, 9) === 'apartments') return asset('storage/' . $this->thumb_url);
+        return $this->thumb_url;
     }
 
     protected static function boot()
