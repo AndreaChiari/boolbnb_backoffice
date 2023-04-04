@@ -388,7 +388,7 @@ return [
         'beds' => 4,
         'bathrooms' => 1,
         'square_meters' => 30,
-        'address' => "Via Sant'Agostino, 45, 70122, Bari BA",
+        'address' => "Via Sant'Agostino 45, 70122, Bari BA",
         'thumb' => "https://images.homify.com/c_fill,f_auto,q_0,w_740/v1438689614/p/photo/image/367149/1.jpg",
         'description' => "Delizioso appartamento completamente ristrutturato nel cuore del centro storico di Bari. A pochi passi dal mare e dal Teatro Petruzzelli. L'appartamento è dotato di tutti i comfort: wifi, aria condizionata, cucina attrezzata, bagno con doccia, phon, ferro da stiro, lavatrice, TV a schermo piatto. Può ospitare fino a 4 persone. "
     ],
