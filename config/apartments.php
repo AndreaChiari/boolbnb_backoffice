@@ -279,7 +279,7 @@ return [
         'bathrooms' => 1,
         'square_meters' => 35,
         'address' => "Via Nazionale, 00184, Roma",
-        'thumb' => "",
+        'thumb' => "https://a0.muscache.com/im/pictures/miso/Hosting-770102091471416851/original/9db3d590-261a-4b5a-bd64-daac63706deb.jpeg?im_w=720",
         'description' => "Accogliente monolocale nel cuore di Roma, a pochi passi dal Colosseo e dal Foro Romano. Dispone di una camera da letto con letto matrimoniale, una cucina completamente attrezzata e un bagno. Wi-Fi gratuito.",
 
     ],
