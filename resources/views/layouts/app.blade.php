@@ -26,7 +26,7 @@
     <div id="app">
 
         @include('includes.navbar')
-
+        @include('includes.validation')
 
 
         <main class="">

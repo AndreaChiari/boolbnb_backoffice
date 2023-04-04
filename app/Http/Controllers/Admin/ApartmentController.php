@@ -48,7 +48,7 @@ class ApartmentController extends Controller
                 'description' => ['string', 'nullable'],
             ],
             [
-                'price.numeric' => 'Il deve essere un valore numerico.',
+                'price.numeric' => 'Il prezzo deve essere un valore numerico.',
                 'price.required' => 'Il prezzo è un campo obbligatorio..',
                 'beds.numeric' => 'I letti devono essere valori numerici.',
                 'beds.required' => 'I letti sono un campo obbligatorio.',
@@ -113,7 +113,7 @@ class ApartmentController extends Controller
                 'description' => ['string', 'nullable'],
             ],
             [
-                'price.numeric' => 'Il deve essere un valore numerico.',
+                'price.numeric' => 'Il prezzo deve essere un valore numerico.',
                 'price.required' => 'Il prezzo è un campo obbligatorio..',
                 'beds.numeric' => 'I letti devono essere valori numerici.',
                 'beds.required' => 'I letti sono un campo obbligatorio.',
