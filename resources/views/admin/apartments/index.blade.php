@@ -49,23 +49,7 @@
     </section>
 
 @section('scripts')
-    <script>
-        const deleteForms = document.querySelectorAll('.deleteForm');
-        const deleteModal = document.getElementById('deleteModal');
-        const removeButton = document.getElementById('removeButton');
-        const backButton = document.getElementById('backButton');
 
-        deleteForms.forEach(form => {
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                deleteModal.classList.remove("d-none");
-
-                removeButton.addEventListener('click', () => form.submit());
-
-                backButton.addEventListener('click', () => deleteModal.classList.add("d-none"));
-            })
-        });
-    </script>
 @endsection
 
 @endsection
