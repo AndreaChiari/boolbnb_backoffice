@@ -14,7 +14,7 @@ class MessageController extends Controller
      */
     public function index(Apartment $apartment)
     {
-        $messages = Message::where('apartment_id', $apartment->id)->get();
+        $messages = Message::where('apartment_id', $apartment->id)->orderBy('is_read')->orderBy('created_at')->get();
         $messages_count = count($messages);
         $unread_messages_count = Message::where('is_read', 0)->where('apartment_id', $apartment->id)->count();
         $apartment_id = $apartment->id;
@@ -83,8 +83,9 @@ class MessageController extends Controller
      */
     public function destroy(Message $message)
     {
+        $apartment_id = $message->apartment->id;
         $message->delete();
 
-        return to_route('admin.messages.index');
+        return to_route('admin.messages.index', $apartment_id);
     }
 }

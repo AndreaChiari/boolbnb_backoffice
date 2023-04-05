@@ -31,6 +31,7 @@ Route::middleware(['auth', 'verified'])->name('admin.')->prefix('admin')->group(
     // Route::resource('messages', MessageController::class);
     Route::get('/messages/index/{apartment}', [MessageController::class, 'index'])->name('messages.index');
     Route::get('/messages/{message}', [MessageController::class, 'show'])->name('messages.show');
+    Route::delete('/messages/{message}', [MessageController::class, 'destroy'])->name('messages.destroy');
 });
 
 
