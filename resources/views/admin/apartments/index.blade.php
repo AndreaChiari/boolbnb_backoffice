@@ -65,4 +65,9 @@
             </div>
         </div>
     </section>
+
+@section('scripts')
+
+@endsection
+
 @endsection
