@@ -1,10 +1,10 @@
 @if ($apartment->exists)
-    <form action="{{ route('admin.apartments.update', $apartment->id) }}" method="POST" class="container"
+    <form id="form" action="{{ route('admin.apartments.update', $apartment->id) }}" method="POST" class="container"
         enctype="multipart/form-data">
         @method('PUT')
     @else
-        <form action="{{ route('admin.apartments.store') }}" method="POST" class="container" enctype="multipart/form-data"
-            novalidate>
+        <form id="form" action="{{ route('admin.apartments.store') }}" method="POST" class="container"
+            enctype="multipart/form-data" novalidate>
 @endif
 @csrf
 <div class="row">
@@ -47,7 +47,11 @@
         <div class="mb-3">
             <label class="form-label" for="address">Indirizzo:</label>
             <input class="form-control" class="" type="text" name="address" id="address" required
-                value="{{ old('title', $apartment->address) }}">
+                value="{{ old('title', $apartment->address) }}" onkeyup="fetchApiSearch()">
+            <div class="address-error text-danger d-none">Il campo è errato</div>
+            <ul id="suggestions" class="d-none">
+
+            </ul>
         </div>
     </div>
 
@@ -138,6 +142,46 @@
                 }
 
             } else imagePreview.src = placeholder;
+        })
+    </script>
+    <script>
+        const addressInput = document.getElementById('address');
+        const suggestionsField = document.getElementById('suggestions');
+        const form = document.getElementById('form');
+        const alert = document.querySelector('.address-error');
+        let suggestions = [];
+        const fetchApiSearch = () => {
+            if (addressInput.value) {
+                suggestionsField.classList.remove('d-none');
+                axios.get(
+                        `https://api.tomtom.com/search/2/search/${addressInput.value}.json?key=lCdijgMp1lmgVifAWwN8K9Jrfa9XcFzm`
+                    )
+                    .then(res => {
+                        suggestions = [];
+                        let suggestionList = '';
+                        res.data.results.forEach(result => {
+                            suggestions.push(result.address.freeformAddress);
+                        });
+                        suggestions.forEach(suggestion => {
+                            suggestionList += `<li class="suggestion-element">${suggestion}</li>`;
+                        })
+                        suggestionsField.innerHTML = suggestionList;
+                        const suggestionElements = document.querySelectorAll('.suggestion-element');
+                        suggestionElements.forEach(element => {
+                            element.addEventListener('click', () => {
+                                addressInput.value = element.innerText;
+                                suggestionsField.classList.add('d-none');
+                            })
+                        })
+
+                    })
+            }
+        }
+        form.addEventListener('submit', (e) => {
+            console.log('ciao');
+            e.preventDefault();
+            if (suggestions.includes(addressInput.value)) form.submit();
+            else alert.classList.remove('d-none') & suggestionsField.classList.add('d-none');
         })
     </script>
 @endsection
