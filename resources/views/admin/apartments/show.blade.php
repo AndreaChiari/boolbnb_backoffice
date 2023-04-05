@@ -39,7 +39,7 @@
         <div class="btn-messages"><a class="btn btn-primary me-2"
                 href="{{ route('admin.messages.index', $apartment->id) }}"><i class="fa-solid fa-envelope"></i></a>
             @if ($new_messages)
-                <p class="messages-notification">{{ $new_messages }}</p>
+                <p class="messages-notification p-2"><b>{{ $new_messages }}</b></p>
             @endif
         </div>
         <a href="{{ route('admin.apartments.edit', $apartment->id) }}" class="btn btn-warning me-2"><i
