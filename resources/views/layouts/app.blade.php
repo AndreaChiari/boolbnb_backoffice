@@ -30,7 +30,7 @@
 
 
 
-        <main class="">
+        <main class="position-relative">
             @include('includes.confirmation_delete')
             @yield('content')
         </main>
@@ -42,15 +42,17 @@
         const deleteModal = document.getElementById('deleteModal');
         const removeButton = document.getElementById('removeButton');
         const backButton = document.getElementById('backButton');
+        const modalContainer = document.getElementById('modalContainer');
 
         deleteForms.forEach(form => {
             form.addEventListener('submit', (e) => {
                 e.preventDefault();
-                deleteModal.classList.remove("d-none");
+                modalContainer.classList.remove("d-none") & document.body.classList.add("overflow-hidden");
 
                 removeButton.addEventListener('click', () => form.submit());
 
-                backButton.addEventListener('click', () => deleteModal.classList.add("d-none"));
+                backButton.addEventListener('click', () => modalContainer.classList.add("d-none") & document
+                    .body.classList.remove("overflow-hidden"));
             })
         });
     </script>
