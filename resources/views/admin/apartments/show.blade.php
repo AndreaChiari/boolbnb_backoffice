@@ -7,9 +7,9 @@
         <div class="card">
             <div class="row g-0">
                 <div class="col-md-4">
-                    <figure class="text-center">
-                        <img src="{{ $apartment->getThumbUrl() }}" alt="{{ $apartment->address }}" class="img-fluid"
-                            height="400" width="500">
+                    <figure class="text-center h-100">
+                        <img src="{{ $apartment->getThumbUrl() }}" alt="{{ $apartment->address }}" class="img-fluid h-100"
+                            style="object-fit: cover;">
                     </figure>
                 </div>
                 <div class="col-md-8">
@@ -36,8 +36,10 @@
 
     {{-- Bottoni --}}
     <div class="container buttons d-flex my-5 justify-content-end">
-        <div class="btn-messages"><a class="btn btn-primary me-2"
-                href="{{ route('admin.messages.index', $apartment->id) }}"><i class="fa-solid fa-envelope"></i></a>
+        <div class="btn-messages">
+            <a class="btn btn-primary me-2" href="{{ route('admin.messages.index', $apartment->id) }}">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
             @if ($new_messages)
                 <p class="messages-notification p-2"><b>{{ $new_messages }}</b></p>
             @endif
@@ -51,5 +53,4 @@
         </form>
         <a class="btn btn-secondary" href="{{ route('admin.apartments.index') }}">Indietro</a>
     </div>
-
 @endsection
