@@ -22,14 +22,29 @@
                             <div class="card-body d-flex flex-column justify-content-between">
                                 <div>
                                     <h5 class="card-title">{{ $apartment->address }}</h5>
-                                    <ul class="list-unstyled mb-0">
-                                        <li>Numero stanze: {{ $apartment->rooms }}</li>
-                                        <li>Numero letti: {{ $apartment->beds }}</li>
-                                        <li>Numero bagni: {{ $apartment->bathrooms }}</li>
-                                    </ul>
+                                    <div class="row text-center justify-content-around">
+                                        <div class="col">
+                                            <div class="mb-2">
+                                                <i class="fa-solid fa-person-shelter fa-beat"></i>
+                                            </div>
+                                            <div>{{ $apartment->rooms }}</div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="mb-2">
+                                                <i class="fa-solid fa-bed fa-beat-fade"></i>
+                                            </div>
+                                            <div>{{ $apartment->beds }}</div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="mb-2">
+                                                <i class="fa-solid fa-toilet fa-beat"></i>
+                                            </div>
+                                            <div>{{ $apartment->bathrooms }}</div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div>
-                                    <p class="card-text fw-bold fs-4">{{ $apartment->price }} € / notte</p>
+                                    <p class="card-text text-center fw-bold fs-4">{{ $apartment->price }} € / notte</p>
                                     {{-- Bottoni --}}
                                     <div class="d-flex justify-content-center align-items-center mt-2 mb-2 gap-3">
                                         <a href="{{ route('admin.apartments.edit', $apartment->id) }}"
