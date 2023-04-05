@@ -30,7 +30,7 @@
 
 
 
-        <main class="position-relative">
+        <main>
             @include('includes.confirmation_delete')
             @yield('content')
         </main>
