@@ -43,13 +43,14 @@
                 value="{{ old('title', $apartment->bathrooms) }}">
         </div>
     </div>
-    <div class="col-md-12">
+    <div class="col-md-12 address-container">
         <div class="mb-3">
             <label class="form-label" for="address">Indirizzo:</label>
             <input class="form-control" class="" type="text" name="address" id="address" required
                 value="{{ old('title', $apartment->address) }}" onkeyup="fetchApiSearch()">
             <div class="address-error text-danger d-none">Il campo è errato</div>
-            <ul id="suggestions" class="d-none">
+            <ul id="suggestions" class="d-none border rounded-2 list-unstyled">
+
 
             </ul>
         </div>
@@ -153,6 +154,7 @@
         const fetchApiSearch = () => {
             if (addressInput.value) {
                 suggestionsField.classList.remove('d-none');
+                suggestionsField.scrollTo(0, 0);
                 axios.get(
                         `https://api.tomtom.com/search/2/search/${addressInput.value}.json?key=lCdijgMp1lmgVifAWwN8K9Jrfa9XcFzm`
                     )
@@ -163,7 +165,8 @@
                             suggestions.push(result.address.freeformAddress);
                         });
                         suggestions.forEach(suggestion => {
-                            suggestionList += `<li class="suggestion-element">${suggestion}</li>`;
+                            suggestionList +=
+                                `<li class="suggestion-element border-top p-2">${suggestion}</li>`;
                         })
                         suggestionsField.innerHTML = suggestionList;
                         const suggestionElements = document.querySelectorAll('.suggestion-element');
@@ -183,5 +186,7 @@
             if (suggestions.includes(addressInput.value)) form.submit();
             else alert.classList.remove('d-none') & suggestionsField.classList.add('d-none');
         })
+
+        window.addEventListener('click', () => suggestionsField.classList.add('d-none'));
     </script>
 @endsection
