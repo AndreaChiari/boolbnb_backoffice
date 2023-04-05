@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Apartment;
+use App\Models\Message;
 use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
@@ -89,7 +90,9 @@ class ApartmentController extends Controller
     public function show(Apartment $apartment)
     {
         $services = Service::all();
-        return view('admin.apartments.show', compact('apartment', 'services'));
+        $new_messages = Message::where('is_read', 0)->where('apartment_id', $apartment->id)->count();
+        if ($new_messages >= 100) $new_messages = '99+';
+        return view('admin.apartments.show', compact('apartment', 'services', 'new_messages'));
     }
 
     /**

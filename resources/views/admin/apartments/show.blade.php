@@ -36,8 +36,12 @@
 
     {{-- Bottoni --}}
     <div class="container buttons d-flex my-5 justify-content-end">
-        <a class="btn btn-primary me-2" href="{{ route('admin.messages.index', $apartment->id) }}"><i
-                class="fa-solid fa-envelope"></i></a>
+        <div class="btn-messages"><a class="btn btn-primary me-2"
+                href="{{ route('admin.messages.index', $apartment->id) }}"><i class="fa-solid fa-envelope"></i></a>
+            @if ($new_messages)
+                <p class="messages-notification">{{ $new_messages }}</p>
+            @endif
+        </div>
         <a href="{{ route('admin.apartments.edit', $apartment->id) }}" class="btn btn-warning me-2"><i
                 class="fa-solid fa-arrow-up"></i></a>
         <form action="{{ route('admin.apartments.destroy', $apartment->id) }}" method="POST">
