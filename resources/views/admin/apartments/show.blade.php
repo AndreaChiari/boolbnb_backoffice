@@ -44,7 +44,7 @@
         </div>
         <a href="{{ route('admin.apartments.edit', $apartment->id) }}" class="btn btn-warning me-2"><i
                 class="fa-solid fa-arrow-up"></i></a>
-        <form action="{{ route('admin.apartments.destroy', $apartment->id) }}" method="POST">
+        <form class="deleteForm" action="{{ route('admin.apartments.destroy', $apartment->id) }}" method="POST">
             @method('DELETE')
             @csrf
             <button class="btn btn-danger me-2" type="submit"><i class="fa-solid fa-trash"></i></button>
