@@ -19,14 +19,14 @@
         <div class="mb-3">
             <label class="form-label" for="rooms">Stanze:</label>
             <input class="form-control" type="number" name="rooms" id="rooms" min="1"
-                value="{{ old('title', $apartment->rooms) }}">
+                value="{{ old('title', $apartment->rooms) }}" required>
         </div>
     </div>
     <div class="col-md-2">
         <div class="mb-3">
             <label class="form-label" for="beds">Letti:</label>
             <input class="form-control" type="number" name="beds" id="beds" min="1"
-                value="{{ old('title', $apartment->beds) }}">
+                value="{{ old('title', $apartment->beds) }}" required>
         </div>
     </div>
     <div class="col-md-2">
@@ -40,7 +40,7 @@
         <div class="mb-3">
             <label class="form-label" for="bathrooms">Bagni:</label>
             <input class="form-control" type="number" name="bathrooms" id="bathrooms" min="0"
-                value="{{ old('title', $apartment->bathrooms) }}">
+                value="{{ old('title', $apartment->bathrooms) }}" required>
         </div>
     </div>
     <div class="col-md-12 address-container">
