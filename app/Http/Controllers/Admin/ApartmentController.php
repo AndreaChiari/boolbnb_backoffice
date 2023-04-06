@@ -162,6 +162,6 @@ class ApartmentController extends Controller
 
         $apartment->delete();
 
-        return to_route('admin.apartments.index')->with('type', 'danger')->with('msg', "L'elemento è stato modificato con successo.");
+        return to_route('admin.apartments.index')->with('type', 'danger')->with('msg', "L'elemento è stato rimmosso con successo.");
     }
 }
