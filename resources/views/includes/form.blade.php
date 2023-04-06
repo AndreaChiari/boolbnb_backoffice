@@ -8,7 +8,14 @@
 @endif
 @csrf
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-2">
+        <div class="mb-3">
+            <label class="form-label" for="price">Name:</label>
+            <input class="form-control" type="text" name="name" id="name" required min-length="0"
+                value="{{ old('title', $apartment->name) }}">
+        </div>
+    </div>
+    <div class="col-md-2">
         <div class="mb-3">
             <label class="form-label" for="price">Prezzo:</label>
             <input class="form-control" type="number" name="price" id="price" required min="0"
