@@ -2,6 +2,7 @@
 
 return [
     [
+        'name' => "Appartamento Rosso",
         'price' => 79,
         'rooms' => 4,
         'beds' => 6,
@@ -14,6 +15,7 @@ return [
 
     ],
     [
+        'name' => "Il Monolocale",
         'price' => 75,
         'rooms' => 2,
         'beds' => 3,
@@ -26,6 +28,7 @@ return [
 
     ],
     [
+        'name' => "Villa dei Fiori",
         'price' => 90,
         'rooms' => 2,
         'beds' => 3,
@@ -37,6 +40,7 @@ return [
 
     ],
     [
+        'name' => "Villa di Campagna",
         'price' => 120,
         'rooms' => 2,
         'beds' => 5,
@@ -48,6 +52,7 @@ return [
 
     ],
     [
+        'name' => "Casa Rosa",
         'price' => 87,
         'rooms' => 3,
         'beds' => 4,
@@ -59,6 +64,7 @@ return [
 
     ],
     [
+        'name' => "Il Nido",
         'price' => 90,
         'rooms' => 2,
         'beds' => 1,
@@ -70,6 +76,7 @@ return [
 
     ],
     [
+        'name' => "Villetta in Campagna",
         'price' => 82,
         'rooms' => 4,
         'beds' => 4,
@@ -81,6 +88,7 @@ return [
 
     ],
     [
+        'name' => "Appartamento Blu",
         'price' => 105,
         'rooms' => 1,
         'beds' => 2,
@@ -92,6 +100,7 @@ return [
 
     ],
     [
+        'name' => "Casa dei Sogni",
         'price' => 144,
         'rooms' => 1,
         'beds' => 1,
@@ -103,6 +112,7 @@ return [
 
     ],
     [
+        'name' => "La Casetta",
         'price' => 54,
         'rooms' => 1,
         'beds' => 2,
@@ -114,6 +124,7 @@ return [
 
     ],
     [
+        'name' => "Villa con Piscina",
         'price' => 16,
         'rooms' => 3,
         'beds' => 2,
@@ -126,6 +137,7 @@ return [
 
     ],
     [
+        'name' => "Appartamento Giallo",
         'price' => 130,
         'rooms' => 4,
         'beds' => 4,
@@ -138,6 +150,7 @@ return [
 
     ],
     [
+        'name' => "Casa sul Lago",
         'price' => 98,
         'rooms' => 3,
         'beds' => 5,
@@ -149,6 +162,7 @@ return [
 
     ],
     [
+        'name' => "Loft Moderno",
         'price' => 85,
         'rooms' => 2,
         'beds' => 3,
@@ -160,6 +174,7 @@ return [
 
     ],
     [
+        'name' => "Casa in Collina",
         'price' => 75,
         'rooms' => 2,
         'beds' => 4,
@@ -171,6 +186,7 @@ return [
 
     ],
     [
+        'name' => "Il Rifugio",
         'price' => 120,
         'rooms' => 3,
         'beds' => 6,
@@ -181,6 +197,7 @@ return [
         'description' => "Elegante appartamento nel cuore di Roma, a pochi passi dalla Fontana di Trevi e dal Colosseo."
     ],
     [
+        'name' => "Appartamento al Mare",
         'price' => 65,
         'rooms' => 1,
         'beds' => 2,
@@ -192,6 +209,7 @@ return [
     ],
 
     [
+        'name' => "Casa Rustica",
         'price' => 110,
         'rooms' => 3,
         'beds' => 5,
@@ -203,6 +221,7 @@ return [
     ],
 
     [
+        'name' => "Villa degli Ulivi",
         'price' => 80,
         'rooms' => 2,
         'beds' => 4,
@@ -213,6 +232,7 @@ return [
         'description' => "Grazioso appartamento nel centro storico di Siena, a pochi passi dalla Piazza del Campo. Composto da due camere da letto, soggiorno con angolo cottura, bagno e terrazza panoramica con vista sulla città. Arredato in stile rustico toscano e dotato di ogni comfort.",
     ],
     [
+        'name' => "Casa con Giardino",
         'price' => 100,
         'rooms' => 2,
         'beds' => 4,
@@ -225,6 +245,7 @@ return [
     ],
 
     [
+        'name' => "Casa Verde",
         'price' => 80,
         'rooms' => 1,
         'beds' => 2,
@@ -237,6 +258,7 @@ return [
     ],
 
     [
+        'name' => "Il Castello",
         'price' => 110,
         'rooms' => 3,
         'beds' => 6,
@@ -248,6 +270,7 @@ return [
 
     ],
     [
+        'name' => "Appartamento Romantico",
         'price' => 55,
         'rooms' => 2,
         'beds' => 3,
@@ -259,6 +282,7 @@ return [
 
     ],
     [
+        'name' => "Casa dei Fiori",
         'price' => 90,
         'rooms' => 3,
         'beds' => 4,
@@ -270,6 +294,7 @@ return [
 
     ],
     [
+        'name' => "La Mansarda",
         'price' => 75,
         'rooms' => 1,
         'beds' => 2,
@@ -281,6 +306,7 @@ return [
 
     ],
     [
+        'name' => "Villa con Vista",
         'price' => 130,
         'rooms' => 2,
         'beds' => 4,
@@ -292,6 +318,7 @@ return [
 
     ],
     [
+        'name' => "Casa con Piscina",
         'price' => 85,
         'rooms' => 3,
         'beds' => 4,
@@ -303,6 +330,7 @@ return [
 
     ],
     [
+        'name' => "Casa di Campagna",
         'price' => 110,
         'rooms' => 2,
         'beds' => 4,
@@ -314,6 +342,7 @@ return [
 
     ],
     [
+        'name' => "Il Balcone",
         'price' => 70,
         'rooms' => 1,
         'beds' => 2,
@@ -325,6 +354,7 @@ return [
 
     ],
     [
+        'name' => "Appartamento sul Lago",
         'price' => 110,
         'rooms' => 3,
         'beds' => 4,
@@ -336,6 +366,7 @@ return [
 
     ],
     [
+        'name' => "Casa sulle Colline",
         'price' => 80,
         'rooms' => 2,
         'beds' => 4,
@@ -347,6 +378,7 @@ return [
 
     ],
     [
+        'name' => "Villa di Lusso",
         'price' => 120,
         'rooms' => 4,
         'beds' => 6,
@@ -358,6 +390,7 @@ return [
 
     ],
     [
+        'name' => "Casa Chic",
         'price' => 85,
         'rooms' => 2,
         'beds' => 4,
@@ -369,6 +402,7 @@ return [
 
     ],
     [
+        'name' => "Il Soffitto a Volta",
         'price' => 100,
         'rooms' => 3,
         'beds' => 6,
@@ -380,6 +414,7 @@ return [
 
     ],
     [
+        'name' => "Casa degli Amici",
         'price' => 80,
         'rooms' => 2,
         'beds' => 4,
@@ -390,6 +425,7 @@ return [
         'description' => "Delizioso appartamento completamente ristrutturato nel cuore del centro storico di Bari. A pochi passi dal mare e dal Teatro Petruzzelli. L'appartamento è dotato di tutti i comfort: wifi, aria condizionata, cucina attrezzata, bagno con doccia, phon, ferro da stiro, lavatrice, TV a schermo piatto. Può ospitare fino a 4 persone. "
     ],
     [
+        'name' => "Appartamento di Design",
         'price' => 60,
         'rooms' => 2,
         'beds' => 4,
@@ -400,6 +436,7 @@ return [
         'description' => "Appartamento appena ristrutturato a 2 passi dal mare e dal centro di Gallipoli. Composto da cucina, soggiorno con divano letto, camera da letto matrimoniale e bagno con doccia. Dotato di aria condizionata, TV, lavatrice e cucina attrezzata. Ideale per una coppia o una famiglia con 2 bambini."
     ],
     [
+        'name' => "Casa dei Ricordi",
         'price' => 85,
         'rooms' => 3,
         'beds' => 5,

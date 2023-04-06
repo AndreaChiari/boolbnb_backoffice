@@ -26,6 +26,7 @@ class ApartmentSeeder extends Seeder
             sleep(1);
             $new_apartment = new Apartment();
             $new_apartment->user_id = $users[$faker->numberBetween(0, $max_user)];
+            $new_apartment->name = $apartment['name'];
             $new_apartment->price = $apartment['price'];
             $new_apartment->rooms = $apartment['rooms'];
             $new_apartment->beds = $apartment['beds'];
