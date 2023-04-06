@@ -191,7 +191,7 @@
                         }
 
                     })
-            }
+            } else if (submit) form.submit();
         }
         form.addEventListener('submit', (e) => {
             console.log('ciao');
