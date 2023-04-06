@@ -41,6 +41,7 @@ class ApartmentController extends Controller
     {
         $request->validate(
             [
+                'name' => ['string', 'required'],
                 'price' => ['numeric', 'required'],
                 'rooms' => ['numeric', 'required'],
                 'beds' => ['numeric', 'required'],
@@ -51,6 +52,8 @@ class ApartmentController extends Controller
                 'description' => ['string', 'nullable'],
             ],
             [
+                'name.string' => 'Il nome deve essere una stringa',
+                'name.required' => 'Il nome è un campo obbligatorio',
                 'price.numeric' => 'Il prezzo deve essere un valore numerico.',
                 'price.required' => 'Il prezzo è un campo obbligatorio..',
                 'beds.numeric' => 'I letti devono essere valori numerici.',
@@ -114,6 +117,7 @@ class ApartmentController extends Controller
     {
         $request->validate(
             [
+                'name' => ['string', 'required'],
                 'price' => ['numeric', 'required'],
                 'rooms' => ['numeric', 'required'],
                 'beds' => ['numeric', 'required'],
@@ -124,6 +128,8 @@ class ApartmentController extends Controller
                 'description' => ['string', 'nullable'],
             ],
             [
+                'name.string' => 'Il nome deve essere una stringa',
+                'name.required' => 'Il nome è un campo obbligatorio',
                 'price.numeric' => 'Il prezzo deve essere un valore numerico.',
                 'price.required' => 'Il prezzo è un campo obbligatorio..',
                 'beds.numeric' => 'I letti devono essere valori numerici.',
