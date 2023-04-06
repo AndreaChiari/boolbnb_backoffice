@@ -43,6 +43,8 @@ class ApartmentController extends Controller
             $apartments = array_filter($apartments, function ($apartment) use ($lat1, $lon1, $range) {
                 return distance($lat1, $lon1, $apartment['latitude'], $apartment['longitude']) <= $range;
             });
+
+            $apartments = array_values($apartments);
         }
 
         //Get sponsored apartments http://127.0.0.1:8000/api/apartments?sponsored=1
@@ -60,6 +62,7 @@ class ApartmentController extends Controller
                 }
                 return $sponsored;
             });
+            $apartments = array_values($apartments);
         }
 
 
