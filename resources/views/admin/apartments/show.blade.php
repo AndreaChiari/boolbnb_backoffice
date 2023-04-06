@@ -14,7 +14,8 @@
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h1 class="card-title">{{ $apartment->address }}</h1>
+                        <h1 class="card-title mb-4">{{ $apartment->name }}</h1>
+                        <p class="card-text">{{ $apartment->address }}</p>
                         <p class="card-text">{{ $apartment->description }}</p>
                         <p class="card-text fw-bold fs-4">{{ $apartment->price }} € / notte</p>
                         <div class="row justify-content-end align-items-center">
