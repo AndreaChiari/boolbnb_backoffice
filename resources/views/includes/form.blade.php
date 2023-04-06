@@ -19,14 +19,14 @@
         <div class="mb-3">
             <label class="form-label" for="rooms">Stanze:</label>
             <input class="form-control" type="number" name="rooms" id="rooms" min="1"
-                value="{{ old('title', $apartment->rooms) }}">
+                value="{{ old('title', $apartment->rooms) }}" required>
         </div>
     </div>
     <div class="col-md-2">
         <div class="mb-3">
             <label class="form-label" for="beds">Letti:</label>
             <input class="form-control" type="number" name="beds" id="beds" min="1"
-                value="{{ old('title', $apartment->beds) }}">
+                value="{{ old('title', $apartment->beds) }}" required>
         </div>
     </div>
     <div class="col-md-2">
@@ -40,7 +40,7 @@
         <div class="mb-3">
             <label class="form-label" for="bathrooms">Bagni:</label>
             <input class="form-control" type="number" name="bathrooms" id="bathrooms" min="0"
-                value="{{ old('title', $apartment->bathrooms) }}">
+                value="{{ old('title', $apartment->bathrooms) }}" required>
         </div>
     </div>
     <div class="col-md-12 address-container">
@@ -151,10 +151,12 @@
         const form = document.getElementById('form');
         const alert = document.querySelector('.address-error');
         let suggestions = [];
-        const fetchApiSearch = () => {
+        const fetchApiSearch = (submit = false) => {
             if (addressInput.value) {
-                suggestionsField.classList.remove('d-none');
-                suggestionsField.scrollTo(0, 0);
+                if (!submit) {
+                    suggestionsField.classList.remove('d-none');
+                    suggestionsField.scrollTo(0, 0);
+                }
                 axios.get(
                         `https://api.tomtom.com/search/2/search/${addressInput.value}.json?key=lCdijgMp1lmgVifAWwN8K9Jrfa9XcFzm`
                     )
@@ -176,6 +178,10 @@
                                 suggestionsField.classList.add('d-none');
                             })
                         })
+                        if (submit) {
+                            if (suggestions.includes(addressInput.value)) form.submit();
+                            else alert.classList.remove('d-none') & suggestionsField.classList.add('d-none');
+                        }
 
                     })
             }
@@ -183,8 +189,7 @@
         form.addEventListener('submit', (e) => {
             console.log('ciao');
             e.preventDefault();
-            if (suggestions.includes(addressInput.value)) form.submit();
-            else alert.classList.remove('d-none') & suggestionsField.classList.add('d-none');
+            fetchApiSearch(true);
         })
 
         window.addEventListener('click', () => suggestionsField.classList.add('d-none'));
