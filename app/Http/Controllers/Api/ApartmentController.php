@@ -53,7 +53,9 @@ class ApartmentController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $apartment = Apartment::with('services', 'sponsorships', 'apartmentPics')->where('id', $id)->get();
+
+        return response()->json($apartment);
     }
 
     /**
