@@ -9,51 +9,51 @@
 @csrf
 <div class="row">
     <div class="col-md-2">
-        <div class="mb-3">
+        <div class="mb-3 ">
             <label class="form-label" for="name">Name:</label>
-            <input class="form-control" type="text" name="name" id="name" required min-length="0"
+            <input class="form-control rounded-5" type="text" name="name" id="name" required min-length="0"
                 value="{{ old('name', $apartment->name) }}">
         </div>
     </div>
     <div class="col-md-2">
         <div class="mb-3">
             <label class="form-label" for="price">Prezzo:</label>
-            <input class="form-control" type="number" name="price" id="price" required min="0"
+            <input class="form-control rounded-5" type="number" name="price" id="price" required min="0"
                 value="{{ old('price', $apartment->price) }}">
         </div>
     </div>
     <div class="col-md-2">
         <div class="mb-3">
             <label class="form-label" for="rooms">Stanze:</label>
-            <input class="form-control" type="number" name="rooms" id="rooms" min="1"
+            <input class="form-control rounded-5" type="number" name="rooms" id="rooms" min="1"
                 value="{{ old('rooms', $apartment->rooms) }}" required>
         </div>
     </div>
     <div class="col-md-2">
         <div class="mb-3">
             <label class="form-label" for="beds">Letti:</label>
-            <input class="form-control" type="number" name="beds" id="beds" min="1"
+            <input class="form-control rounded-5" type="number" name="beds" id="beds" min="1"
                 value="{{ old('beds', $apartment->beds) }}" required>
         </div>
     </div>
     <div class="col-md-2">
         <div class="mb-3">
             <label class="form-label" for="square_meters">Metratura:</label>
-            <input class="form-control" type="number" name="square_meters" id="square_meters" min="1"
+            <input class="form-control rounded-5" type="number" name="square_meters" id="square_meters" min="1"
                 value="{{ old('square_meters', $apartment->square_meters) }}">
         </div>
     </div>
     <div class="col-md-2">
         <div class="mb-3">
             <label class="form-label" for="bathrooms">Bagni:</label>
-            <input class="form-control" type="number" name="bathrooms" id="bathrooms" min="0"
+            <input class="form-control rounded-5" type="number" name="bathrooms" id="bathrooms" min="0"
                 value="{{ old('bathrooms', $apartment->bathrooms) }}" required>
         </div>
     </div>
     <div class="col-md-12 address-container">
         <div class="mb-3">
             <label class="form-label" for="address">Indirizzo:</label>
-            <input class="form-control" class="" type="text" name="address" id="address" required
+            <input class="form-control rounded-5" class="" type="text" name="address" id="address" required
                 value="{{ old('address', $apartment->address) }}" onkeyup="fetchApiSearch()">
             <div class="address-error text-danger d-none">Il campo è errato</div>
             <ul id="suggestions" class="d-none border rounded-2 list-unstyled">
@@ -68,7 +68,8 @@
         <div class="mb-3">
             <label for="thumb" class="form-label">Immagine</label>
             <input type="file" name="thumb" id="thumb"
-                class="form-control @error('thumb') is-invalid @enderror" value="{{ old('thumb', $apartment->thumb) }}">
+                class="form-control rounded-5 @error('thumb') is-invalid @enderror"
+                value="{{ old('thumb', $apartment->thumb) }}">
             @error('thumb')
                 <div class="invalid-feedback">
                     {{ $message }}
@@ -88,12 +89,12 @@
     {{-- Descrizione --}}
     <div class="col-md-12 mb-3">
         <label class="form-label" for="description">Descrizione:</label>
-        <textarea class="form-control" name="description" id="description" cols="100" rows="5">{{ old('description', $apartment->description) }}</textarea>
+        <textarea class="form-control rounded-5" name="description" id="description" cols="100" rows="5">{{ old('description', $apartment->description) }}</textarea>
     </div>
     {{-- Servizi --}}
     <div class="col-md-12">
         <label class="form-label">Servizi:</label>
-        <div class="services border rounded-2 p-3 mb-3">
+        <div class="services border rounded-5 p-3 mb-3">
             <div class="row">
                 @foreach ($services as $service)
                     <div class="col-6 mb-2">
