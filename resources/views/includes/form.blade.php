@@ -151,10 +151,12 @@
         const form = document.getElementById('form');
         const alert = document.querySelector('.address-error');
         let suggestions = [];
-        const fetchApiSearch = () => {
+        const fetchApiSearch = (submit = false) => {
             if (addressInput.value) {
-                suggestionsField.classList.remove('d-none');
-                suggestionsField.scrollTo(0, 0);
+                if (!submit) {
+                    suggestionsField.classList.remove('d-none');
+                    suggestionsField.scrollTo(0, 0);
+                }
                 axios.get(
                         `https://api.tomtom.com/search/2/search/${addressInput.value}.json?key=lCdijgMp1lmgVifAWwN8K9Jrfa9XcFzm`
                     )
@@ -176,6 +178,10 @@
                                 suggestionsField.classList.add('d-none');
                             })
                         })
+                        if (submit) {
+                            if (suggestions.includes(addressInput.value)) form.submit();
+                            else alert.classList.remove('d-none') & suggestionsField.classList.add('d-none');
+                        }
 
                     })
             }
@@ -183,8 +189,7 @@
         form.addEventListener('submit', (e) => {
             console.log('ciao');
             e.preventDefault();
-            if (suggestions.includes(addressInput.value)) form.submit();
-            else alert.classList.remove('d-none') & suggestionsField.classList.add('d-none');
+            fetchApiSearch(true);
         })
 
         window.addEventListener('click', () => suggestionsField.classList.add('d-none'));
