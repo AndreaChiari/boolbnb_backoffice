@@ -35,7 +35,7 @@ class ApartmentController extends Controller
         //Get apartments in range http://127.0.0.1:8000/api/apartments?lat={lat}&lon={lon}&range={range}
 
         if (isset($request->lat) && isset($request->lon) && isset($request->range)) {
-            $apartments = Apartment::with('services', 'sponsorships', 'apartmentPics', 'views')->get()->toArray();
+            $apartments = Apartment::with('services', 'sponsorships', 'apartmentPics', 'views')->orderBy('created_at', 'DESC')->get()->toArray();
             $lat1 = $request->lat;
             $lon1 = $request->lon;
             $range = $request->range;
@@ -48,7 +48,7 @@ class ApartmentController extends Controller
         //Get sponsored apartments http://127.0.0.1:8000/api/apartments?sponsored=1
 
         if (isset($request->sponsored)) {
-            $apartments = Apartment::with('services', 'sponsorships', 'apartmentPics', 'views')->get()->toArray();
+            $apartments = Apartment::with('services', 'sponsorships', 'apartmentPics', 'views')->orderBy('created_at', 'DESC')->get()->toArray();
             $apartments = array_filter($apartments, function ($apartment) {
                 $now = Carbon::now();
                 $sponsored = false;

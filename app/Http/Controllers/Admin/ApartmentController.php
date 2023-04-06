@@ -81,7 +81,7 @@ class ApartmentController extends Controller
 
         if (Arr::exists($data, 'services')) $apartment->services()->sync($data['services']);
 
-        return redirect()->route('admin.apartments.show', $apartment->id);
+        return redirect()->route('admin.apartments.show', $apartment->id)->with('type', 'success')->with('msg', "L'elemento è stato creato con successo.");
     }
 
     /**
@@ -150,7 +150,7 @@ class ApartmentController extends Controller
         if (Arr::exists($data, 'services')) $apartment->services()->sync($data['services']);
         else if (count($apartment->services)) $apartment->services()->detach();
 
-        return redirect()->route('admin.apartments.show', $apartment->id);
+        return redirect()->route('admin.apartments.show', $apartment->id)->with('type', 'warning')->with('msg', "L'elemento è stato modificato con successo.");
     }
 
     /**
@@ -162,6 +162,6 @@ class ApartmentController extends Controller
 
         $apartment->delete();
 
-        return to_route('admin.apartments.index');
+        return to_route('admin.apartments.index')->with('type', 'danger')->with('msg', "L'elemento è stato rimmosso con successo.");
     }
 }
