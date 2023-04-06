@@ -12,49 +12,49 @@
         <div class="mb-3">
             <label class="form-label" for="price">Name:</label>
             <input class="form-control" type="text" name="name" id="name" required min-length="0"
-                value="{{ old('title', $apartment->name) }}">
+                value="{{ old('name', $apartment->name) }}">
         </div>
     </div>
     <div class="col-md-2">
         <div class="mb-3">
             <label class="form-label" for="price">Prezzo:</label>
             <input class="form-control" type="number" name="price" id="price" required min="0"
-                value="{{ old('title', $apartment->price) }}">
+                value="{{ old('price', $apartment->price) }}">
         </div>
     </div>
     <div class="col-md-2">
         <div class="mb-3">
             <label class="form-label" for="rooms">Stanze:</label>
             <input class="form-control" type="number" name="rooms" id="rooms" min="1"
-                value="{{ old('title', $apartment->rooms) }}" required>
+                value="{{ old('rooms', $apartment->rooms) }}" required>
         </div>
     </div>
     <div class="col-md-2">
         <div class="mb-3">
             <label class="form-label" for="beds">Letti:</label>
             <input class="form-control" type="number" name="beds" id="beds" min="1"
-                value="{{ old('title', $apartment->beds) }}" required>
+                value="{{ old('beds', $apartment->beds) }}" required>
         </div>
     </div>
     <div class="col-md-2">
         <div class="mb-3">
             <label class="form-label" for="square_meters">Metratura:</label>
             <input class="form-control" type="number" name="square_meters" id="square_meters" min="1"
-                value="{{ old('title', $apartment->square_meters) }}">
+                value="{{ old('square_meters', $apartment->square_meters) }}">
         </div>
     </div>
     <div class="col-md-2">
         <div class="mb-3">
             <label class="form-label" for="bathrooms">Bagni:</label>
             <input class="form-control" type="number" name="bathrooms" id="bathrooms" min="0"
-                value="{{ old('title', $apartment->bathrooms) }}" required>
+                value="{{ old('bathrooms', $apartment->bathrooms) }}" required>
         </div>
     </div>
     <div class="col-md-12 address-container">
         <div class="mb-3">
             <label class="form-label" for="address">Indirizzo:</label>
             <input class="form-control" class="" type="text" name="address" id="address" required
-                value="{{ old('title', $apartment->address) }}" onkeyup="fetchApiSearch()">
+                value="{{ old('address', $apartment->address) }}" onkeyup="fetchApiSearch()">
             <div class="address-error text-danger d-none">Il campo è errato</div>
             <ul id="suggestions" class="d-none border rounded-2 list-unstyled">
 
@@ -88,7 +88,7 @@
     {{-- Descrizione --}}
     <div class="col-md-12 mb-3">
         <label class="form-label" for="description">Descrizione:</label>
-        <textarea class="form-control" name="description" id="description" cols="100" rows="5">{{ old('title', $apartment->description) }}</textarea>
+        <textarea class="form-control" name="description" id="description" cols="100" rows="5">{{ old('description', $apartment->description) }}</textarea>
     </div>
     {{-- Servizi --}}
     <div class="col-md-12">
