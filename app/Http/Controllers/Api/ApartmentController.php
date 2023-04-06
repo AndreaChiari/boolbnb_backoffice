@@ -32,7 +32,7 @@ class ApartmentController extends Controller
 
         $apartments = Apartment::with('services', 'sponsorships', 'apartmentPics')->get();
 
-        //Get apartments in range http://127.0.0.1:8000/api/apartments?lat={lat}.1713&lon={lon}.0368&range={range}
+        //Get apartments in range http://127.0.0.1:8000/api/apartments?lat={lat}&lon={lon}&range={range}
 
         if (isset($request->lat) && isset($request->lon) && isset($request->range)) {
             $apartments = Apartment::with('services', 'sponsorships', 'apartmentPics')->get()->toArray();
