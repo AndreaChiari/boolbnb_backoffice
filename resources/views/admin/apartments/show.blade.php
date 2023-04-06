@@ -4,12 +4,12 @@
 
 @section('content')
     <div class="container mt-5">
-        <div class="card">
-            <div class="row g-0">
+        <div class="card container-detail-main">
+            <div class="row g-0 container-main">
                 <div class="col-md-4">
                     <figure class="text-center h-100">
-                        <img src="{{ $apartment->getThumbUrl() }}" alt="{{ $apartment->address }}" class="img-fluid h-100"
-                            style="object-fit: cover;">
+                        <img src="{{ $apartment->getThumbUrl() }}" alt="{{ $apartment->address }}"
+                            class="img-fluid h-100 detail-main-img" style="object-fit: cover;">
                     </figure>
                 </div>
                 <div class="col-md-8">
