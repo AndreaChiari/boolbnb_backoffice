@@ -26,9 +26,8 @@
     <div id="app">
 
         @include('includes.navbar')
+        @include('includes.alert')
         @include('includes.validation')
-
-
 
         <main>
             @include('includes.confirmation_delete')
