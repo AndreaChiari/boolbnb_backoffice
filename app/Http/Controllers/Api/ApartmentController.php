@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Apartment;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class ApartmentController extends Controller
@@ -27,14 +28,39 @@ class ApartmentController extends Controller
             }
         }
 
-        $apartments = Apartment::with('services', 'sponsorships', 'apartmentPics')->get()->toArray();
-        $lat1 = $request->lat;
-        $lon1 = $request->lon;
-        $range = $request->range;
+        //Get all apartments http://127.0.0.1:8000/api/apartments
 
-        $apartments = array_filter($apartments, function ($apartment) use ($lat1, $lon1, $range) {
-            return distance($lat1, $lon1, $apartment['latitude'], $apartment['longitude']) <= $range;
-        });
+        $apartments = Apartment::with('services', 'sponsorships', 'apartmentPics')->get();
+
+        //Get apartments in range http://127.0.0.1:8000/api/apartments?lat={lat}.1713&lon={lon}.0368&range={range}
+
+        if (isset($request->lat) && isset($request->lon) && isset($request->range)) {
+            $apartments = Apartment::with('services', 'sponsorships', 'apartmentPics')->get()->toArray();
+            $lat1 = $request->lat;
+            $lon1 = $request->lon;
+            $range = $request->range;
+
+            $apartments = array_filter($apartments, function ($apartment) use ($lat1, $lon1, $range) {
+                return distance($lat1, $lon1, $apartment['latitude'], $apartment['longitude']) <= $range;
+            });
+        }
+
+        //Get sponsored apartments http://127.0.0.1:8000/api/apartments?sponsored=1
+
+        if (isset($request->sponsored)) {
+            $apartments = Apartment::with('services', 'sponsorships', 'apartmentPics')->get()->toArray();
+            $apartments = array_filter($apartments, function ($apartment) {
+                $now = Carbon::now();
+                $sponsored = false;
+                foreach ($apartment['sponsorships'] as $sponsorship) {
+                    if ($now->floatDiffInDays($sponsorship['pivot']['end_date'], false) > 0) {
+                        $sponsored = true;
+                        break;
+                    };
+                }
+                return $sponsored;
+            });
+        }
 
 
         return response()->json($apartments);
@@ -53,6 +79,9 @@ class ApartmentController extends Controller
      */
     public function show(string $id)
     {
+
+        //Get single apartment http://127.0.0.1:8000/api/apartments/1
+
         $apartment = Apartment::with('services', 'sponsorships', 'apartmentPics')->where('id', $id)->get();
 
         return response()->json($apartment);
