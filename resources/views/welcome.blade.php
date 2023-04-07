@@ -12,9 +12,15 @@
 
     <div class="content">
         <div class="container">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora temporibus, dicta nemo aliquam totam nisi
-                deserunt soluta quas voluptatum ab beatae praesentium necessitatibus minus, facilis illum rerum officiis
-                accusamus dolores!</p>
+            <details class="fw-lighter">
+                <summary>Info</summary>
+                Benvenuti nel nostro back office, il luogo dove potete gestire al meglio le vostre inserzioni di
+                appartamenti! Qui potete aggiungere nuovi appartamenti e inserire tutte le informazioni necessarie per farli
+                conoscere ai nostri visitatori. Potete inserire dettagliate descrizioni dell'appartamento, comprensive di
+                tutte le caratteristiche, i servizi disponibili e la posizione geografica. Potete anche caricare foto
+                dell'appartamento e della zona circostante, per mostrare ai vostri potenziali ospiti tutti i dettagli della
+                vostra proprietà.
+            </details>
         </div>
     </div>
 @endsection
