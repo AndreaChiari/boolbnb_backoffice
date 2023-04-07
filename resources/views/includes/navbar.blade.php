@@ -17,7 +17,7 @@
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
                     <a class="nav-link @if (Route::is('home')) active @endif"
-                        href="{{ url('/') }}">{{ __('Home') }}</a>
+                        href="{{ url('http://localhost:5174/') }}">{{ __('Home') }}</a>
                 </li>
 
                 <li class="nav-item">
