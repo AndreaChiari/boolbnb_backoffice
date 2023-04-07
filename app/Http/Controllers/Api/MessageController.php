@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\Message;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class MessageController extends Controller
 {
@@ -21,6 +22,29 @@ class MessageController extends Controller
      */
     public function store(Request $request)
     {
+        $validator = Validator::make($request->all(), [
+            'apartment_id' => 'required|exists:apartments,id',
+            'email' => 'email|required',
+            'object' => 'string|required',
+            'content' => 'string|required'
+        ], [
+            'apartment_id.required' => 'L\'identificativo dell\'appartamento è obbligatorio',
+            'apartment_id.exists' => 'L\'identificativo dell\'appartamento non esiste',
+            'email.email' => 'L\'indirizzo email deve avere un formato valido',
+            'email.required' => 'L\'email è obbligatoria',
+            'object.string' => 'L\'oggetto deve essere un testo',
+            'object.required' => 'L\'oggetto è obbligatorio',
+            'content.string' => 'Il messaggio deve essere un testo',
+            'content.required' => 'Il messaggio è obbligatoria',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'message' => 'Errore di validazione',
+                'errors' => $validator->errors()
+            ], 422);
+        }
+
         $data = $request->all();
 
         $new_message = new Message();
