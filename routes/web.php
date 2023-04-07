@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\ApartmentController;
 use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SponsorshipController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,6 +21,7 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -27,6 +29,7 @@ Route::get('/dashboard', function () {
 Route::middleware(['auth', 'verified'])->name('admin.')->prefix('admin')->group(function () {
     //Rotte degli apartments
     Route::resource('apartments', ApartmentController::class);
+    Route::resource('sponsorships', SponsorshipController::class);
     //Rotte dei messages
     // Route::resource('messages', MessageController::class);
     Route::get('/messages/index/{apartment}', [MessageController::class, 'index'])->name('messages.index');

@@ -1,0 +1,96 @@
+.general {
+    height: calc(100vh - 150px);
+}
+
+/* Sponsor Card Styles */
+.sponsor-card {
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.sponsor-header {
+    background-color: #fff;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.sponsor-header h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #555;
+}
+
+.sponsor-body {
+    padding: 20px;
+}
+
+.sponsor-body h5 {
+    margin: 0;
+    font-size: 18px;
+    color: #555;
+}
+
+.sponsor-body p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #777;
+}
+
+.sponsor-footer {
+    background-color: #fff;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.sponsor-footer a.btn-primary {
+    background-color: #6CB999;
+    border-color: #6CB999;
+}
+
+/* Sponsor Card Colors */
+.sponsor-green {
+    background-color: #D7ECD9;
+}
+
+.sponsor-purple {
+    background-color: #DDD7EC;
+}
+
+.sponsor-gold {
+    background-color: #ECD7D7;
+}
+
+/* Sponsor Card Hover Effects */
+.sponsor-card:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.sponsor-card:hover .sponsor-header {
+    background-color: #6CB999;
+    color: #fff;
+}
+
+.sponsor-card:hover .sponsor-footer a.btn-primary {
+    background-color: #fff;
+    border-color: #6CB999;
+    color: #6CB999;
+}
+
+.sponsor-card:hover .sponsor-body h5 {
+    color: #6CB999;
+}
+
+.sponsor-card:hover .sponsor-body p {
+    color: #aaa;
+}
+
+/* Sponsor Card Responsive Styles */
+@media (max-width: 767px) {
+    .sponsor-card {
+        margin-bottom: 20px;
+    }
+}
