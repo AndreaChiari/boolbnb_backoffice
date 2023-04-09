@@ -1,0 +1,61 @@
+.navbar {
+    background-color: rgb(35, 36, 40);
+    color: white;
+    height: 80px;
+
+    img {
+        max-height: 80px;
+    }
+
+    .dropdown-menu {
+        background-color: rgb(35, 36, 40);
+
+        .dropdown-item:hover {
+            color: white;
+            filter: brightness(1);
+            background-color: rgb(255, 93, 88);
+        }
+
+        .dropdown-item:focus {
+            color: white;
+            filter: brightness(1);
+            background-color: rgb(255, 93, 88);
+        }
+    }
+
+    a {
+        color: white;
+        filter: brightness(0.8);
+        transition: all 0.5s;
+
+        &.nav-link.active {
+            color: white;
+            filter: brightness(1);
+        }
+
+        &.nav-link:hover {
+            color: white;
+            filter: brightness(1);
+        }
+
+        &.nav-link:focus {
+            color: white;
+            filter: brightness(1);
+        }
+
+        &.nav-link-dropdown-toggle.show {
+            color: white;
+        }
+
+        &.logo {
+            color: rgb(255, 93, 88);
+            font-weight: bold;
+            font-size: 24px;
+
+            &:hover {
+                color: rgb(255, 93, 88);
+                filter: brightness(1);
+            }
+        }
+    }
+}

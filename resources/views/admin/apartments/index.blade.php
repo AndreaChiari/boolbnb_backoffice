@@ -6,55 +6,62 @@
     <section id="apartments">
         <div class="container py-5 mt-5">
             <div class="d-flex justify-content-end my-4">
-                <a href="{{ route('admin.apartments.create') }}" class="btn btn-success">
+                <a href="{{ route('admin.apartments.create') }}" class="btn-backoffice px-2 bordered">
                     <i class="fas fa-plus"></i>
                 </a>
             </div>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
                 @foreach ($apartments as $apartment)
                     <div class="col mb-4">
-                        <a href="{{ route('admin.apartments.show', $apartment['id']) }}"
-                            style="text-decoration: none; color:black">
-                            <div class="card h-100 shadow-sm">
+                        <a href="{{ route('admin.apartments.show', $apartment['id']) }}">
+                            <div class="card h-100">
                                 <img src="{{ $apartment->getThumbUrl() }}" class="card-img-top"
                                     alt="{{ $apartment->address }}">
                                 <div class="card-body d-flex flex-column justify-content-between">
                                     <div>
                                         <h2 class="card-title text-center mb-4">{{ $apartment->name }}</h2>
-                                        <div class="row text-center justify-content-around">
+                                        <div class="details row text-center justify-content-around mb-3">
                                             <div class="col">
                                                 <div class="mb-2">
-                                                    <i class="fa-solid fa-person-shelter fa-beat"></i>
+                                                    <i class="fa-solid fa-person-shelter"></i>
                                                 </div>
-                                                <div>{{ $apartment->rooms }}</div>
+                                                <div class="number">{{ $apartment->rooms }}</div>
                                             </div>
                                             <div class="col">
                                                 <div class="mb-2">
-                                                    <i class="fa-solid fa-bed fa-beat-fade"></i>
+                                                    <i class="fa-solid fa-bed"></i>
                                                 </div>
-                                                <div>{{ $apartment->beds }}</div>
+                                                <div class="number">{{ $apartment->beds }}</div>
                                             </div>
                                             <div class="col">
                                                 <div class="mb-2">
-                                                    <i class="fa-solid fa-toilet fa-beat"></i>
+                                                    <i class="fa-solid fa-restroom"></i>
                                                 </div>
-                                                <div>{{ $apartment->bathrooms }}</div>
+                                                <div class="number">{{ $apartment->bathrooms }}</div>
                                             </div>
                                         </div>
                                     </div>
                                     <div>
-                                        <p class="card-text text-center fw-bold fs-4">{{ $apartment->price }} € / notte</p>
+                                        <p class="price card-text text-center fw-bold mb-3">{{ $apartment->price }} € /
+                                            notte</p>
                                         {{-- Bottoni --}}
-                                        <div class="d-flex justify-content-center align-items-center mt-2 mb-2 gap-3">
+                                        <div
+                                            class="buttons d-flex justify-content-center align-items-center mt-3 mb-2 gap-2">
                                             <a href="{{ route('admin.apartments.edit', $apartment->id) }}"
-                                                class="btn btn-warning"><i class="fa-solid fa-arrow-up "></i></a>
+                                                class="btn-backoffice py-2 px-3"><i
+                                                    class="fa-regular fa-pen-to-square"></i></a>
                                             <form action="{{ route('admin.apartments.destroy', $apartment->id) }}"
                                                 method="POST" class="deleteForm">
                                                 @method('DELETE')
                                                 @csrf
-                                                <button class="btn btn-danger flex-fill" type="submit"><i
-                                                        class="fa-solid fa-trash"></i></button>
+                                                <button class="btn-backoffice py-2 px-3 flex-fill" type="submit"><i
+                                                        class="fa-regular fa-trash-can"></i></button>
                                             </form>
+                                            <a href="{{ route('admin.messages.index', $apartment->id) }}"
+                                                class="btn-backoffice py-2 px-3"><i class="fa-regular fa-envelope"></i></a>
+                                            <a href="" class="btn-backoffice py-2 px-3"><i
+                                                    class="fa-solid fa-chart-line"></i></a>
+
                                         </div>
                                     </div>
                                 </div>

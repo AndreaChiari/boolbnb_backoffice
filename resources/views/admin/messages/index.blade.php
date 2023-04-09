@@ -23,7 +23,7 @@
         @endif
         @forelse ($messages as $message)
             <div
-                class="message-row row border flex-column flex-xl-row align-items-center p-3 p-lg-0 @if ($message->is_read) is-read @endif">
+                class="message-row row border flex-column flex-xl-row align-items-center p-3 p-lg-0 bg-light @if ($message->is_read) is-read @endif">
                 <div class="col-1 d-flex align-items-center justify-content-center">
                     @if ($message->is_read)
                         <i class="fa-solid fa-envelope-open fa-2x"></i>

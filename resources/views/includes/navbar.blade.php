@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+<nav class="navbar navbar-expand-md d-flex align-items-center shadow-sm">
     <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
             <div class="boolbnb_laravel">
@@ -14,10 +14,10 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item">
-                    <a class="nav-link @if (Route::is('home')) active @endif"
-                        href="{{ url('http://localhost:5174/') }}">{{ __('Home') }}</a>
+            <ul class="navbar-nav d-flex align-items-center me-auto">
+                <li class="nav-item me-2">
+                    <a class="nav-link logo d-flex align-items-center" href="{{ url('http://localhost:5174/') }}"><img
+                            src="/boolbnb_2.png" alt="logo" class="logo img-fluid">BOOLBNB</a>
                 </li>
 
                 <li class="nav-item">

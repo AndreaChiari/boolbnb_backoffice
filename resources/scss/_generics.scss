@@ -1,3 +1,7 @@
+body {
+    background-color: rgb(49, 51, 56);
+}
+
 #thumb-preview {
     border-radius: 5%;
     height: 100px;
@@ -19,8 +23,8 @@
     }
 }
 
-.is-read {
-    background-color: lightgray;
+.bg-light.is-read {
+    background-color: lightgray !important;
 }
 
 .btn-messages {
@@ -84,7 +88,7 @@
         }
 
         &:hover {
-            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 10px rgb(255, 93, 88);
             transform: translateY(-5px);
         }
 

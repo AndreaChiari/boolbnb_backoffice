@@ -1,0 +1,51 @@
+#apartments {
+    .card {
+        background-color: transparent;
+        border-color: rgb(255, 222, 223);
+        a {
+            text-decoration: none;
+
+            .card-title {
+                color: rgb(255, 222, 223);
+            }
+
+            .price {
+                color: rgb(255, 93, 88);
+                font-size: 22px;
+            }
+
+            .details {
+                font-size: 20px;
+
+                i {
+                    color: rgb(255, 93, 88);
+                }
+
+                .number {
+                    color: rgb(255, 222, 223);
+                }
+            }
+        }
+    }
+    .btn-backoffice {
+        font-size: 28px;
+        border: none;
+        background-color: transparent;
+        color: rgb(255, 222, 223);
+        transition: all 0.5s;
+
+        &.bordered {
+            border: 1px solid rgb(255, 222, 223);
+            border-radius: 5px;
+
+            &:hover {
+                color: rgb(255, 222, 223);
+                background-color: rgb(255, 93, 88);
+            }
+        }
+
+        &:hover {
+            color: rgb(255, 93, 88);
+        }
+    }
+}
