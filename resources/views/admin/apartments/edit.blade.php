@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'Edit apartment')
+@section('title', 'Modifica Appartamento')
 
 @section('content')
-    <header>
-        <h1 class="my-5 text-white">Edit Apartment:</h1>
+    <header class="container">
+        <h1 class="form-title my-5">Modifica Appartamento:</h1>
     </header>
 
     {{-- FORM --}}

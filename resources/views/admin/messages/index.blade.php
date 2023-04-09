@@ -6,7 +6,7 @@
 
     <div class="container py-5">
         @if ($messages_count)
-            <h2 class="text-center mb-5">Hai {{ $messages_count }} @if ($messages_count === 1)
+            <h2 class="messages-title text-center mb-5">Hai {{ $messages_count }} @if ($messages_count === 1)
                     messaggio
                 @else
                     messaggi
@@ -23,12 +23,12 @@
         @endif
         @forelse ($messages as $message)
             <div
-                class="message-row row border flex-column flex-xl-row align-items-center p-3 p-lg-0 bg-light @if ($message->is_read) is-read @endif">
+                class="message-row row flex-column flex-xl-row align-items-center p-3 p-lg-0 @if ($message->is_read) is-read @endif">
                 <div class="col-1 d-flex align-items-center justify-content-center">
                     @if ($message->is_read)
                         <i class="fa-solid fa-envelope-open fa-2x"></i>
                     @else
-                        <i class="fa-solid fa-envelope fa-2x"></i>
+                        <i class="fa-solid fa-envelope unread fa-2x"></i>
                     @endif
                 </div>
                 <div class="col-xl-5 d-flex align-items-center justify-content-center py-2 px-0 text-center">
@@ -41,12 +41,13 @@
                     <p class="mb-0"><b>Il:</b> {{ $message->getReceivedDate() }}</p>
                 </div>
                 <div class="col-xl-2 p-2 d-flex justify-content-center align-items-center">
-                    <a href="{{ route('admin.messages.show', $message->id) }}" class="btn btn-primary me-2"><i
+                    <a href="{{ route('admin.messages.show', $message->id) }}" class="btn-messages-index me-2"><i
                             class="fa-solid fa-eye"></i></a>
                     <form action="{{ route('admin.messages.destroy', $message->id) }}" method="POST" class="deleteForm">
                         @method('DELETE')
                         @csrf
-                        <button class="btn btn-danger flex-fill" type="submit"><i class="fa-solid fa-trash"></i></button>
+                        <button class="btn-messages-index flex-fill" type="submit"><i
+                                class="fa-solid fa-trash"></i></button>
                     </form>
                 </div>
             </div>

@@ -6,12 +6,19 @@
     <section id="apartments">
         <div class="container py-5 mt-5">
             <div class="d-flex justify-content-end my-4">
-                <a href="{{ route('admin.apartments.create') }}" class="btn-backoffice px-2 bordered">
+                <a href="{{ route('admin.apartments.create') }}"
+                    class="btn-backoffice p-2 bordered d-flex align-items-center justify-content-center">
                     <i class="fas fa-plus"></i>
                 </a>
             </div>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
                 @foreach ($apartments as $apartment)
+                    @php
+                        $new_messages = array_filter($apartment->messages->toArray(), function ($message) {
+                            return !$message['is_read'];
+                        });
+                        $new_messages_count = count($new_messages) > 99 ? '99+' : count($new_messages);
+                    @endphp
                     <div class="col mb-4">
                         <a href="{{ route('admin.apartments.show', $apartment['id']) }}">
                             <div class="card h-100">
@@ -58,7 +65,13 @@
                                                         class="fa-regular fa-trash-can"></i></button>
                                             </form>
                                             <a href="{{ route('admin.messages.index', $apartment->id) }}"
-                                                class="btn-backoffice py-2 px-3"><i class="fa-regular fa-envelope"></i></a>
+                                                class="btn-backoffice py-2 px-3"><i class="fa-regular fa-envelope"></i>
+                                                @if ($new_messages_count)
+                                                    <div class="messages-notification text-center">
+                                                        {{ $new_messages_count }}
+                                                    </div>
+                                                @endif
+                                            </a>
                                             <a href="" class="btn-backoffice py-2 px-3"><i
                                                     class="fa-solid fa-chart-line"></i></a>
 

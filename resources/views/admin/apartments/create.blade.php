@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'Aggiungi progetto')
+@section('title', 'Aggiungi appartamento')
 
 @section('content')
-    <header>
-        <h1 class="my-5 text-white">Aggiungi Appartamento:</h1>
+    <header class="container">
+        <h1 class="form-title my-5">Aggiungi Appartamento:</h1>
     </header>
 
     {{-- FORM --}}

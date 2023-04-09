@@ -1,0 +1,24 @@
+.form-title {
+    color: rgb(255, 222, 223);
+}
+
+#form {
+    color: rgb(255, 222, 223);
+
+    input,
+    textarea {
+        border: 2px solid rgb(255, 93, 88);
+    }
+
+    input[type="checkbox"] {
+        border: 1px solid rgb(255, 222, 223);
+
+        &:checked {
+            background-color: rgb(255, 93, 88);
+        }
+    }
+
+    .services.border {
+        border-color: rgb(255, 222, 223) !important;
+    }
+}

@@ -1,5 +1,6 @@
 body {
     background-color: rgb(49, 51, 56);
+    font-family: "Spectral", serif;
 }
 
 #thumb-preview {
@@ -21,34 +22,6 @@ body {
     .detail-main-img {
         border-radius: 15px 0px 0px 15px;
     }
-}
-
-.bg-light.is-read {
-    background-color: lightgray !important;
-}
-
-.btn-messages {
-    position: relative;
-
-    .messages-notification {
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translate(-30%, -30%);
-        width: 20px;
-        height: 20px;
-        background-color: red;
-        color: white;
-        font-size: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-    }
-}
-
-.message-row {
-    font-size: 14px;
 }
 
 .address-container {

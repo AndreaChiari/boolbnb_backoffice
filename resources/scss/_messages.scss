@@ -1,0 +1,51 @@
+.messages-title {
+    color: rgb(255, 222, 223);
+}
+
+.message-row {
+    border: 1px solid rgb(49, 51, 56);
+    font-size: 14px;
+    background-color: rgb(255, 222, 223);
+    color: rgb(49, 51, 56);
+}
+
+.message-row.is-read {
+    background-color: rgb(255, 247, 247);
+}
+
+.btn-messages {
+    position: relative;
+
+    .messages-notification {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-30%, -30%);
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        color: white;
+        font-size: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+}
+
+.btn-messages-index {
+    color: rgb(49, 51, 56);
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    font-size: 24px;
+    transition: all 0.5s;
+
+    &:hover {
+        color: rgb(255, 93, 88);
+    }
+}
+
+.unread {
+    color: rgb(255, 93, 88);
+}
