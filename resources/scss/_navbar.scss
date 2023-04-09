@@ -24,22 +24,22 @@
     }
 
     a {
-        color: white;
+        color: rgb(255, 247, 247);
         filter: brightness(0.8);
         transition: all 0.5s;
 
         &.nav-link.active {
-            color: white;
+            color: rgb(255, 93, 88);
             filter: brightness(1);
         }
 
         &.nav-link:hover {
-            color: white;
+            color: rgb(255, 93, 88);
             filter: brightness(1);
         }
 
         &.nav-link:focus {
-            color: white;
+            color: rgb(255, 93, 88);
             filter: brightness(1);
         }
 

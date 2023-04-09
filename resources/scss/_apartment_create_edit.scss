@@ -7,18 +7,20 @@
 
     input,
     textarea {
-        border: 2px solid rgb(255, 93, 88);
+        // border: 2px solid rgb(255, 93, 88);
+        box-shadow: 0 0 8px rgb(255, 93, 88);
     }
 
     input[type="checkbox"] {
         border: 1px solid rgb(255, 222, 223);
+        box-shadow: none;
 
         &:checked {
             background-color: rgb(255, 93, 88);
         }
     }
 
-    .services.border {
-        border-color: rgb(255, 222, 223) !important;
+    .services {
+        box-shadow: 0 0 5px rgb(255, 222, 223);
     }
 }

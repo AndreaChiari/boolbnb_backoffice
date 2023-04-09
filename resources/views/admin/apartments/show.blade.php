@@ -3,7 +3,7 @@
 @section('title', $apartment->address)
 
 @section('content')
-    <div class="container mt-5">
+    <div id="apartment-show" class="container mt-5">
         <div class="card container-detail-main">
             <div class="row g-0 container-main">
                 <div class="col-md-4">
@@ -15,14 +15,15 @@
                 <div class="col-md-8">
                     <div class="card-body">
                         <h1 class="card-title mb-4">{{ $apartment->name }}</h1>
-                        <p class="card-text">{{ $apartment->address }}</p>
-                        <p class="card-text">{{ $apartment->description }}</p>
-                        <p class="card-text fw-bold fs-4">{{ $apartment->price }} € / notte</p>
-                        <div class="row justify-content-end align-items-center">
+                        <p class="address card-text">{{ $apartment->address }}</p>
+                        <p class="description card-text">{{ $apartment->description }}</p>
+                        <p class="card-text price fw-bold fs-4">{{ $apartment->price }} € / notte</p>
+                        <div class="services row justify-content-end">
                             @if ($apartment->services)
                                 @foreach ($apartment->services as $service)
                                     <div class="col-4 col-sm-3 col-md-2 text-center">
                                         <i class="{{ $service->icon }} my-3 fa-2x"></i>
+                                        <p>{{ $service->name }}</p>
                                     </div>
                                 @endforeach
                             @else
@@ -36,22 +37,21 @@
     </div>
 
     {{-- Bottoni --}}
-    <div class="container buttons d-flex my-5 justify-content-end">
-        <div class="btn-messages">
-            <a class="btn btn-primary me-2" href="{{ route('admin.messages.index', $apartment->id) }}">
-                <i class="fa-solid fa-envelope"></i>
-            </a>
+    <div class="container buttons d-flex my-5 justify-content-end align-items-center">
+        <a class="btn-backoffice py-2 px-3 me-2" href="{{ route('admin.messages.index', $apartment->id) }}">
+            <i class="fa-solid fa-envelope"></i>
             @if ($new_messages)
-                <p class="messages-notification p-2"><b>{{ $new_messages }}</b></p>
+                <p class="messages-notification text-center">{{ $new_messages }}</p>
             @endif
-        </div>
-        <a href="{{ route('admin.apartments.edit', $apartment->id) }}" class="btn btn-warning me-2"><i
-                class="fa-solid fa-arrow-up"></i></a>
+        </a>
+        <a href="{{ route('admin.apartments.edit', $apartment->id) }}" class="btn-backoffice py-2 px-3 me-2"><i
+                class="fa-regular fa-pen-to-square"></i></a>
         <form class="deleteForm" action="{{ route('admin.apartments.destroy', $apartment->id) }}" method="POST">
             @method('DELETE')
             @csrf
-            <button class="btn btn-danger me-2" type="submit"><i class="fa-solid fa-trash"></i></button>
+            <button class="btn-backoffice py-2 px-3 me-5" type="submit"><i class="fa-regular fa-trash-can"></i></button>
         </form>
-        <a class="btn btn-secondary" href="{{ route('admin.apartments.index') }}">Indietro</a>
+        <a class="btn-backoffice bordered p-2 d-flex align-items-center justify-content-center"
+            href="{{ route('admin.apartments.index') }}"><i class="fa-solid fa-arrow-left"></i></a>
     </div>
 @endsection

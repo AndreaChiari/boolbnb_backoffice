@@ -94,7 +94,7 @@
     {{-- Servizi --}}
     <div class="col-md-12">
         <label class="form-label">Servizi:</label>
-        <div class="services border rounded-5 p-3 mb-3">
+        <div class="services rounded-5 p-3 mb-3">
             <div class="row">
                 @foreach ($services as $service)
                     <div class="col-6 mb-2">
@@ -115,13 +115,14 @@
 </div>
 
 
-{{-- Bottone --}}
+{{-- Bottoni --}}
 <footer class=" d-flex justify-content-between mb-3">
-    <a href="{{ route('admin.apartments.index') }}" class="btn btn-secondary">
+    <a href="{{ route('admin.apartments.index') }}"
+        class="btn-backoffice bordered p-2 d-flex align-items-center justify-content-center">
         <i class="fa-solid fa-arrow-left"></i>
     </a>
-    <button type="submit" class="btn btn-success">
-        <i class="fa-solid fa-floppy-disk"></i>
+    <button type="submit" class="btn-backoffice bordered p-2 d-flex align-items-center justify-content-center">
+        <i class="fa-regular fa-floppy-disk"></i>
     </button>
 </footer>
 </form>

@@ -1,0 +1,31 @@
+#apartment-show {
+    .card {
+        background-color: transparent;
+        border: none;
+        box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.5);
+        text-shadow: 0px 2px rgba($color: #000000, $alpha: 0.5);
+    }
+
+    .card-title {
+        color: rgb(255, 222, 223);
+    }
+
+    .address,
+    .price {
+        color: rgb(255, 93, 88);
+    }
+
+    .description {
+        color: rgb(255, 247, 247);
+    }
+
+    .services {
+        i {
+            color: rgb(255, 93, 88);
+        }
+
+        p {
+            color: rgb(255, 222, 223);
+        }
+    }
+}
