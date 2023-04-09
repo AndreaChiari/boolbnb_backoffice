@@ -53,11 +53,14 @@
             </div>
         @empty
             <div class="row row-cols-1">
-                <div class="col d-flex align-items-center justify-content-center p-2">Non ci sono messaggi</div>
+                <div class="col d-flex align-items-center justify-content-center p-2 no-messages">Non ci sono messaggi!
+                </div>
             </div>
         @endforelse
         <div class="buttons d-flex justify-content-end mt-5">
-            <a href="{{ route('admin.apartments.show', $apartment_id) }}" class="btn btn-secondary">Indietro</a>
+            <a href="{{ route('admin.apartments.show', $apartment_id) }}"
+                class="btn-backoffice bordered p-2 d-flex align-items-center justify-content-center"><i
+                    class="fa-solid fa-arrow-left"></i></a>
         </div>
     </div>
 
