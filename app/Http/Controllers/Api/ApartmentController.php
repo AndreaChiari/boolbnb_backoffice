@@ -30,19 +30,45 @@ class ApartmentController extends Controller
 
         //Get all apartments http://127.0.0.1:8000/api/apartments
 
-        $apartments = Apartment::with('services', 'sponsorships', 'apartmentPics', 'views')->orderBy('created_at', 'DESC')->get();
+        $all_apartments = Apartment::with('services', 'sponsorships', 'apartmentPics', 'views')->orderBy('created_at', 'DESC')->get()->toArray();
+        $apartments = [];
+        foreach ($all_apartments as $apartment) {
+            $apartment['is_sponsored'] = false;
+            foreach ($apartment['sponsorships'] as $sponsorship) {
+                $now = Carbon::now();
+                if ($now->floatDiffInDays($sponsorship['pivot']['end_date'], false) > 0) {
+                    $apartment['is_sponsored'] = true;
+                    break;
+                };
+            }
+            $apartments[] = $apartment;
+        }
+        $apartments = array_values($apartments);
 
         //Get apartments in range http://127.0.0.1:8000/api/apartments?lat={lat}&lon={lon}&range={range}
 
         if (isset($request->lat) && isset($request->lon) && isset($request->range)) {
-            $apartments = Apartment::with('services', 'sponsorships', 'apartmentPics', 'views')->orderBy('created_at', 'DESC')->get()->toArray();
+            $range_apartments = Apartment::with('services', 'sponsorships', 'apartmentPics', 'views')->orderBy('created_at', 'DESC')->get()->toArray();
             $lat1 = $request->lat;
             $lon1 = $request->lon;
             $range = $request->range;
 
-            $apartments = array_filter($apartments, function ($apartment) use ($lat1, $lon1, $range) {
+            $range_apartments = array_filter($range_apartments, function ($apartment) use ($lat1, $lon1, $range) {
                 return distance($lat1, $lon1, $apartment['latitude'], $apartment['longitude']) <= $range;
             });
+
+            $apartments = [];
+            foreach ($range_apartments as $apartment) {
+                $apartment['is_sponsored'] = false;
+                foreach ($apartment['sponsorships'] as $sponsorship) {
+                    $now = Carbon::now();
+                    if ($now->floatDiffInDays($sponsorship['pivot']['end_date'], false) > 0) {
+                        $apartment['is_sponsored'] = true;
+                        break;
+                    };
+                }
+                $apartments[] = $apartment;
+            }
 
             $apartments = array_values($apartments);
         }
@@ -62,7 +88,12 @@ class ApartmentController extends Controller
                 }
                 return $sponsored;
             });
-            $apartments = array_values($apartments);
+            $sponsored_apartments = [];
+            foreach ($apartments as $apartment) {
+                $apartment['is_sponsored'] = true;
+                $sponsored_apartments[] = $apartment;
+            }
+            $apartments = array_values($sponsored_apartments);
         }
 
 
