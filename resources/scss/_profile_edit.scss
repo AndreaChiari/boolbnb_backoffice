@@ -1,0 +1,27 @@
+#profile-edit {
+    .profile-title {
+        color: $pink-2;
+    }
+
+    .card {
+        border: none;
+        box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.5) !important;
+        text-shadow: 0px 1px rgba($color: #000000, $alpha: 0.5);
+        background-color: $main-bg !important;
+        color: $pink-2;
+
+        header {
+            h2 {
+                color: $pink-3;
+            }
+        }
+
+        input {
+            box-shadow: 0 0 8px $pink-3;
+        }
+    }
+
+    .modal-content {
+        background-color: $main-bg;
+    }
+}

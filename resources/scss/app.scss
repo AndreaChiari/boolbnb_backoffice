@@ -1,4 +1,5 @@
 @import "~bootstrap/scss/bootstrap";
+@import "variables.scss";
 @import "generics.scss";
 @import "confirmation_modal.scss";
 @import "_sponsorships.scss";
@@ -8,3 +9,6 @@
 @import "messages.scss";
 @import "apartment_create_edit.scss";
 @import "apartment_show.scss";
+@import "register.scss";
+@import "login.scss";
+@import "profile_edit.scss";

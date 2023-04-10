@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Http;
@@ -59,6 +60,16 @@ class Apartment extends Model
     {
         if (substr($this->thumb, 0, 10) === 'apartments') return asset('storage/' . $this->thumb);
         return $this->thumb;
+    }
+
+    public function isSponsored()
+    {
+        $active_sponsorship = array_filter($this->sponsorships->toArray(), function ($sponsorship) {
+            $now = Carbon::now();
+            return $now->floatDiffInDays($sponsorship['pivot']['end_date'], false) > 0;
+        });
+
+        return count($active_sponsorship);
     }
 
     protected static function boot()

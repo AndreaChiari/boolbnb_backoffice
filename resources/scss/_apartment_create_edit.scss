@@ -1,26 +1,49 @@
 .form-title {
-    color: rgb(255, 222, 223);
+    color: $pink-2;
 }
 
 #form {
-    color: rgb(255, 222, 223);
+    color: $pink-2;
 
     input,
     textarea {
-        // border: 2px solid rgb(255, 93, 88);
-        box-shadow: 0 0 8px rgb(255, 93, 88);
+        box-shadow: 0 0 8px $pink-3;
     }
 
     input[type="checkbox"] {
-        border: 1px solid rgb(255, 222, 223);
+        border: 1px solid $pink-2;
         box-shadow: none;
 
         &:checked {
-            background-color: rgb(255, 93, 88);
+            background-color: $pink-3;
         }
     }
 
     .services {
-        box-shadow: 0 0 5px rgb(255, 222, 223);
+        box-shadow: 0 0 5px $pink-2;
+    }
+
+    .address-container {
+        position: relative;
+
+        #suggestions {
+            background-color: white;
+            color: black;
+            position: absolute;
+            left: 12px;
+            right: 12px;
+            z-index: 1;
+            max-height: 130px;
+            overflow-y: auto;
+
+            li {
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $pink-3;
+                    color: white;
+                }
+            }
+        }
     }
 }
