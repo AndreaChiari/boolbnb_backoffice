@@ -26,7 +26,7 @@
                                     alt="{{ $apartment->address }}">
                                 <div class="card-body d-flex flex-column justify-content-between">
                                     <div>
-                                        <h2 class="card-title text-center mb-4">{{ $apartment->name }}</h2>
+                                        <h2 class="card-title text-center">{{ $apartment->name }}</h2>
                                         <div class="details row text-center justify-content-around mb-3">
                                             <div class="col">
                                                 <div class="mb-2">
