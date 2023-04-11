@@ -24,10 +24,6 @@
                     <a class="nav-link @if (request()->routeIs('admin.apartments*')) active @endif"
                         href="{{ route('admin.apartments.index') }}">{{ __('Apartments') }}</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link @if (request()->routeIs('admin.sponsorships')) active @endif"
-                        href="{{ route('admin.sponsorships.index') }}">{{ __('Sponsorships') }}</a>
-                </li>
             </ul>
 
             <!-- Right Side Of Navbar -->

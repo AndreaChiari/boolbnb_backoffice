@@ -10,6 +10,17 @@
                     <figure class="text-center h-100">
                         <img src="{{ $apartment->getThumbUrl() }}" alt="{{ $apartment->address }}"
                             class="img-fluid h-100 detail-main-img" style="object-fit: cover;">
+                        <div class="overlay p-3">
+                            <span class="views d-flex align-items-center"><i class="fa-solid fa-eye me-2"></i>
+                                {{ count($apartment->views) }}</span>
+                            @if ($apartment->isSponsored())
+                                <div class="sponsored d-flex justify-content-evenly px-2"><span> SPONSORED
+                                    </span>
+                                    @include('includes.timer')
+                                </div>
+                            @endif
+
+                        </div>
                     </figure>
                 </div>
                 <div class="col-md-8">
@@ -59,6 +70,8 @@
                 <p class="messages-notification text-center">{{ $new_messages }}</p>
             @endif
         </a>
+        <a href="{{ route('admin.sponsorships.index') }}" class="btn-backoffice py-2 px-3"><i
+                class="fa-regular fa-circle-up"></i></a>
         <a href="{{ route('admin.apartments.edit', $apartment->id) }}" class="btn-backoffice py-2 px-3 me-2"><i
                 class="fa-regular fa-pen-to-square"></i></a>
         <form class="deleteForm" action="{{ route('admin.apartments.destroy', $apartment->id) }}" method="POST">

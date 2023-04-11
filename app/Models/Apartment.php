@@ -72,6 +72,23 @@ class Apartment extends Model
         return count($active_sponsorship);
     }
 
+    public function activeSponsorship()
+    {
+        $active_sponsorship = array_filter($this->sponsorships->toArray(), function ($sponsorship) {
+            $now = Carbon::now();
+            return $now->floatDiffInDays($sponsorship['pivot']['end_date'], false) > 0;
+        });
+
+        return $active_sponsorship;
+    }
+
+    public function getActiveSponsorshipEndDate($string = false)
+    {
+        $sponsorship_end = new Carbon($this->activeSponsorship()[0]['pivot']['end_date']);
+        if ($string) return $sponsorship_end->toDateString();
+        return $sponsorship_end;
+    }
+
     protected static function boot()
     {
         parent::boot();

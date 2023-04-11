@@ -20,10 +20,23 @@
                         $new_messages_count = count($new_messages) > 99 ? '99+' : count($new_messages);
                     @endphp
                     <div class="col mb-4">
-                        <a href="{{ route('admin.apartments.show', $apartment['id']) }}">
+                        <a href="{{ route('admin.apartments.show', $apartment->id) }}">
                             <div class="card h-100">
-                                <img src="{{ $apartment->getThumbUrl() }}" class="card-img-top"
-                                    alt="{{ $apartment->address }}">
+                                <figure>
+                                    <img src="{{ $apartment->getThumbUrl() }}" class="card-img-top"
+                                        alt="{{ $apartment->address }}">
+                                    <div class="overlay p-3">
+                                        <span class="views d-flex align-items-center"><i class="fa-solid fa-eye me-2"></i>
+                                            {{ count($apartment->views) }}</span>
+                                        @if ($apartment->isSponsored())
+                                            <div class="sponsored d-flex justify-content-evenly px-2"><span> SPONSORED
+                                                </span>
+                                                @include('includes.timer')
+                                            </div>
+                                        @endif
+
+                                    </div>
+                                </figure>
                                 <div class="card-body d-flex flex-column justify-content-between">
                                     <div>
                                         <h2 class="card-title text-center">{{ $apartment->name }}</h2>
@@ -53,26 +66,28 @@
                                             notte</p>
                                         {{-- Bottoni --}}
                                         <div
-                                            class="buttons d-flex justify-content-center align-items-center mt-3 mb-2 gap-2">
+                                            class="buttons d-flex justify-content-between align-items-center mt-3 mb-2 gap-2">
                                             <a href="{{ route('admin.apartments.edit', $apartment->id) }}"
-                                                class="btn-backoffice py-2 px-3"><i
+                                                class="btn-backoffice py-2 px-2"><i
                                                     class="fa-regular fa-pen-to-square"></i></a>
                                             <form action="{{ route('admin.apartments.destroy', $apartment->id) }}"
                                                 method="POST" class="deleteForm">
                                                 @method('DELETE')
                                                 @csrf
-                                                <button class="btn-backoffice py-2 px-3 flex-fill" type="submit"><i
+                                                <button class="btn-backoffice py-2 px-2 flex-fill" type="submit"><i
                                                         class="fa-regular fa-trash-can"></i></button>
                                             </form>
                                             <a href="{{ route('admin.messages.index', $apartment->id) }}"
-                                                class="btn-backoffice py-2 px-3"><i class="fa-regular fa-envelope"></i>
+                                                class="btn-backoffice py-2 px-2"><i class="fa-regular fa-envelope"></i>
                                                 @if ($new_messages_count)
-                                                    <div class="messages-notification text-center">
+                                                    <div class="messages-notification small text-center">
                                                         {{ $new_messages_count }}
                                                     </div>
                                                 @endif
                                             </a>
-                                            <a href="" class="btn-backoffice py-2 px-3"><i
+                                            <a href="{{ route('admin.sponsorships.index') }}"
+                                                class="btn-backoffice py-2 px-2"><i class="fa-regular fa-circle-up"></i></a>
+                                            <a href="" class="btn-backoffice py-2 px-2"><i
                                                     class="fa-solid fa-chart-line"></i></a>
 
                                         </div>
