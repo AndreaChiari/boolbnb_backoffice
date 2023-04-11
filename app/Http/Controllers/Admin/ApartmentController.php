@@ -170,4 +170,8 @@ class ApartmentController extends Controller
 
         return to_route('admin.apartments.index')->with('type', 'danger')->with('msg', "L'appartamento $apartment->name è stato rimmosso con successo.");
     }
+
+    public function toggleVisibility(Apartment $apartment)
+    {
+    }
 }
