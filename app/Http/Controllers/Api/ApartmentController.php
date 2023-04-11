@@ -30,7 +30,7 @@ class ApartmentController extends Controller
 
         //Get all apartments http://127.0.0.1:8000/api/apartments
 
-        $all_apartments = Apartment::with('services', 'sponsorships', 'apartmentPics', 'views')->orderBy('created_at', 'DESC')->get()->toArray();
+        $all_apartments = Apartment::with('services', 'sponsorships', 'apartmentPics', 'views')->where('visibility', 1)->orderBy('created_at', 'DESC')->get()->toArray();
         $apartments = [];
         foreach ($all_apartments as $apartment) {
             $apartment['is_sponsored'] = false;
@@ -48,7 +48,7 @@ class ApartmentController extends Controller
         //Get apartments in range http://127.0.0.1:8000/api/apartments?lat={lat}&lon={lon}&range={range}
 
         if (isset($request->lat) && isset($request->lon) && isset($request->range)) {
-            $range_apartments = Apartment::with('services', 'sponsorships', 'apartmentPics', 'views')->orderBy('created_at', 'DESC')->get()->toArray();
+            $range_apartments = Apartment::with('services', 'sponsorships', 'apartmentPics', 'views')->where('visibility', 1)->orderBy('created_at', 'DESC')->get()->toArray();
             $lat1 = $request->lat;
             $lon1 = $request->lon;
             $range = $request->range;
@@ -76,7 +76,7 @@ class ApartmentController extends Controller
         //Get sponsored apartments http://127.0.0.1:8000/api/apartments?sponsored=1
 
         if (isset($request->sponsored)) {
-            $apartments = Apartment::with('services', 'sponsorships', 'apartmentPics', 'views')->orderBy('created_at', 'DESC')->get()->toArray();
+            $apartments = Apartment::with('services', 'sponsorships', 'apartmentPics', 'views')->where('visibility', 1)->orderBy('created_at', 'DESC')->get()->toArray();
             $apartments = array_filter($apartments, function ($apartment) {
                 $now = Carbon::now();
                 $sponsored = false;
@@ -116,7 +116,11 @@ class ApartmentController extends Controller
 
         //Get single apartment http://127.0.0.1:8000/api/apartments/1
 
-        $apartment = Apartment::with('services', 'sponsorships', 'apartmentPics', 'views')->where('id', $id)->get();
+        $apartment = Apartment::with('services', 'sponsorships', 'apartmentPics', 'views')->where('id', $id)->where('visibility', 1)->get();
+
+        if (empty($apartment->toArray())) {
+            return response(['error' => true, 'error-msg' => 'Not found'], 404);
+        }
 
         return response()->json($apartment);
     }
