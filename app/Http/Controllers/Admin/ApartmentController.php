@@ -173,5 +173,9 @@ class ApartmentController extends Controller
 
     public function toggleVisibility(Apartment $apartment)
     {
+        $apartment->visibility = !$apartment->visibility;
+        $apartment->save();
+
+        return redirect()->back();
     }
 }
