@@ -35,6 +35,7 @@ class ApartmentSeeder extends Seeder
             $new_apartment->address = $apartment['address'];
             $new_apartment->thumb = $apartment['thumb'];
             $new_apartment->description = $apartment['description'];
+            $new_apartment->visibility = true;
 
             $new_apartment->save();
         }
