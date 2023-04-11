@@ -76,6 +76,19 @@
                                                     class="fa-solid fa-chart-line"></i></a>
 
                                         </div>
+                                        <form class="visibility d-flex flex-column align-items-center" method="POST"
+                                            action="{{ route('admin.apartments.toggle-visibility', $apartment->id) }}">
+                                            @method('PATCH')
+                                            @csrf
+                                            <p class="mb-1">Visibilità</p>
+                                            <button class="btn-backoffice py-2 px-3">
+                                                @if ($apartment->visibility)
+                                                    <i class="fa-regular fa-eye"></i>
+                                                @else
+                                                    <i class="fa-regular fa-eye-slash"></i>
+                                                @endif
+                                            </button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>

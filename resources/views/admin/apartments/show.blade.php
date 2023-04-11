@@ -14,7 +14,22 @@
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h1 class="card-title mb-4">{{ $apartment->name }}</h1>
+                        <div class="row align-items-center mb-4">
+                            <h1 class="card-title col-10 mb-0">{{ $apartment->name }}</h1>
+                            <form class="col-2 visibility d-flex align-items-center" method="POST"
+                                action="{{ route('admin.apartments.toggle-visibility', $apartment->id) }}">
+                                @method('PATCH')
+                                @csrf
+                                <p class="mb-1 text-color-main">Visibilità</p>
+                                <button class="btn-backoffice py-2 px-3">
+                                    @if ($apartment->visibility)
+                                        <i class="fa-regular fa-eye"></i>
+                                    @else
+                                        <i class="fa-regular fa-eye-slash"></i>
+                                    @endif
+                                </button>
+                            </form>
+                        </div>
                         <p class="address card-text">{{ $apartment->address }}</p>
                         <p class="description card-text">{{ $apartment->description }}</p>
                         <p class="card-text price fw-bold fs-4">{{ $apartment->price }} € / notte</p>

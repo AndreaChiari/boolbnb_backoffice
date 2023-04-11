@@ -29,6 +29,8 @@ Route::get('/dashboard', function () {
 Route::middleware(['auth', 'verified'])->name('admin.')->prefix('admin')->group(function () {
     //Rotte degli apartments
     Route::resource('apartments', ApartmentController::class);
+    Route::patch('apartments/{apartment}/toggle-visibility', [ApartmentController::class, 'toggleVisibility'])->name('apartments.toggle-visibility');
+    //Rotte delle sponsorships
     Route::resource('sponsorships', SponsorshipController::class);
     //Rotte dei messages
     // Route::resource('messages', MessageController::class);

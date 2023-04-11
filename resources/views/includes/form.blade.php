@@ -110,7 +110,8 @@
     </div>
     <div class="my-3">
         <label for="visibility">Visibilità:</label>
-        <input type="checkbox" name="visibility" id="visibility" value="1">
+        <input class="form-check-input" type="checkbox" name="visibility" id="visibility" value="1"
+            @if (old('visibility', $apartment->visibility)) checked @endif>
     </div>
 </div>
 

@@ -23,7 +23,6 @@
                 font-size: 1.5rem;
                 font-weight: bold;
                 margin-bottom: 10px;
-
             }
 
             ul {
@@ -58,6 +57,10 @@
                     color: $pink-2;
                 }
             }
+        }
+
+        .visibility p {
+            color: $pink-3;
         }
     }
 }
