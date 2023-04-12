@@ -1,12 +1,12 @@
 @php
-    $sponsorship_end = $apartment->getActiveSponsorshipEndDate(true);
+    ${'sponsorship_end' . $apartment->id} = $apartment->getActiveSponsorshipEndDate(true);
     
 @endphp
 
 <div class="timer d-flex align-items-center"><i class="fa-regular fa-clock me-2"></i> <span
         id="days{{ $apartment->id }}"></span>:<span id="hours{{ $apartment->id }}"></span>:<span
         id="minutes{{ $apartment->id }}"></span>:<span id="seconds{{ $apartment->id }}"></span></div>
-<input id="end-date" type="hidden" value="{{ $sponsorship_end }}">
+<input id="end-date{{ $apartment->id }}" type="hidden" value="{{ ${'sponsorship_end' . $apartment->id} }}">
 
 <script>
     // Conversion Rates
@@ -25,7 +25,8 @@
     const targetMinutes{{ $apartment->id }} = document.getElementById(minutesId{{ $apartment->id }});
     const targetSeconds{{ $apartment->id }} = document.getElementById(secondsId{{ $apartment->id }});
 
-    const endDateValue{{ $apartment->id }} = document.getElementById('end-date').value;
+    const endDateId{{ $apartment->id }} = 'end-date' + {{ $apartment->id }}
+    const endDateValue{{ $apartment->id }} = document.getElementById(endDateId{{ $apartment->id }}).value;
     const finalDate{{ $apartment->id }} = new Date(endDateValue{{ $apartment->id }}).getTime();
 
     const timer{{ $apartment->id }} = setInterval(() => {
