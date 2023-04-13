@@ -1,15 +1,8 @@
-<?php require_once '../includes/braintree_init.php'; ?>
-
 <html>
-<?php require_once '../includes/head.php'; ?>
 
 <body>
-
-    <?php require_once '../includes/header.php'; ?>
-
     <div class="wrapper">
         <div class="checkout container">
-
             <header>
                 <h1>Hi, <br>Let's test a transaction</h1>
                 <p>
@@ -17,7 +10,7 @@
                 </p>
             </header>
 
-            <form method="post" id="payment-form" action="<?php echo $baseUrl; ?>checkout.php">
+            <form method="get" id="payment-form" action="#">
                 <section>
                     <label for="amount">
                         <span class="input-label">Amount</span>
@@ -41,7 +34,7 @@
     <script src="https://js.braintreegateway.com/web/dropin/1.36.1/js/dropin.min.js"></script>
     <script>
         var form = document.querySelector('#payment-form');
-        var client_token = "<?php echo $gateway->ClientToken()->generate(); ?>";
+        var client_token = {{ $token }};
 
         braintree.dropin.create({
             authorization: client_token,
@@ -70,7 +63,6 @@
             });
         });
     </script>
-    <script src="javascript/demo.js"></script>
 </body>
 
 </html>
