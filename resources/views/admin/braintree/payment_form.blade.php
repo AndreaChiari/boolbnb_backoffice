@@ -11,8 +11,12 @@
                         <div class="credit-card__front">
                             <div class="credit-card__front__top"></div>
                             <div class="credit-card__front__middle">
-                                <div class="credit-card__card-number">0000 0000 0000 0000</div>
-                                <div class="credit-card__expiration-date">MM/YY</div>
+                                <div class="text-black credit-card__card-number mt-3">
+                                    <input type="text" id="card-number" disabled>
+                                </div>
+                                <div class="text-black credit-card__expiration-date">
+                                    <input type="text" id="expir" disabled>
+                                </div>
                                 <div class="credit-card__chip">
                                     <div class="credit-card__chip__inner"></div>
                                 </div>
@@ -87,6 +91,24 @@
             });
         });
     </script>
+    <script>
+        const cardInput = document.getElementById("card-number");
+        const cardNumberInput = document.getElementById("credit-card-number");
+        const expiInput = document.getElementById("expir");
+        const expirationInput = document.getElementById("expiration");
+
+        cardNumberInput.addEventListener("input", () => {
+            cardInput.value = cardNumberInput.value.replace(/\s+/g, '').replace(/(\d{4})/g, '$1 ').trim();
+
+        });
+
+        expirationInput.addEventListener("input", () => {
+            expiInput.value = expirationInput.value.replace(/(\d{2})/, '$1/').trim();
+        });
+    </script>
+
+
+
 </body>
 
 </html>
