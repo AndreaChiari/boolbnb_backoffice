@@ -1,4 +1,5 @@
 @php
+    
     ${'sponsorship_end' . $apartment->id} = $apartment->getActiveSponsorshipEndDate(true);
     
 @endphp

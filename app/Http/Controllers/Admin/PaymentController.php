@@ -60,7 +60,14 @@ class PaymentController extends Controller
             $sponsorship = Sponsorship::find($request->all()['sponsorship']);
             $sponsorship_duration = $sponsorship->duration;
             $start_date = now();
-            $end_date = date_add(now(), date_interval_create_from_date_string("$sponsorship_duration hours"));
+            if ($apartment->isSponsored()) {
+                $start_date = $apartment->getActiveSponsorshipEndDate();
+            }
+            $end_date = date_add($start_date, date_interval_create_from_date_string("$sponsorship_duration hours"));
+            $start_date = now();
+            if ($apartment->isSponsored()) {
+                $start_date = $apartment->getActiveSponsorshipEndDate();
+            }
             $apartment->sponsorships()->attach($sponsorship->id, ['start_date' => $start_date, 'end_date' => $end_date]);
             return to_route('admin.apartments.show', $apartment->id)->with('msg', 'Transazione riuscita! N. Transazione: ' . $transaction->id);
         } else {
