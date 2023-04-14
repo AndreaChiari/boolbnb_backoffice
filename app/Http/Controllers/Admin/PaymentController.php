@@ -62,7 +62,7 @@ class PaymentController extends Controller
             $start_date = now();
             $end_date = date_add(now(), date_interval_create_from_date_string("$sponsorship_duration hours"));
             $apartment->sponsorships()->attach($sponsorship->id, ['start_date' => $start_date, 'end_date' => $end_date]);
-            return back()->with('msg', 'Transazione riuscita' . $transaction->id);
+            return to_route('admin.apartments.show', $apartment->id)->with('msg', 'Transazione riuscita! N. Transazione: ' . $transaction->id);
         } else {
             $errorString = "";
 
