@@ -39,7 +39,7 @@ Route::middleware(['auth', 'verified'])->name('admin.')->prefix('admin')->group(
     Route::get('/messages/{message}', [MessageController::class, 'show'])->name('messages.show');
     Route::delete('/messages/{message}', [MessageController::class, 'destroy'])->name('messages.destroy');
     // Route payments
-    Route::get('/payments/{sponsorship}/{apartment}', [PaymentController::class, 'index'])->name('payments');
+    Route::get('/payments', [PaymentController::class, 'index'])->name('payments');
     Route::post('/checkout', [PaymentController::class, 'checkout'])->name('payments.checkout');
 });
 

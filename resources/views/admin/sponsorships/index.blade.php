@@ -19,7 +19,8 @@
                                 <p>Prezzo: {{ $sponsorship->price }} €</p>
                             </div>
                             <div class="sponsor-footer">
-                                <a href="#" class="btn btn-primary">Acquista ora</a>
+                                <a href="{{ route('admin.payments', ['apartment' => $apartment->id, 'sponsorship' => $sponsorship->id]) }}"
+                                    class="btn btn-primary">Acquista ora</a>
                             </div>
                         </div>
                     </div>

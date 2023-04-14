@@ -11,8 +11,10 @@ use Illuminate\Http\Request;
 
 class PaymentController extends Controller
 {
-    public function index(Apartment $apartment, Sponsorship $sponsorship)
+    public function index(Request $request)
     {
+        $apartment = Apartment::where('id', $request->all()['apartment'])->first();
+        $sponsorship = Sponsorship::where('id', $request->all()['sponsorship'])->first();
         $gateway = new \Braintree\Gateway([
             'environment' => config('services.braintree.environment'),
             'merchantId' => config('services.braintree.merchantId'),
@@ -21,7 +23,7 @@ class PaymentController extends Controller
         ]);
 
         $token = $gateway->ClientToken()->generate();
-        return view('admin.braintree.payment_form', ['token' => $token], compact('apartments', 'sponsorships'));
+        return view('admin.braintree.payment_form', compact('token', 'apartment', 'sponsorship'));
     }
 
     public function checkout(Request $request)
