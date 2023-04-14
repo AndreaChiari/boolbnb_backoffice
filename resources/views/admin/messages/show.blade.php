@@ -7,7 +7,8 @@
         <div class="message-card card p-3">
             <time class="mb-3 text-end">{{ $message->getReceivedDate() }}</time>
             <h3 class="message-title text-center mb-5">{{ $message->object }}</h3>
-            <h6 class="message-mail mb-5">Da: {{ $message->email }}</h6>
+            <h6 class="message-mail mb-5">Da: {{ $message->name }}</h6>
+            <h6 class="message-mail mb-5">E-mail: {{ $message->email }}</h6>
             <p class="message-content">{{ $message->content }}</p>
         </div>
     </div>

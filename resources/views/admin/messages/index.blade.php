@@ -35,7 +35,10 @@
                     <p class="mb-0"><b>Oggetto:</b> {{ $message->object }}</p>
                 </div>
                 <div class="col-xl-2 d-flex align-items-center justify-content-center py-2 px-0 text-center">
-                    <p class="mb-0"><b>Da:</b> {{ $message->email }}</p>
+                    <p class="mb-0"><b>Da:</b> {{ $message->name }}</p>
+                </div>
+                <div class="col-xl-5 d-flex align-items-center justify-content-center py-2 px-0 text-center">
+                    <p class="mb-0"><b>Email:</b> {{ $message->email }}</p>
                 </div>
                 <div class="col-xl-2 d-flex align-items-center justify-content-center py-2 px-0 text-center">
                     <p class="mb-0"><b>Il:</b> {{ $message->getReceivedDate() }}</p>
