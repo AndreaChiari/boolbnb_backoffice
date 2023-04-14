@@ -2,19 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Apartment;
 use App\Models\Sponsorship;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SponsorshipController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Apartment $apartment)
     {
         $sponsorships = Sponsorship::all();
 
-        return view('admin.sponsorships.index', compact('sponsorships'));
+        if ($apartment->user_id !== Auth::id()) abort(403, 'Access Denied');
+
+        return view('admin.sponsorships.index', compact('sponsorships', 'apartment'));
     }
 
     /**
