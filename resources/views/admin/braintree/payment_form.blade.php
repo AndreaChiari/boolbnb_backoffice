@@ -15,7 +15,7 @@
                 </div>
             @endif
             @if (count($errors) > 0)
-                <p>dioporco</p>
+                <p>errore</p>
             @endif
 
             <form method="post" id="payment-form"
