@@ -95,6 +95,7 @@ class ApartmentController extends Controller
         $services = Service::all();
         $new_messages = Message::where('is_read', 0)->where('apartment_id', $apartment->id)->count();
         if ($new_messages >= 100) $new_messages = '99+';
+        if ($apartment->user_id !== Auth::id()) abort(403, 'Access Denied');
         return view('admin.apartments.show', compact('apartment', 'services', 'new_messages'));
     }
 
@@ -106,6 +107,8 @@ class ApartmentController extends Controller
         $apartment = Apartment::findOrFail($id);
         $services = Service::orderBy('id')->get();
         $apartment_services = $apartment->services->pluck('id')->toArray();
+
+        if ($apartment->user_id !== Auth::id()) abort(403, 'Access Denied');
 
         return view('admin.apartments.edit', compact('apartment', 'services', 'apartment_services'));
     }
