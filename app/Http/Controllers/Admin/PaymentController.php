@@ -13,8 +13,17 @@ class PaymentController extends Controller
 {
     public function index(Request $request)
     {
-        $apartment = Apartment::where('id', $request->all()['apartment'])->first();
-        $sponsorship = Sponsorship::where('id', $request->all()['sponsorship'])->first();
+        session_start();
+        if (isset($request->all()['apartment'])) {
+            $_SESSION["aparment_id"] = $request->all()['apartment'];
+            $apartment = Apartment::where('id', $_SESSION["aparment_id"])->first();
+        } else $apartment = Apartment::where('id', $_SESSION["aparment_id"])->first();
+        if (isset($request->all()['sponsorship'])) {
+            $_SESSION["sponsorship_id"] = $request->all()['sponsorship'];
+            $sponsorship = Sponsorship::where('id', $_SESSION["sponsorship_id"])->first();
+        } else $sponsorship = Sponsorship::where('id', $_SESSION["sponsorship_id"])->first();
+
+
         $gateway = new \Braintree\Gateway([
             'environment' => config('services.braintree.environment'),
             'merchantId' => config('services.braintree.merchantId'),
@@ -47,8 +56,13 @@ class PaymentController extends Controller
 
         if ($result->success) {
             $transaction = $result->transaction;
-            // header("Location: " . $baseUrl . "transaction.php?id=" . $transaction->id);
-            return back()->with('success_messsage', 'Transazione riuscita' . $transaction->id);
+            $apartment = Apartment::find($request->all()['apartment']);
+            $sponsorship = Sponsorship::find($request->all()['sponsorship']);
+            $sponsorship_duration = $sponsorship->duration;
+            $start_date = now();
+            $end_date = date_add(now(), date_interval_create_from_date_string("$sponsorship_duration hours"));
+            $apartment->sponsorships()->attach($sponsorship->id, ['start_date' => $start_date, 'end_date' => $end_date]);
+            return back()->with('msg', 'Transazione riuscita' . $transaction->id);
         } else {
             $errorString = "";
 
@@ -56,8 +70,6 @@ class PaymentController extends Controller
                 $errorString .= 'Error: ' . $error->code . ": " . $error->message . "\n";
             }
             return back()->withErrors('Transazione negata' . $result->message);
-            // $_SESSION["errors"] = $errorString;
-            // header("Location: " . $baseUrl . "index.php");
         }
     }
 }

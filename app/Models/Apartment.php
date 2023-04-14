@@ -84,7 +84,9 @@ class Apartment extends Model
 
     public function getActiveSponsorshipEndDate($string = false)
     {
-        $sponsorship_end = new Carbon($this->activeSponsorship()[0]['pivot']['end_date']);
+        foreach ($this->activeSponsorship() as $sponsorship) {
+            $sponsorship_end = new Carbon($sponsorship['pivot']['end_date']);
+        }
         if ($string) return $sponsorship_end->toDateString();
         return $sponsorship_end;
     }

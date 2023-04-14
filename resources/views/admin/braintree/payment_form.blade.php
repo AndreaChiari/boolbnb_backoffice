@@ -9,8 +9,18 @@
                     Make a test payment with Braintree using PayPal or a card
                 </p>
             </header>
+            @if (session('msg'))
+                <div class="alert alert-success">
+                    <p>tuttapposto</p>
+                </div>
+            @endif
+            @if (count($errors) > 0)
+                <p>dioporco</p>
+            @endif
 
-            <form method="get" id="payment-form" action="#">
+            <form method="post" id="payment-form"
+                action="{{ route('admin.payments.checkout', ['apartment' => $apartment->id, 'sponsorship' => $sponsorship->id]) }}">
+                @csrf
                 <section>
                     <label for="amount">
                         <span class="input-label">Amount</span>
