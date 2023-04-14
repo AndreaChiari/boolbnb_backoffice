@@ -73,7 +73,7 @@
                 <p class="messages-notification text-center">{{ $new_messages }}</p>
             @endif
         </a>
-        <a href="{{ route('admin.sponsorships.index') }}" class="btn-backoffice py-2 px-3"><i
+        <a href="{{ route('admin.sponsorships.index', $apartment->id) }}" class="btn-backoffice py-2 px-3"><i
                 class="fa-regular fa-circle-up"></i></a>
         <a href="{{ route('admin.apartments.edit', $apartment->id) }}" class="btn-backoffice py-2 px-3 me-2"><i
                 class="fa-regular fa-pen-to-square"></i></a>
