@@ -1,13 +1,27 @@
 <html>
 
+<head>@vite(['resources/js/app.js']) </head>
+
 <body>
     <div class="wrapper">
         <div class="checkout container">
             <header>
-                <h1>Hi, <br>Let's test a transaction</h1>
-                <p>
-                    Make a test payment with Braintree using PayPal or a card
-                </p>
+                <div class="credit-card-wrapper mt-5">
+                    <div class="credit-card">
+                        <div class="credit-card__front">
+                            <div class="credit-card__front__top"></div>
+                            <div class="credit-card__front__middle">
+                                <div class="credit-card__card-number">0000 0000 0000 0000</div>
+                                <div class="credit-card__expiration-date">MM/YY</div>
+                                <div class="credit-card__chip">
+                                    <div class="credit-card__chip__inner"></div>
+                                </div>
+                            </div>
+                            <div class="credit-card__front__bottom"></div>
+                        </div>
+                        <div class="credit-card__back"></div>
+                    </div>
+                </div>
             </header>
             @if (session('msg'))
                 <div class="alert alert-success">
