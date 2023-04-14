@@ -17,7 +17,7 @@
                             <p>Qui ci va la descrizione dell'offerta della sponsorizzazione da 24.</p>
                         </div>
                         <div class="sponsor-footer">
-                            <a href="#" class="btn btn-primary">Acquista ora</a>
+                            <a href="{{ route('admin.payments') }}" class="btn btn-primary">Acquista ora</a>
                         </div>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                             <p>Qui ci va la descrizione dell'offerta della sponsorizzazione da 72.</p>
                         </div>
                         <div class="sponsor-footer">
-                            <a href="#" class="btn btn-primary">Acquista ora</a>
+                            <a href="{{ route('admin.payments') }}" class="btn btn-primary">Acquista ora</a>
                         </div>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
                             <p>Qui ci va la descrizione dell'offerta della sponsorizzazione da 144.</p>
                         </div>
                         <div class="sponsor-footer">
-                            <a href="#" class="btn btn-primary">Acquista ora</a>
+                            <a href="{{ route('admin.payments') }}" class="btn btn-primary">Acquista ora</a>
                         </div>
                     </div>
                 </div>
