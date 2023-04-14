@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Apartment;
 use App\Models\Sponsorship;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SponsorshipController extends Controller
 {
@@ -15,7 +16,9 @@ class SponsorshipController extends Controller
     {
         $sponsorships = Sponsorship::all();
 
-        return view('admin.sponsorships.index', compact('sponsorships'));
+        if ($apartment->user_id !== Auth::id()) abort(403, 'Access Denied');
+
+        return view('admin.sponsorships.index', compact('sponsorships', 'apartment'));
     }
 
     /**

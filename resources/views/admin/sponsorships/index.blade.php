@@ -3,7 +3,6 @@
 @section('title', 'Sponsor')
 
 @section('content')
-
     <section class="general">
         <div class="container p-5 h-50">
             <div class="row justify-content-center">

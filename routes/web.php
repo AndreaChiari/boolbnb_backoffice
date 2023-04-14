@@ -31,7 +31,7 @@ Route::middleware(['auth', 'verified'])->name('admin.')->prefix('admin')->group(
     Route::resource('apartments', ApartmentController::class);
     Route::patch('apartments/{apartment}/toggle-visibility', [ApartmentController::class, 'toggleVisibility'])->name('apartments.toggle-visibility');
     //Rotte delle sponsorships
-    Route::resource('sponsorships', SponsorshipController::class);
+    Route::get('sponsorships/{apartment}', [SponsorshipController::class, 'index'])->name('sponsorships.index');
     //Rotte dei messages
     // Route::resource('messages', MessageController::class);
     Route::get('/messages/index/{apartment}', [MessageController::class, 'index'])->name('messages.index');
