@@ -9,7 +9,7 @@ class ApartmentPic extends Model
 {
     use HasFactory;
 
-    protected $fillable = [];
+    protected $fillable = ['apartment_id', 'thumb'];
 
     public function apartment()
     {
