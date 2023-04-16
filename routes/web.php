@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\PaymentController;
 use App\Http\Controllers\Admin\ApartmentController;
 use App\Http\Controllers\Admin\MessageController;
+use App\Http\Controllers\ApartmentPicController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SponsorshipController;
 use Illuminate\Support\Facades\Route;
@@ -28,6 +29,9 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware(['auth', 'verified'])->name('admin.')->prefix('admin')->group(function () {
+    //Route additional images
+    Route::delete('/apartment-pics/{apartment_pic}', [ApartmentPicController::class, 'destroy'])->name('apartment-pics.destroy');
+    Route::post('/apartment-pics', [ApartmentPicController::class, 'store'])->name('apartment-pics.store');
     //Rotte degli apartments
     Route::resource('apartments', ApartmentController::class);
     Route::patch('apartments/{apartment}/toggle-visibility', [ApartmentController::class, 'toggleVisibility'])->name('apartments.toggle-visibility');

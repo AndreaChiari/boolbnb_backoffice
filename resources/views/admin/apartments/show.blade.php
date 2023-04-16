@@ -3,7 +3,7 @@
 @section('title', $apartment->address)
 
 @section('content')
-    <div id="apartment-show" class="container mt-5">
+    <div id="apartment-show" class="container my-5">
         <div class="card container-detail-main">
             <div class="row g-0 container-main">
                 <div class="col-md-4">
@@ -65,6 +65,32 @@
         </div>
     </div>
 
+    <div class="images container">
+        <div class="row gap-2">
+            @forelse ($apartment->apartmentPics as $pic)
+                <form action="{{ route('admin.apartment-pics.destroy', $pic->id) }}" method="POST"
+                    class="additional-img col-2 d-flex justify-content-center align-items-center">
+                    @method('DELETE')
+                    @csrf
+                    <img src="{{ asset('storage/' . $pic->thumb) }}" alt="{{ $pic->id }}">
+                    <button class="btn-backoffice" type="submit"><i class="fa-regular fa-trash-can"></i></button>
+                </form>
+            @empty
+            @endforelse
+            <form class="col-2" action="{{ route('admin.apartment-pics.store') }}" method="POST"
+                enctype="multipart/form-data">
+                @csrf
+                <div id="img-loader" class="d-flex justify-content-center align-items-center">
+                    <i class="fa-solid fa-plus fa-2x"></i>
+                </div>
+                <input name="thumb" id="add-image" type="file" class="d-none">
+                <input name="apartment_id" type="hidden" value="{{ $apartment->id }}">
+                <button class="btn-backoffice bordered">Carica Immagine</button>
+            </form>
+        </div>
+    </div>
+
+
     {{-- Bottoni --}}
     <div class="container buttons d-flex my-5 justify-content-end align-items-center">
         <a class="btn-backoffice py-2 px-3 me-2" href="{{ route('admin.messages.index', $apartment->id) }}">
@@ -85,4 +111,30 @@
         <a class="btn-backoffice bordered p-2 d-flex align-items-center justify-content-center"
             href="{{ route('admin.apartments.index') }}"><i class="fa-solid fa-arrow-left"></i></a>
     </div>
+@endsection
+
+@section('scripts')
+    <script>
+        const imgLoader = document.getElementById('img-loader');
+        const imgInput = document.getElementById('add-image');
+        const submitForm = document.getElementById('submit-img');
+        imgLoader.addEventListener('click', () => {
+            imgInput.click()
+        })
+
+        // Ascolto il cambio del caricamento file
+        imgInput.addEventListener('change', () => {
+            // Controllo se ho caricato un file
+            if (imgInput.files && imgInput.files[0]) {
+                const reader = new FileReader();
+                reader.readAsDataURL(imgInput.files[0])
+
+                // Quando sei pronto (ossia quando ha preparato il dato, promemoria: onload è un 'addeventlistener')
+                reader.onload = e => {
+                    imgLoader.innerHTML = `<img src="${e.target.result}" alt="preview">`;
+                }
+
+            } else imgLoader.innerHTML = `<i class="fa-solid fa-plus fa-2x"></i>`;
+        })
+    </script>
 @endsection
