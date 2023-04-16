@@ -20,28 +20,28 @@
                     @endif
                 @endif
             </h2>
+            <div class="d-flex table-header">
+                <p class="text-white mail-object-header">Oggetto:</p>
+                <p class="text-white mail-from-header">Da:</p>
+                <p class="text-white mail-email-header">E-mail:</p>
+                <p class="text-white mail-at-header">Il:</p>
+            </div>
         @endif
         @forelse ($messages as $message)
             <div
                 class="message-row row flex-column flex-xl-row align-items-center p-3 p-lg-0 @if ($message->is_read) is-read @endif">
-                <div class="col-1 d-flex align-items-center justify-content-center">
-                    @if ($message->is_read)
-                        <i class="fa-solid fa-envelope-open fa-2x"></i>
-                    @else
-                        <i class="fa-solid fa-envelope unread fa-2x"></i>
-                    @endif
-                </div>
-                <div class="col-xl-5 d-flex align-items-center justify-content-center py-2 px-0 text-center">
-                    <p class="mb-0"><b>Oggetto:</b> {{ $message->object }}</p>
+                <div></div>
+                <div class="col-xl-2 d-flex align-items-center justify-content-center ms-5 py-2 px-0 text-center">
+                    <p class="mb-0"><b class="d-xl-none">Oggetto:</b> {{ $message->object }}</p>
                 </div>
                 <div class="col-xl-2 d-flex align-items-center justify-content-center py-2 px-0 text-center">
-                    <p class="mb-0"><b>Da:</b> {{ $message->name }}</p>
-                </div>
-                <div class="col-xl-5 d-flex align-items-center justify-content-center py-2 px-0 text-center">
-                    <p class="mb-0"><b>Email:</b> {{ $message->email }}</p>
+                    <p class="mb-0"><b class="d-xl-none">Da:</b> {{ $message->name }}</p>
                 </div>
                 <div class="col-xl-2 d-flex align-items-center justify-content-center py-2 px-0 text-center">
-                    <p class="mb-0"><b>Il:</b> {{ $message->getReceivedDate() }}</p>
+                    <p class="mb-0"><b class="d-xl-none">Email:</b> {{ $message->email }}</p>
+                </div>
+                <div class="col-xl-2 d-flex align-items-center justify-content-center py-2 px-0 text-center">
+                    <p class="mb-0"><b class="d-xl-none">Il:</b> {{ $message->getReceivedDate() }}</p>
                 </div>
                 <div class="col-xl-2 p-2 d-flex justify-content-center align-items-center">
                     <a href="{{ route('admin.messages.show', $message->id) }}" class="btn-messages-index me-2"><i
@@ -50,8 +50,15 @@
                         @method('DELETE')
                         @csrf
                         <button class="btn-messages-index flex-fill" type="submit"><i
-                                class="fa-solid fa-trash"></i></button>
+                                class="fa-solid fa-trash me-4"></i></button>
                     </form>
+                    <div class="col-1 d-flex align-items-center justify-content-center">
+                        @if ($message->is_read)
+                            <i class="fa-solid fa-envelope-open fa-2x"></i>
+                        @else
+                            <i class="fa-solid fa-envelope unread fa-2x"></i>
+                        @endif
+                    </div>
                 </div>
             </div>
         @empty
