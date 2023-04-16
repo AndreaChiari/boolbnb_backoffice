@@ -86,7 +86,7 @@ class Apartment extends Model
     {
         foreach ($this->activeSponsorships() as $sponsorship) {
             if (isset($sponsorship_end) && $sponsorship_end->floatDiffInDays($sponsorship['pivot']['end_date'], false) > 0) $sponsorship_end = new Carbon($sponsorship['pivot']['end_date']);
-            $sponsorship_end = new Carbon($sponsorship['pivot']['end_date']);
+            if (!isset($sponsorship_end)) $sponsorship_end = new Carbon($sponsorship['pivot']['end_date']);
         }
         if ($string) return $sponsorship_end->toDateString();
         return $sponsorship_end;

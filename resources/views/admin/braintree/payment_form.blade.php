@@ -33,7 +33,10 @@
                 </div>
             @endif
             @if (count($errors) > 0)
-                <p>errore</p>
+                @foreach ($errors as $error)
+                    <p class="text-danger">{{ $error }}</p>
+                @endforeach
+
             @endif
 
             <form method="post" id="payment-form"
