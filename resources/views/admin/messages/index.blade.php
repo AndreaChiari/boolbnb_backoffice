@@ -21,10 +21,10 @@
                 @endif
             </h2>
             <div class="d-flex table-header">
-                <p class="text-white mail-object-header">Oggetto:</p>
-                <p class="text-white mail-from-header">Da:</p>
-                <p class="text-white mail-email-header">E-mail:</p>
-                <p class="text-white mail-at-header">Il:</p>
+                <p class="text-white mail-object-header d-none d-xl-block">Oggetto:</p>
+                <p class="text-white mail-from-header d-none d-xl-block">Da:</p>
+                <p class="text-white mail-email-header d-none d-xl-block">E-mail:</p>
+                <p class="text-white mail-at-header d-none d-xl-block">Il:</p>
             </div>
         @endif
         @forelse ($messages as $message)
