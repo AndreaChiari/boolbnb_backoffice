@@ -20,25 +20,45 @@
                     @endif
                 @endif
             </h2>
-            <div class="d-flex table-header">
-                <p class="text-white mail-object-header d-none d-xl-block">Oggetto:</p>
-                <p class="text-white mail-from-header d-none d-xl-block">Da:</p>
-                <p class="text-white mail-email-header d-none d-xl-block">E-mail:</p>
-                <p class="text-white mail-at-header d-none d-xl-block">Il:</p>
-            </div>
         @endif
+        <div class="message-header row flex-column flex-xl-row align-items-center p-3 p-lg-0 d-none d-xl-flex">
+            <div class="col-xl-2 d-flex align-items-center justify-content-center py-2 px-0 text-center">
+            </div>
+            <div class="col-xl-2 d-flex align-items-center justify-content-center py-2 px-0 text-center">
+                <p>Da:</p>
+            </div>
+            <div class="col-xl-2 d-flex align-items-center justify-content-center py-2 px-0 text-center">
+                <p>E-mail:</p>
+            </div>
+            <div class="col-xl-2 d-flex align-items-center justify-content-center py-2 px-0 text-center">
+                <p>Oggetto:</p>
+            </div>
+            <div class="col-xl-2 d-flex align-items-center justify-content-center py-2 px-0 text-center">
+                <p>Il:</p>
+            </div>
+            <div>
+            </div>
+        </div>
         @forelse ($messages as $message)
             <div
                 class="message-row row flex-column flex-xl-row align-items-center p-3 p-lg-0 @if ($message->is_read) is-read @endif">
-                <div></div>
-                <div class="col-xl-2 d-flex align-items-center justify-content-center ms-5 py-2 px-0 text-center">
-                    <p class="mb-0"><b class="d-xl-none">Oggetto:</b> {{ $message->object }}</p>
+                <div class="col-xl-2 d-flex align-items-center justify-content-center py-2 px-0 text-center">
+                    <div class="">
+                        @if ($message->is_read)
+                            <i class="fa-solid fa-envelope-open fa-2x"></i>
+                        @else
+                            <i class="fa-solid fa-envelope unread fa-2x"></i>
+                        @endif
+                    </div>
                 </div>
                 <div class="col-xl-2 d-flex align-items-center justify-content-center py-2 px-0 text-center">
                     <p class="mb-0"><b class="d-xl-none">Da:</b> {{ $message->name }}</p>
                 </div>
                 <div class="col-xl-2 d-flex align-items-center justify-content-center py-2 px-0 text-center">
                     <p class="mb-0"><b class="d-xl-none">Email:</b> {{ $message->email }}</p>
+                </div>
+                <div class="col-xl-2 d-flex align-items-center justify-content-center py-2 px-0 text-center">
+                    <p class="mb-0"><b class="d-xl-none">Oggetto:</b> {{ $message->object }}</p>
                 </div>
                 <div class="col-xl-2 d-flex align-items-center justify-content-center py-2 px-0 text-center">
                     <p class="mb-0"><b class="d-xl-none">Il:</b> {{ $message->getReceivedDate() }}</p>
@@ -52,13 +72,6 @@
                         <button class="btn-messages-index flex-fill" type="submit"><i
                                 class="fa-solid fa-trash me-4"></i></button>
                     </form>
-                    <div class="col-1 d-flex align-items-center justify-content-center">
-                        @if ($message->is_read)
-                            <i class="fa-solid fa-envelope-open fa-2x"></i>
-                        @else
-                            <i class="fa-solid fa-envelope unread fa-2x"></i>
-                        @endif
-                    </div>
                 </div>
             </div>
         @empty
