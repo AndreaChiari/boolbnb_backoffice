@@ -10,7 +10,7 @@
                     <div class="card-inner">
                         <div class="front">
                             <img src="https://i.ibb.co/PYss3yv/map.png" class="map-img">
-                            <div class="row">
+                            <div class="row justify-content-between align-items-center">
                                 <img src="https://i.ibb.co/G9pDnYJ/chip.png" class="chip-img">
                                 <img src="https://i.ibb.co/WHZ3nRJ/visa.png" width="60px" class="visa">
                             </div>
@@ -43,21 +43,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
             </div>
