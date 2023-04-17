@@ -1,6 +1,6 @@
 @php
     
-    ${'sponsorship_end' . $apartment->id} = $apartment->getActiveSponsorshipEndDate(true);
+    ${'sponsorship_end' . $apartment->id} = $apartment->getActiveSponsorshipEndDate(true, true);
     
 @endphp
 

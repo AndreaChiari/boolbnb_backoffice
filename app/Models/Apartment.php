@@ -82,14 +82,21 @@ class Apartment extends Model
         return array_values($active_sponsorships);
     }
 
-    public function getActiveSponsorshipEndDate($string = false)
+    public function getActiveSponsorshipEndDate($string = false, $locale = false)
     {
         foreach ($this->activeSponsorships() as $sponsorship) {
             if (isset($sponsorship_end) && $sponsorship_end->floatDiffInDays($sponsorship['pivot']['end_date'], false) > 0) $sponsorship_end = new Carbon($sponsorship['pivot']['end_date']);
             if (!isset($sponsorship_end)) $sponsorship_end = new Carbon($sponsorship['pivot']['end_date']);
         }
-        if ($string) return $sponsorship_end->toDateString();
-        return $sponsorship_end;
+        $sponsorship_end_utc = $sponsorship_end->setTimezone('UTC');
+
+        if ($locale) {
+            if ($string) return $sponsorship_end_utc->setTimezone('Europe/Rome')->toDateTimeString();
+            return $sponsorship_end_utc->setTimezone('Europe/Rome');
+        } else {
+            if ($string) return $sponsorship_end_utc->toDateTimeString();
+            return $locale ?: $sponsorship_end_utc;
+        }
     }
 
     protected static function boot()
