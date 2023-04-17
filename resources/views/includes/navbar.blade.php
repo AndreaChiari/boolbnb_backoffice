@@ -14,10 +14,12 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
-            <ul class="navbar-nav d-flex align-items-center me-auto">
-                <li class="nav-item me-2">
+            <ul class="navbar-nav d-flex align-items-center me-auto justify-content-center">
+                <li class="nav-item me-2 d-flex justify-items-center">
                     <a class="nav-link logo d-flex align-items-center" href="{{ url('http://localhost:5174/') }}"><img
-                            src="/boolbnb_2.png" alt="logo" class="logo img-fluid">BOOLBNB</a>
+                            src="/boolbnb_2.png" alt="logo" class="logo img-fluid">
+                        <p class="mt-3">OOLBNB<p>
+                    </a>
                 </li>
 
                 <li class="nav-item">
