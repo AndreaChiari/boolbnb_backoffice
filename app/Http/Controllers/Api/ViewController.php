@@ -23,7 +23,7 @@ class ViewController extends Controller
         $isUnique = true;
 
         foreach ($views as $view) {
-            if (($view['ip'] === $data['ip']) && ($now->floatDiffInHours($view['date'], false) > 0)) {
+            if (($view['ip'] === $data['ip']) && ($now->floatDiffInHours($view['date'], false) < 0)) {
                 $isUnique = false;
             }
         }
