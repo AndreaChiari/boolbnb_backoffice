@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Apartment;
 use App\Models\Message;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class MessageController extends Controller
 {
@@ -19,6 +20,7 @@ class MessageController extends Controller
         $unread_messages_count = Message::where('is_read', 0)->where('apartment_id', $apartment->id)->count();
         $apartment_id = $apartment->id;
 
+        if ($apartment->user_id !== Auth::id()) abort(403, 'Access Denied');
         return view('admin.messages.index', compact('messages', 'messages_count', 'unread_messages_count', 'apartment_id'));
     }
 
@@ -51,6 +53,7 @@ class MessageController extends Controller
      */
     public function show(Message $message)
     {
+        if ($message->apartment->user_id !== Auth::id()) abort(403, 'Access Denied');
         $message->is_read = 1;
         $message->save();
         return view('admin.messages.show', compact('message'));
