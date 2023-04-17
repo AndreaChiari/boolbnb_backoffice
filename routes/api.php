@@ -25,7 +25,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/apartments', [ApartmentController::class, 'index']);
 Route::get('/apartments/{apartment}', [ApartmentController::class, 'show']);
 Route::get('/views', [ViewController::class, 'getIp']);
-Route::post('/views', [ViewController::class, 'checkIp']);
+Route::post('/views', [ViewController::class, 'store']);
+
 
 //Messages API routes
 Route::post('/messages', [MessageController::class, 'store']);
