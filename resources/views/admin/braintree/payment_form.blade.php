@@ -5,62 +5,98 @@
 <body>
     <div class="wrapper">
         <div class="checkout container">
-            <header>
-                <div class="credit-card-wrapper mt-5">
-                    <div class="credit-card">
-                        <div class="credit-card__front">
-                            <div class="credit-card__front__top"></div>
-                            <div class="credit-card__front__middle">
-                                <div class="text-black credit-card__card-number mt-3">
-                                    <input type="text" id="card-number" disabled>
-                                </div>
-                                <div class="text-black credit-card__expiration-date">
-                                    <input type="text" id="expir" disabled>
-                                </div>
-                                <div class="credit-card__chip">
-                                    <div class="credit-card__chip__inner"></div>
-                                </div>
+            <div class="credit-card-wrapper mt-5 d-flex justify-content-center">
+                <div class="credit">
+                    <div class="card-inner">
+                        <div class="front">
+                            <img src="https://i.ibb.co/PYss3yv/map.png" class="map-img">
+                            <div class="row">
+                                <img src="https://i.ibb.co/G9pDnYJ/chip.png" class="chip-img">
+                                <img src="https://i.ibb.co/WHZ3nRJ/visa.png" width="60px" class="visa">
                             </div>
-                            <div class="credit-card__front__bottom"></div>
+                            <div class="rows card-no">
+                                <input type="text" id="card-number" disabled>
+                            </div>
+                            <div class="row card-holder">
+                                <p>BY</p>
+                                <p>TEAM-6</p>
+                            </div>
+                            <div class="row name">
+                                <p>nome e cognome</p>
+                                <input type="text" id="expir" disabled>
+                            </div>
                         </div>
-                        <div class="credit-card__back"></div>
+                        <div class="back">
+                            <img src="https://i.ibb.co/PYss3yv/map.png" class="map-img">
+                            <div class="bar"></div>
+                            <div class="row card-cvv ">
+                                <div class="mb-2">
+                                    <img src="https://i.ibb.co/S6JG8px/pattern.png">
+                                </div>
+                                <p>000</p>
+                            </div>
+
+                            <div class="row signature">
+                                <p>CUSTOMER SIGNATURE</p>
+                                <img src="https://i.ibb.co/WHZ3nRJ/visa.png" width="80px">
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
             @if (session('msg'))
                 <div class="alert alert-success">
-                    <p>tuttapposto</p>
+                    <p class="text-primary font-weight-bold">tuttapposto</p>
                 </div>
             @endif
             @if (count($errors) > 0)
                 @foreach ($errors as $error)
                     <p class="text-danger">{{ $error }}</p>
                 @endforeach
-
             @endif
-
             <form method="post" id="payment-form"
                 action="{{ route('admin.payments.checkout', ['apartment' => $apartment->id, 'sponsorship' => $sponsorship->id]) }}">
                 @csrf
                 <section>
                     <label for="amount">
-                        <span class="input-label">Amount</span>
+                        <span class="input-label text-white">Prezzo:</span>
                         <div class="input-wrapper amount-wrapper">
                             <input id="amount" name="amount" type="tel" min="1" placeholder="Amount"
-                                value="{{ $sponsorship->price }}">
+                                value="{{ $sponsorship->price }}" readonly>
                         </div>
                     </label>
-
                     <div class="bt-drop-in-wrapper">
                         <div id="bt-dropin"></div>
                     </div>
                 </section>
-
                 <input id="nonce" name="payment_method_nonce" type="hidden" />
-                <button class="button" type="submit"><span>Test Transaction</span></button>
+                <button class="button btn-pay bordered mt-3"><span>Paga ora</span></button>
             </form>
+            <div class="d-flex justify-content-end">
+                <a class="btn-pay bordered p-2 d-flex align-items-center justify-content-center"
+                    href="{{ route('admin.apartments.index') }}"><span class="font-weight-bold">Torna alla
+                        home</span></a>
+            </div>
         </div>
     </div>
+
 
     <script src="https://js.braintreegateway.com/web/dropin/1.36.1/js/dropin.min.js"></script>
     <script>
