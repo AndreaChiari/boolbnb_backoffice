@@ -3,8 +3,12 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Mail\MessageSentMail;
 use App\Models\Message;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 class MessageController extends Controller
@@ -51,6 +55,11 @@ class MessageController extends Controller
         $new_message->fill($data);
 
         $new_message->save();
+
+        $mail = new MessageSentMail($new_message);
+        $user = User::findOrFail($new_message->apartment->user_id);
+        $address = $user->email;
+        Mail::to($address)->send($mail);
     }
 
     /**
