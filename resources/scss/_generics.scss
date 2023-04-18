@@ -172,3 +172,126 @@ body {
 
 
 
+// Statistiche
+#statistics{
+.container {
+        background-color: rgba(34, 34, 34, 0.291);
+        padding: 20px;
+        border-radius: 30px;
+        margin-top: 10%;
+    }
+
+    h1 {
+        color: #fff;
+    }
+
+    form {
+        margin-bottom: 20px;
+    }
+
+    .row {
+        margin-top: 20px;
+    }
+
+    .graph-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .graph-bar {
+        width: 80px;
+        margin-right: 5px;
+        position: relative;
+        background-color: #ff9800;
+        border-radius: 5px;
+        overflow: hidden;
+        transform-style: preserve-3d;
+        animation: animateGraph 1s ease-in-out;
+        cursor: pointer;
+    }
+
+    .graph-bar-inner {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 0;
+        background-color: #e91e63;
+        transform-origin: bottom center;
+        transform-style: preserve-3d;
+        animation: growGraph 1s ease-in-out;
+    }
+
+    .graph-bar-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        transform-style: preserve-3d;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .graph-bar:hover .graph-bar-overlay {
+        opacity: 1;
+    }
+
+    .graph-count {
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+        color: #fff;
+        padding-top: 5px;
+    }
+
+    .graph-date {
+        display: block;
+        font-size: 12px;
+        color: #fff;
+    }
+
+    @keyframes animateGraph {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes growGraph {
+        from {
+            height: 0;
+        }
+
+        to {
+            height: 100%;
+        }
+    }
+        .btz {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #e91e63;
+            color: #fff;
+            font-size: 15px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+        }
+    
+        .btn:hover {
+            background-color: #ff4081;
+        }
+    
+        .btn:active {
+            background-color: #c2185b;
+        }
+}
