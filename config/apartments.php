@@ -119,7 +119,7 @@ return [
         'bathrooms' => 1,
         'square_meters' => 20,
         'address' => "Via Molini 7, 39100, Bolzano",
-        'thumb' => "https://a0.muscache.com/im/pictures/miso/Hosting-52067293/original/0e7dd49d-f4a6-47b1-94f9-3be3c8d33c4f.jpeg?im_w=1200",
+        'thumb' => "https://e6i8y7h3.rocketcdn.me/wp-content/uploads/2019/01/Casetta-in-legno-DEN.jpg",
         'description' => "Appartamento per 2-3 persone, recentemente ristrutturato in zona panoramica e soleggiata (il centro è tranquillamente raggiungibile a piedi in 5-10 minuti) con camera matrimoniale.",
 
     ],
