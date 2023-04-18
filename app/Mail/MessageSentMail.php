@@ -30,7 +30,7 @@ class MessageSentMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Nuovo messaggio ricevuto da ' . $this->message->name,
+            subject: 'BoolBnB - Nuovo messaggio ricevuto da ' . $this->message->name,
         );
     }
 
