@@ -1,7 +1,7 @@
-        <div id="modalContainer" class="d-none">
+        <div class="d-none" id="modalContainer">
             <div id="deleteModal"
                 class="mt-3 text-center confirmation-modal mx-auto d-flex flex-column justify-content-between">
-                <h1>
+                <h1 class="pt-3">
                     Conferma
                 </h1>
                 <p>
