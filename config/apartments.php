@@ -47,7 +47,7 @@ return [
         'bathrooms' => 3,
         'square_meters' => 29,
         'address' => "via Dei Bottai 2, 39100, Bolzano",
-        'thumb' => "https://a0.muscache.com/im/pictures/b509cdb0-9512-4ae4-b4ca-b8ed7eba7c88.jpg?im_w=1200",
+        'thumb' => "https://mondoversilia.it/wp-content/uploads/2021/08/Villa-in-vendita-nella-campagna-di-Pietrasanta-Cod-1015-02.jpg",
         'description' => "",
 
     ],
@@ -83,7 +83,7 @@ return [
         'bathrooms' => 1,
         'square_meters' => 28,
         'address' => "via dei Cappuccini 12, 39100, Bolzano",
-        'thumb' => "https://a0.muscache.com/im/pictures/miso/Hosting-707803329507708164/original/ebf69816-73e8-4138-a8b9-d214e03fbcf0.jpeg?im_w=1200",
+        'thumb' => "https://www.modenatoday.it/~media/horizontal-hi/23116798187852/villaemma-2.jpg",
         'description' => "Se stai cercando un alloggio centrale ed economico, il nostro appartamento su BnB è la scelta ideale! Con la sua posizione strategica, potrai raggiungere a piedi i principali luoghi di interesse della città senza spendere una fortuna.",
 
     ],
@@ -144,7 +144,7 @@ return [
         'bathrooms' => 1,
         'square_meters' => 200,
         'address' => "Via barletta 32, 73048, Nardò",
-        'thumb' => "https://cdn2.hometogo.net/small/v1/f02/bc8/c3c18587aaa75bf8b5d666be82.jpg",
+        'thumb' => "https://sulbric.com/wp-content/uploads/2018/07/DSC_0490_edit.jpg",
         'description' => "si tratta di una camera matrimoniale ampia  (40mq) con la possibilità di un terzo letto, arredata con stile e confort. 
         la stanza fa parte di una casa antica, con spazi condivisi tra cui un ampia cucina,  wifi, un giardino di 100 mq arredato.",
 
@@ -169,7 +169,7 @@ return [
         'bathrooms' => 1,
         'square_meters' => 45,
         'address' => "Via del Governo Vecchio 70, 00186, Roma RM",
-        'thumb' => "https://cdn2.hometogo.net/small/v1/765/5fd/47579f9240300c8354bc8c3291.jpg",
+        'thumb' => "https://www.marazzi.it/media/filer_public_thumbnails/filer_public/88/d1/88d153ae-72b4-4773-8040-ffa6af1fcf57/marazzi_loft-gaggiano_016_main.jpg__1190x600_q85_crop_subsampling-2.jpg",
         'description' => "Luminoso appartamento nel cuore di Roma, a due passi da Piazza Navona e dal Pantheon. Composto da un soggiorno con divano letto, una camera matrimoniale, una cucina attrezzata e un bagno. Perfetto per una coppia o una piccola famiglia.",
 
     ],
@@ -216,7 +216,7 @@ return [
         'bathrooms' => 2,
         'square_meters' => 80,
         'address' => "Via degli Artisti 12, 50132, Firenze FI",
-        'thumb' => "https://cdn.trovacasa.it/annunci/vlis/A_77598_58243937_858930946/foto.jpg",
+        'thumb' => "https://images.homify.com/c_fill,f_auto,q_0,w_740/v1442925714/p/photo/image/928501/_DSC2118.jpg",
         'description' => "Appartamento recentemente ristrutturato in un palazzo storico del centro di Firenze, vicino alla stazione Santa Maria Novella. Composto da tre camere da letto, due bagni, salotto con angolo cottura e balcone. Arredato con gusto e dotato di ogni comfort.",
     ],
 
@@ -239,7 +239,7 @@ return [
         'bathrooms' => 1,
         'square_meters' => 50,
         'address' => "via Cavour 25, 20121, Milano",
-        'thumb' => "https://cdn2.hometogo.net/small/v1/43e/5e8/3b0cbc6624279ddb471f95066f.jpg",
+        'thumb' => "https://www.savastaimmobiliare.it/wp-content/uploads/2021/06/16-6-Articolo.png",
         'description' => "Appartamento luminoso e spazioso nel cuore di Milano, a pochi passi dalla stazione centrale e dalle principali attrazioni turistiche. L'appartamento è dotato di una camera da letto matrimoniale, un soggiorno con divano letto, una cucina completamente attrezzata e un bagno. È perfetto per coppie o famiglie che desiderano vivere l'esperienza milanese a pieno.",
 
     ],
@@ -265,7 +265,7 @@ return [
         'bathrooms' => 2,
         'square_meters' => 80,
         'address' => "via Garibaldi 10, 95121, Catania",
-        'thumb' => "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBD2-1AS_0Yny828gMPzsHsQuVBXSfX9iojw9mQLhJ3GY3vTi9zOi6EcJ0ue2JY2qU7bs&usqp=CAU",
+        'thumb' => "https://www.lapassionediarredare.it/wp-content/uploads/2022/11/Come-arredare-con-i-mobili-sospesi-50-idee-25.jpg",
         'description' => "Luminoso e moderno appartamento nel centro storico di Catania, a pochi passi dal Duomo e dal Castello Ursino. L'appartamento è composto da tre camere da letto, un soggiorno con divano letto, una cucina completamente attrezzata e due bagni. È perfetto per gruppi di amici o famiglie che desiderano vivere l'esperienza catanese a pieno.",
 
     ],
@@ -289,7 +289,7 @@ return [
         'bathrooms' => 2,
         'square_meters' => 70,
         'address' => "Piazza della Signoria, 50122, Firenze",
-        'thumb' => "https://delta.creativecirclecdn.com/riverdalepress/original/20210805-212754-HOTW080521-02_BRIGHT_WEB.jpg",
+        'thumb' => "https://la-casa-dei-fiori-assisi.hotelmix.it/data/Photos/OriginalPhoto/11190/1119038/1119038802/La-Casa-Dei-Fiori-Villa-Assisi-Exterior.JPEG",
         'description' => "Splendido appartamento nel cuore di Firenze, a due passi dalla famosa Piazza della Signoria. L'appartamento dispone di due camere da letto matrimoniali, due bagni, una cucina completamente attrezzata e un ampio soggiorno. Wi-Fi gratuito.",
 
     ],
@@ -325,7 +325,7 @@ return [
         'bathrooms' => 2,
         'square_meters' => 40,
         'address' => "Via della Scala 30, 00153, Roma",
-        'thumb' => "https://images.homify.com/c_fill,f_auto,q_0,w_740/v1484143978/p/photo/image/1768898/cavallasca_como_vanin_2.jpg",
+        'thumb' => "https://www.wowhomes.ch/it/affitti/fotos/2/1626183119e3dadc9f8b71896b3b09cb8a70a1d0eb/162618312107dcb2e74f56de048b5e3cdd6edb582b.jpg",
         'description' => "Luminoso appartamento di 80 mq, situato al 2° piano di un edificio antico, in posizione centralissima nel caratteristico quartiere di Trastevere. L'appartamento è composto da soggiorno con divano letto, cucina attrezzata, due camere da letto matrimoniali, due bagni (uno con vasca e uno con doccia) e una terrazza panoramica con vista sui tetti di Roma.",
 
     ],
@@ -361,7 +361,7 @@ return [
         'bathrooms' => 2,
         'square_meters' => 80,
         'address' => "Via Monte Grappa 10, 00195, Roma",
-        'thumb' => "https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        'thumb' => "https://www.villedasogno.net/wp-content/uploads/2019/03/04/Vendita-casa-Lago-di-Garda-a-Padenghe-sul-Garda_01.jpg",
         'description' => "Appartamento elegante e luminoso nel quartiere Prati, a pochi passi dalla Basilica di San Pietro e dai Musei Vaticani. Composto da soggiorno, cucina attrezzata, due camere da letto, due bagni e balcone. Aria condizionata, riscaldamento autonomo e connessione Wi-Fi gratuita.",
 
     ],
@@ -373,7 +373,7 @@ return [
         'bathrooms' => 1,
         'square_meters' => 50,
         'address' => "Via Carlo Alberto 13, 20123, Milano",
-        'thumb' => "https://mir-s3-cdn-cf.behance.net/projects/404/2822cb50335811.Y3JvcCwxMDA5LDc5MCwxNzksMA.jpg",
+        'thumb' => "https://www.lapassionediarredare.it/wp-content/uploads/2022/11/Mobile-tv-moderno-50-idee-da-cui-trarre-spunto-17.jpg",
         'description' => "Appartamento raffinato nel cuore di Milano, a pochi passi dal Duomo e dalla Galleria Vittorio Emanuele II. Composto da soggiorno con angolo cottura, camera da letto, bagno e balcone con vista sulla cittÃ . Riscaldamento autonomo e connessione Wi-Fi gratuita.",
 
     ],
@@ -385,7 +385,7 @@ return [
         'bathrooms' => 2,
         'square_meters' => 100,
         'address' => "Via del Colosseo 12, 00184, Roma",
-        'thumb' => "https://newpropertyboard.com/wp-content/uploads/DVP-Master-Bedroom-01.jpg",
+        'thumb' => "https://www.lapassionediarredare.it/wp-content/uploads/2022/11/Mobile-tv-moderno-50-idee-da-cui-trarre-spunto-19.jpg",
         'description' => "Appartamento spazioso e luminoso a due passi dal Colosseo, nel cuore di Roma. Composto da soggiorno, cucina abitabile, tre camere da letto, due bagni e balcone con vista sul Colosseo. Aria condizionata, riscaldamento autonomo e connessione Wi-Fi gratuita.",
 
     ],
@@ -409,7 +409,7 @@ return [
         'bathrooms' => 2,
         'square_meters' => 80,
         'address' => "Via A. De Gasperi, 95121, Catania CT",
-        'thumb' => "https://foto.pcase.it/16736/8366358_1.jpg",
+        'thumb' => "https://www.lapassionediarredare.it/wp-content/uploads/2022/11/Mobile-tv-moderno-50-idee-da-cui-trarre-spunto-24.jpg",
         'description' => "Ampio appartamento a pochi passi dal centro storico di Catania e dalla stazione centrale. L'appartamento è composto da un ampio soggiorno con divano-letto, cucina attrezzata, tre camere da letto e due bagni. Arredato con gusto e dotato di tutti i comfort, incluso Wi-Fi gratuito e aria condizionata. Perfetto per famiglie o gruppi di amici che vogliono esplorare la splendida città di Catania.",
 
     ],
@@ -432,7 +432,7 @@ return [
         'bathrooms' => 1,
         'square_meters' => 25,
         'address' => "Via Isabella D'Aragona, 73014, Gallipoli LE",
-        'thumb' => "https://www.domemilano.com/wp-content/uploads/2019/12/interni_moderni_di_lusso_italian_luxury_interiors.jpg",
+        'thumb' => "https://www.lapassionediarredare.it/wp-content/uploads/2022/11/Mobile-tv-moderno-50-idee-da-cui-trarre-spunto-22.jpg",
         'description' => "Appartamento appena ristrutturato a 2 passi dal mare e dal centro di Gallipoli. Composto da cucina, soggiorno con divano letto, camera da letto matrimoniale e bagno con doccia. Dotato di aria condizionata, TV, lavatrice e cucina attrezzata. Ideale per una coppia o una famiglia con 2 bambini."
     ],
     [
@@ -443,7 +443,7 @@ return [
         'bathrooms' => 2,
         'square_meters' => 40,
         'address' => "Corso Giuseppe Garibaldi, 89125, Reggio Calabria RC",
-        'thumb' => "https://cdn4.creativecirclemedia.com/riverdalepress/original/20210805-212754-HOTW080521-01_BRIGHT_WEB.jpg",
+        'thumb' => "https://www.lapassionediarredare.it/wp-content/uploads/2022/11/Mobile-tv-moderno-50-idee-da-cui-trarre-spunto-5.jpg",
         'description' => "Appartamento luminoso e spazioso nel centro di Reggio Calabria. A pochi minuti a piedi dal Museo Archeologico Nazionale e dal lungomare. L'appartamento è dotato di 3 camere da letto, 2 bagni, cucina attrezzata, salotto con TV e balcone. Connessione Wi-Fi gratuita disponibile in tutta la struttura."
     ],
 ];
