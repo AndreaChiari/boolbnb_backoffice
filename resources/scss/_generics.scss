@@ -31,14 +31,16 @@ body {
 @import url('https://fonts.googleapis.com/css2?family=josefin+Sans:wght@400;500;600;700&display=swap');
 
 
-
+.test{
+    background-color: rgb(212, 200, 200);
+}
 .credit {
     width: 500px;
     height: 300px;
     color: #fff;
     cursor: pointer;
     perspective: 1000px;
-    background-color: #313338;
+    background-color:rgb(212, 200, 200);
 }
 
 .card-inner {

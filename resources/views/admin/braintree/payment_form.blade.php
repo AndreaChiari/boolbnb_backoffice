@@ -2,7 +2,7 @@
 
 <head>@vite(['resources/js/app.js']) </head>
 
-<body>
+<body class="test">
     <div class="wrapper">
         <div class="checkout container">
             <div class="credit-card-wrapper mt-5 d-flex justify-content-center">
@@ -55,7 +55,7 @@
                 @csrf
                 <section>
                     <label for="amount">
-                        <span class="input-label text-white">Prezzo:</span>
+                        <span class="input-label text-black">Prezzo:</span>
                         <div class="input-wrapper amount-wrapper">
                             <input id="amount" name="amount" type="tel" min="1" placeholder="Amount"
                                 value="{{ $sponsorship->price }}" readonly>
