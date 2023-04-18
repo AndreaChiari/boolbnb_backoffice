@@ -337,7 +337,7 @@ return [
         'bathrooms' => 2,
         'square_meters' => 50,
         'address' => "Via de' Tornabuoni, 50123 Firenze",
-        'thumb' => "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/45/3d/1d/casa-di-campagna-in-toscana.jpg?w=1200&h=-1&s=1",
+        'thumb' => "https://tirichiamo.it/image.axd?picture=2017%2f6%2fRistrutturare-la-casa-di-campagna.jpg",
         'description' => "Elegante appartamento di 100 mq nel cuore del centro storico di Firenze, situato al 3° piano di un palazzo storico. L'appartamento è composto da soggiorno con divano letto, cucina attrezzata, due camere da letto matrimoniali, due bagni (uno con vasca e uno con doccia) e una terrazza con vista sui monumenti della città.",
 
     ],
