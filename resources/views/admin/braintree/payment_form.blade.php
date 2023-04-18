@@ -46,15 +46,9 @@
 
 
             </div>
-            @if (session('msg'))
-                <div class="alert alert-success">
-                    <p class="text-primary font-weight-bold">tuttapposto</p>
-                </div>
-            @endif
+
             @if (count($errors) > 0)
-                @foreach ($errors as $error)
-                    <p class="text-danger">{{ $error }}</p>
-                @endforeach
+                <p class="alert alert-danger text-center my-3">Transazione fallita</p>
             @endif
             <form method="post" id="payment-form"
                 action="{{ route('admin.payments.checkout', ['apartment' => $apartment->id, 'sponsorship' => $sponsorship->id]) }}">
