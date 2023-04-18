@@ -119,7 +119,7 @@ return [
         'bathrooms' => 1,
         'square_meters' => 20,
         'address' => "Via Molini 7, 39100, Bolzano",
-        'thumb' => "https://a0.muscache.com/im/pictures/miso/Hosting-52067293/original/0e7dd49d-f4a6-47b1-94f9-3be3c8d33c4f.jpeg?im_w=1200",
+        'thumb' => "https://e6i8y7h3.rocketcdn.me/wp-content/uploads/2019/01/Casetta-in-legno-DEN.jpg",
         'description' => "Appartamento per 2-3 persone, recentemente ristrutturato in zona panoramica e soleggiata (il centro è tranquillamente raggiungibile a piedi in 5-10 minuti) con camera matrimoniale.",
 
     ],
@@ -131,7 +131,7 @@ return [
         'bathrooms' => 1,
         'square_meters' => 40,
         'address' => "Via San Lorenzo 5, 73048, Nardò",
-        'thumb' => "https://cdn2.hometogo.net/small/v1/8ea/b72/c5fc46f973915592d6576ccc1d.jpg",
+        'thumb' => "https://txc5xc6e.cdn.imgeng.in/custom/01505/foto/20211112102212-47.jpg",
         'description' => "si tratta di una camera matrimoniale ampia  (40mq) con la possibilità di un terzo letto, arredata con stile e confort. 
         la stanza fa parte di una casa antica, con spazi condivisi tra cui un ampia cucina,  wifi, un giardino di 100 mq arredato.",
 
@@ -181,7 +181,7 @@ return [
         'bathrooms' => 1,
         'square_meters' => 50,
         'address' => "Via Giuseppe Giusti 16, 50121, Firenze FI",
-        'thumb' => "https://www.vacanzeresidence.it/images/slider/appartamento-florian-01g.jpg",
+        'thumb' => "https://st.hzcdn.com/simgs/pictures/facciate-di-case/casa-in-collina-gianfranco-sangalli-architetti-img~2f811a58061fab00_4-4542-1-bc40c3e.jpg",
         'description' => "Accogliente appartamento nel quartiere di Santa Croce, a pochi minuti a piedi dal centro storico di Firenze. Dispone di una camera matrimoniale, una camera doppia, una cucina attrezzata e un bagno. Ideale per famiglie o gruppi di amici.",
 
     ],
@@ -228,7 +228,7 @@ return [
         'bathrooms' => 1,
         'square_meters' => 50,
         'address' => "Via di Mezzo 6, 53100, Siena SI",
-        'thumb' => "https://cdn4.creativecirclemedia.com/riverdalepress/original/20210805-212754-HOTW080521-01_BRIGHT_WEB.jpg",
+        'thumb' => "https://www.holidaycasa.it/affitti/fotos/2/15641506370f5b73286b8fbc5d1187802d026dc07a/15641507689002e689c71e082f093bd724f8888126.jpg",
         'description' => "Grazioso appartamento nel centro storico di Siena, a pochi passi dalla Piazza del Campo. Composto da due camere da letto, soggiorno con angolo cottura, bagno e terrazza panoramica con vista sulla città. Arredato in stile rustico toscano e dotato di ogni comfort.",
     ],
     [
@@ -277,7 +277,7 @@ return [
         'bathrooms' => 1,
         'square_meters' => 50,
         'address' => "Via delle Carrozze, 00187, Roma",
-        'thumb' => "https://st4.depositphotos.com/6297298/22718/i/600/depositphotos_227187730-stock-photo-small-living-room-table-couch.jpg",
+        'thumb' => "https://www.agriturismohegemone.it/assets/images/apartments/romantico/001gallery/006-appartamento-romantico.jpg",
         'description' => "Elegante appartamento nel cuore di Roma, a pochi passi dalla Fontana di Trevi e dal Pantheon. Dispone di una camera da letto matrimoniale, una cucina completamente attrezzata, un bagno e un soggiorno con divano letto. Wi-Fi gratuito.",
 
     ],
@@ -301,7 +301,7 @@ return [
         'bathrooms' => 1,
         'square_meters' => 35,
         'address' => "Via Nazionale, 00184, Roma",
-        'thumb' => "https://a0.muscache.com/im/pictures/miso/Hosting-770102091471416851/original/9db3d590-261a-4b5a-bd64-daac63706deb.jpeg?im_w=720",
+        'thumb' => "https://villacellaia.com/wp-content/uploads/2019/06/MANSARDA2.jpg",
         'description' => "Accogliente monolocale nel cuore di Roma, a pochi passi dal Colosseo e dal Foro Romano. Dispone di una camera da letto con letto matrimoniale, una cucina completamente attrezzata e un bagno. Wi-Fi gratuito.",
 
     ],
