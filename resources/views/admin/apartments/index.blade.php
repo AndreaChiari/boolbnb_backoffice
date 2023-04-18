@@ -94,7 +94,8 @@
                                         </a>
                                         <a href="{{ route('admin.sponsorships.index', $apartment->id) }}"
                                             class="btn-backoffice"><i class="fa-regular fa-credit-card"></i></a>
-                                        <a href="" class="btn-backoffice"><i class="fa-solid fa-chart-line"></i></a>
+                                        <a href="{{ route('admin.statistics.index', $apartment->id) }}"
+                                            class="btn-backoffice"><i class="fa-solid fa-chart-line"></i></a>
                                     </div>
                                 </div>
                             </div>

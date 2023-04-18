@@ -20,11 +20,11 @@ class ViewSeeder extends Seeder
         $apartment_ids = Apartment::pluck('id')->toArray();
         $max = count($apartment_ids) - 1;
 
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 100; $i++) {
             $new_view = new View();
 
             $new_view->apartment_id = $apartment_ids[$faker->numberBetween(0, $max)];
-            $new_view->date = Carbon::now();
+            $new_view->date = $faker->dateTimeInInterval('-1 week', '+7 days');
             $new_view->ip = $faker->ipv4();
 
             $new_view->save();

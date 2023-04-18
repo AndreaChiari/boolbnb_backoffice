@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\PaymentController;
 use App\Http\Controllers\Admin\ApartmentController;
 use App\Http\Controllers\Admin\MessageController;
+use App\Http\Controllers\Admin\StatisticController;
 use App\Http\Controllers\ApartmentPicController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SponsorshipController;
@@ -45,6 +46,8 @@ Route::middleware(['auth', 'verified'])->name('admin.')->prefix('admin')->group(
     // Route payments
     Route::get('/payments', [PaymentController::class, 'index'])->name('payments');
     Route::post('/checkout', [PaymentController::class, 'checkout'])->name('payments.checkout');
+    //Route statistics
+    Route::get('statistics/{apartment}', [StatisticController::class, 'index'])->name('statistics.index');
 });
 
 
