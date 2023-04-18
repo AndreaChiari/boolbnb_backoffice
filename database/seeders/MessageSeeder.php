@@ -18,7 +18,7 @@ class MessageSeeder extends Seeder
         $apartment_ids = Apartment::pluck('id')->toArray();
         $max = count($apartment_ids) - 1;
 
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 200; $i++) {
             $new_message = new Message();
 
             $new_message->apartment_id = $apartment_ids[$faker->numberBetween(0, $max)];
