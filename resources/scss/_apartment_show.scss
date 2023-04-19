@@ -107,3 +107,20 @@
         right: 0;
     }
 }
+.details {
+    font-size: 15px;
+    cursor: pointer;
+   
+
+    i {
+        color: $pink-3;
+        &:hover {
+              box-shadow: 5px 5px 20px rgba(255, 94, 88, 0.533);
+               
+            }
+    }
+
+    .number {
+        color: $pink-2;
+    }
+}
