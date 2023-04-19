@@ -6,6 +6,8 @@
 
     &:hover {
         text-shadow: 0 0 5px red;
+        -webkit-filter: drop-shadow(5px 5px 5px #f50606);
+        filter: drop-shadow(5px 5px 5px #e00000);
     }
 }
 
