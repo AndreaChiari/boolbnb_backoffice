@@ -46,39 +46,41 @@
                         </div>
                         <p class="address card-text">{{ $apartment->address }}</p>
                         <p class="description card-text">{{ $apartment->description }}</p>
-                        <div class="details d-flex align-items-center text-center justify-content-evenly mx-5 mb-5">
+                        <div class="details d-flex align-items-center text-center justify-content-evenly mx-5 mb-3 pt-3">
                             <div>
-                                <div class="mb-2">
-                                    <i class="fa-solid fa-person-shelter"></i>
+                                <div class="detail-box mb-2">
+                                    <i class="fa-solid fa-person-shelter fa-2x"></i>
+                                    <div class="number">{{ $apartment->rooms }}</div>
                                 </div>
-                                <div class="number">{{ $apartment->rooms }}</div>
+                                <p class="text-color-secondary">Stanze</p>
                             </div>
                             <div>
-                                <div class="mb-2">
-                                    <i class="fa-solid fa-bed"></i>
+                                <div class="detail-box mb-2">
+                                    <i class="fa-solid fa-bed fa-2x"></i>
+                                    <div class="number">{{ $apartment->beds }}</div>
                                 </div>
-                                <div class="number">{{ $apartment->beds }}</div>
+                                <p class="text-color-secondary">Letti</p>
                             </div>
                             <div>
-                                <div class="mb-2">
-                                    <i class="fa-solid fa-restroom"></i>
+                                <div class="detail-box mb-2">
+                                    <i class="fa-solid fa-restroom fa-2x"></i>
+                                    <div class="number">{{ $apartment->bathrooms }}</div>
                                 </div>
-                                <div class="number">{{ $apartment->bathrooms }}</div>
+                                <p class="text-color-secondary">Bagni</p>
                             </div>
                         </div>
-                        <p class="card-text price fw-bold fs-4">{{ $apartment->price }} € / notte</p>
-                        <div class="services row justify-content-end">
-                            @if ($apartment->services)
+                        @if (count($apartment->services))
+                            <div class="services row justify-content-center mx-2 border-secondary-color rounded-5 p-3 mb-3">
+                                <h5 class="text-center mb-5">Servizi</h5>
                                 @foreach ($apartment->services as $service)
                                     <div class="col-4 col-sm-3 col-md-2 text-center">
                                         <i class="{{ $service->icon }} my-3 fa-2x"></i>
                                         <p>{{ $service->name }}</p>
                                     </div>
                                 @endforeach
-                            @else
-                                -
-                            @endif
-                        </div>
+                            </div>
+                        @endif
+                        <p class="card-text price fw-bold fs-4">{{ $apartment->price }} € / notte</p>
 
                     </div>
                 </div>
