@@ -119,22 +119,22 @@
 
     {{-- Bottoni --}}
     <div class="container buttons d-flex my-5 justify-content-end align-items-center">
-        <a class="btn-backoffice py-2 px-3 me-2" href="{{ route('admin.messages.index', $apartment->id) }}">
+        <a class="btn-backoffice py-2 px-1 me-3" href="{{ route('admin.messages.index', $apartment->id) }}">
             <i class="fa-solid fa-envelope"></i>
             @if ($new_messages)
                 <p class="messages-notification text-center">{{ $new_messages }}</p>
             @endif
         </a>
-        <a href="{{ route('admin.sponsorships.index', $apartment->id) }}" class="btn-backoffice py-2 px-3"><i
+        <a href="{{ route('admin.sponsorships.index', $apartment->id) }}" class="btn-backoffice py-2 px-1 me-3"><i
                 class="fa-regular fa-credit-card"></i></a>
-        <a href="{{ route('admin.apartments.edit', $apartment->id) }}" class="btn-backoffice py-2 px-3 me-2"><i
+        <a href="{{ route('admin.apartments.edit', $apartment->id) }}" class="btn-backoffice py-2 px-1 me-3"><i
                 class="fa-regular fa-pen-to-square"></i></a>
         <a href="{{ route('admin.statistics.index', $apartment->id) }}" class="btn-backoffice"><i
-                class="fa-solid fa-chart-line me-2"></i></a>
+                class="fa-solid fa-chart-line me-3"></i></a>
         <form class="deleteForm" action="{{ route('admin.apartments.destroy', $apartment->id) }}" method="POST">
             @method('DELETE')
             @csrf
-            <button class="btn-backoffice py-2 px-3 me-5" type="submit"><i class="fa-regular fa-trash-can"></i></button>
+            <button class="btn-backoffice py-2 px-1 me-5" type="submit"><i class="fa-regular fa-trash-can"></i></button>
         </form>
         <a class="btn-backoffice bordered p-2 d-flex align-items-center justify-content-center"
             href="{{ route('admin.apartments.index') }}"><i class="fa-solid fa-arrow-left"></i></a>
