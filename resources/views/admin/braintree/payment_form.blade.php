@@ -69,7 +69,7 @@
                 <button class="button btn-pay bordered mt-3"><span>Paga ora</span></button>
             </form>
             <div class="d-flex justify-content-end">
-                <a class="btn-pay bordered p-2 d-flex align-items-center justify-content-center"
+                <a class="btn-pay  prova p-2 d-flex align-items-center justify-content-center"
                     href="{{ route('admin.apartments.index') }}"><span class="font-weight-bold">Torna alla
                         home</span></a>
             </div>
