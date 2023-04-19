@@ -21,7 +21,7 @@ return [
         'beds' => 3,
         'bathrooms' => 1,
         'square_meters' => 20,
-        'address' => "via Alto Adige 2, 39100, Bolzano",
+        'address' => "Via Dalmazia, 39100 Bolzano",
         'thumb' => "https://a0.muscache.com/im/pictures/miso/Hosting-704718551122371442/original/1e8515b7-6d59-4c1d-828f-eb6f0255786e.jpeg?im_w=1200",
         'description' => "Ai piedi di Castel Firmiano (Messner Mountain Museum), tra i meleti, con accesso diretto ai sentieri escursionistici e ciclabili, si trova l'area ricreativa esterna di Kaiserau.
         Qui potrete scegliere tra una gita sulla strada del vino, sulle Dolomiti, sui laghi di montagna, una sciata e di più.",

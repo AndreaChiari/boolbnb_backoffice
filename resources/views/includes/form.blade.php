@@ -10,7 +10,7 @@
 <div class="row">
     <div class="col-md-2">
         <div class="mb-3 ">
-            <label class="form-label" for="name">Name:</label>
+            <label class="form-label" for="name">Nome:</label>
             <input class="form-control rounded-5" type="text" name="name" id="name" required min-length="0"
                 value="{{ old('name', $apartment->name) }}">
         </div>
