@@ -46,6 +46,26 @@
                         </div>
                         <p class="address card-text">{{ $apartment->address }}</p>
                         <p class="description card-text">{{ $apartment->description }}</p>
+                        <div class="details d-flex align-items-center text-center justify-content-evenly mx-5 mb-5">
+                            <div>
+                                <div class="mb-2">
+                                    <i class="fa-solid fa-person-shelter"></i>
+                                </div>
+                                <div class="number">{{ $apartment->rooms }}</div>
+                            </div>
+                            <div>
+                                <div class="mb-2">
+                                    <i class="fa-solid fa-bed"></i>
+                                </div>
+                                <div class="number">{{ $apartment->beds }}</div>
+                            </div>
+                            <div>
+                                <div class="mb-2">
+                                    <i class="fa-solid fa-restroom"></i>
+                                </div>
+                                <div class="number">{{ $apartment->bathrooms }}</div>
+                            </div>
+                        </div>
                         <p class="card-text price fw-bold fs-4">{{ $apartment->price }} € / notte</p>
                         <div class="services row justify-content-end">
                             @if ($apartment->services)
@@ -59,6 +79,7 @@
                                 -
                             @endif
                         </div>
+
                     </div>
                 </div>
             </div>

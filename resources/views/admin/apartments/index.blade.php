@@ -53,7 +53,7 @@
                                 </figure>
                                 <div class="card-body">
                                     <h2 class="card-title text-center">{{ $apartment->name }}</h2>
-                                    <div class="details row text-center justify-content-around mb-3">
+                                    {{-- <div class="details row text-center justify-content-around mb-3">
                                         <div class="col">
                                             <div class="mb-2">
                                                 <i class="fa-solid fa-person-shelter"></i>
@@ -72,7 +72,7 @@
                                             </div>
                                             <div class="number">{{ $apartment->bathrooms }}</div>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     <div class="buttons d-flex justify-content-center align-items-center">
                                         <a href="{{ route('admin.apartments.edit', $apartment->id) }}"
                                             class="btn-backoffice"><i class="fa-regular fa-pen-to-square"></i></a>
