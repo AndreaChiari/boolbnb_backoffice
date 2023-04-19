@@ -39,7 +39,20 @@
     }
 
     .messages-notification.small {
-        top: 0;
-        right: 5px;
+        top: -3px;
+        right: 8px;
+        font-size: 8px;
+        width: 12px;
+        height: 12px;
+        line-height: 12px;
+    }
+
+    &.txt-small p {
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    &.txt-small i {
+        font-size: 20px;
     }
 }
