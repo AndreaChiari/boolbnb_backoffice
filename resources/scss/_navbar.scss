@@ -1,6 +1,7 @@
 .logo {
     p {
-        margin-left: -32px;
+        margin-left: -24px;
+        letter-spacing: 5px;
     }
 }
 
@@ -61,7 +62,8 @@
         &.logo {
             color: $pink-3;
             font-weight: bold;
-            font-size: 24px;
+            font-size: 19px;
+
 
             &:hover {
                 color: $pink-3;
