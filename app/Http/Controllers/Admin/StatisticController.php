@@ -35,7 +35,14 @@ class StatisticController extends Controller
             ->groupBy('date')
             ->get();
 
-        return view('admin.apartments.statistics.index', compact('apartment', 'start_date', 'end_date', 'views'));
+        $tot_views_arr = View::select(DB::raw('COUNT(*) as count'))
+            ->where('apartment_id', $apartment->id)
+            ->whereBetween('date', [$start_date, $end_date])
+            ->first();
+
+        $tot_views = $tot_views_arr['count'];
+
+        return view('admin.apartments.statistics.index', compact('apartment', 'start_date', 'end_date', 'views', 'tot_views'));
     }
 
     /**
