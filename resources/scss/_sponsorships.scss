@@ -1,10 +1,7 @@
-
-
 .general {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     background: $main-bg;
 }
 
@@ -28,7 +25,7 @@
 }
 
 .spon .box::before {
-    content: ' ';
+    content: " ";
     position: absolute;
     top: 0;
     left: 50px;
@@ -42,7 +39,7 @@
 }
 
 .spon .box::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 50;
@@ -60,22 +57,21 @@
     transform: skewX(0deg);
     left: 20px;
     width: calc(100% - 90px);
-
 }
 
 .spon .box:nth-child(1):before,
 .spon .box:nth-child(1):after {
-    background: linear-gradient(315deg, #ffbc00, #ff0058)
+    background: linear-gradient(315deg, #ffbc00, #ff0058);
 }
 
 .spon .box:nth-child(2):before,
 .spon .box:nth-child(2):after {
-    background: linear-gradient(315deg, #03a9f4, #ff0058)
+    background: linear-gradient(315deg, #03a9f4, #ff0058);
 }
 
 .spon .box:nth-child(3):before,
 .spon .box:nth-child(3):after {
-    background: linear-gradient(315deg, #4dff03, #00d0ff)
+    background: linear-gradient(315deg, #4dff03, #00d0ff);
 }
 
 .spon .box span {
@@ -90,7 +86,7 @@
 }
 
 .spon .box span::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -102,7 +98,7 @@
     opacity: 0;
     transition: 0.1s;
     animation: animate 2s ease-in-out infinite;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08)
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 
 .spon .box:hover span::before {
@@ -114,7 +110,7 @@
 }
 
 .spon .box span::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     right: 0;
@@ -139,7 +135,6 @@
 }
 
 @keyframes animate {
-
     0%,
     100% {
         transform: translateY(10px);
