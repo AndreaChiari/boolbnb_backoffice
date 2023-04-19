@@ -21,10 +21,46 @@ return [
         'beds' => 3,
         'bathrooms' => 1,
         'square_meters' => 20,
-        'address' => "via Alto Adige 2, 39100, Bolzano",
+        'address' => "Via Dalmazia, 39100 Bolzano",
         'thumb' => "https://a0.muscache.com/im/pictures/miso/Hosting-704718551122371442/original/1e8515b7-6d59-4c1d-828f-eb6f0255786e.jpeg?im_w=1200",
         'description' => "Ai piedi di Castel Firmiano (Messner Mountain Museum), tra i meleti, con accesso diretto ai sentieri escursionistici e ciclabili, si trova l'area ricreativa esterna di Kaiserau.
         Qui potrete scegliere tra una gita sulla strada del vino, sulle Dolomiti, sui laghi di montagna, una sciata e di più.",
+
+    ],
+    [
+        'name' => "Villa Serenità",
+        'price' => 280,
+        'rooms' => 8,
+        'beds' => 16,
+        'bathrooms' => 3,
+        'square_meters' => 200,
+        'address' => "Via Luigi Cadorna, 39100 Bolzano",
+        'thumb' => "https://blog.casa.it/wp-content/uploads/2017/02/lusso3.jpg",
+        'description' => "Villa Serenità è una casa di lusso situata su una collina con vista panoramica sul mare. La villa dispone di cinque camere da letto, ciascuna con bagno privato, e una spaziosa area living con grandi finestre che si affacciano sulla piscina all'aperto. Gli interni sono arredati con mobili eleganti e moderni, ma mantengono un'atmosfera accogliente grazie ai tessuti morbidi e alle tonalità neutre utilizzate. La cucina gourmet è completamente attrezzata con elettrodomestici di alta qualità e dispone di un'isola centrale per preparare deliziosi pasti. All'esterno, gli ospiti possono godersi il sole sulla terrazza solarium o rilassarsi sotto il portico arredato con comode sedie a sdraio. La villa è circondata da un giardino curato con piante esotiche e ulivi secolari, che creano un'atmosfera di tranquillità e serenità.",
+
+    ],
+    [
+        'name' => "Palazzo di Montagna",
+        'price' => 150,
+        'rooms' => 4,
+        'beds' => 8,
+        'bathrooms' => 3,
+        'square_meters' => 175,
+        'address' => "Via Giovanni Keplero, 39100 Bolzano",
+        'thumb' => "https://dettaglihomedecor.com/wp-content/uploads/2019/03/Arijiju-casa-privata-in-Kenya-01.jpg",
+        'description' => "Palazzo di Montagna è una villa di lusso situata sulle montagne, con accesso diretto alla spiaggia spa privata. La villa dispone di sei camere da letto, ognuna con bagno privato e vista sul mare. Gli interni sono arredati in stile mediterraneo, con colori caldi e tessuti lussuosi. La villa dispone di una grande piscina all'aperto, circondata da un'ampia terrazza con sedie a sdraio. La cucina gourmet è completamente attrezzata e dispone di una zona pranzo con vista sulla piscina e sul mare. All'esterno, gli ospiti possono godersi la vista mozzafiato sul mare dal giardino curato o dalla terrazza coperta arredata.",
+
+    ],
+    [
+        'name' => "Villa dei Sogni",
+        'price' => 300,
+        'rooms' => 4,
+        'beds' => 8,
+        'bathrooms' => 3,
+        'square_meters' => 225,
+        'address' => "Corso della Libertà, 39100 Bolzano",
+        'thumb' => "https://media-assets.ad-italia.it/photos/60f00b2fce331131086743b7/16:9/w_1280,c_limit/01_Airbnb_ConPiscina-LiscianoNiccone.jpg",
+        'description' => "Villa dei Sogni è una casa di lusso situata su una collina con vista panoramica sulla campagna circostante. La villa dispone di quattro camere da letto, ciascuna con bagno privato e arredata con mobili eleganti. Gli interni sono luminosi e spaziosi, con pavimenti in legno e soffitti alti. La cucina è moderna e completamente attrezzata, con una grande isola centrale e un'area pranzo formale. La villa dispone anche di una grande area living con camino e una zona TV. All'esterno, gli ospiti possono godersi la vista sulla campagna dalla piscina all'aperto, circondata da un giardino ben curato con piante mediterranee.",
 
     ],
     [
@@ -132,8 +168,7 @@ return [
         'square_meters' => 40,
         'address' => "Via San Lorenzo 5, 73048 Nardò",
         'thumb' => "https://txc5xc6e.cdn.imgeng.in/custom/01505/foto/20211112102212-47.jpg",
-        'description' => "si tratta di una camera matrimoniale ampia  (40mq) con la possibilità di un terzo letto, arredata con stile e confort. 
-        la stanza fa parte di una casa antica, con spazi condivisi tra cui un ampia cucina,  wifi, un giardino di 100 mq arredato.",
+        'description' => "Benvenuti nella nostra camera matrimoniale di 40 mq, un'oasi di lusso e comfort nel cuore di una casa antica piena di fascino. La nostra camera matrimoniale offre ampi spazi per il relax, e la possibilità di un terzo letto aggiuntivo la rende perfetta per famiglie o gruppi di amici. L'arredamento elegante e raffinato si sposa alla perfezione con il carattere rustico della casa antica, creando un'atmosfera unica e accogliente.",
 
     ],
     [
@@ -145,7 +180,7 @@ return [
         'square_meters' => 200,
         'address' => "Via Barletta, 73048 Nardò",
         'thumb' => "https://sulbric.com/wp-content/uploads/2018/07/DSC_0490_edit.jpg",
-        'description' => "si tratta di una camera matrimoniale ampia  (40mq) con la possibilità di un terzo letto, arredata con stile e confort. 
+        'description' => "Si tratta di una camera matrimoniale ampia  (40mq) con la possibilità di un terzo letto, arredata con stile e confort. 
         la stanza fa parte di una casa antica, con spazi condivisi tra cui un ampia cucina,  wifi, un giardino di 100 mq arredato.",
 
     ],

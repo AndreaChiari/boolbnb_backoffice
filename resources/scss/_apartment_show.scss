@@ -19,7 +19,31 @@
             color: $pink-1;
         }
 
+        .detail-box {
+            position: relative;
+
+            .number {
+                position: absolute;
+                font-size: 12px;
+                font-weight: bold;
+                top: 60%;
+                left: 50%;
+                transform: translate(-50%);
+                background-color: $pink-2;
+                color: $pink-3;
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.5);
+            }
+        }
+
         .services {
+            h5 {
+                color: $pink-3;
+            }
+
             i {
                 color: $pink-3;
             }
@@ -69,8 +93,9 @@
     }
 
     img {
-        max-width: 100%;
-        max-height: 100%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
         border-radius: 10px;
     }
 }
@@ -87,8 +112,9 @@
         }
 
         img {
-            max-width: 100%;
-            max-height: 100%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             border-radius: 10px;
         }
 
@@ -110,14 +136,12 @@
 .details {
     font-size: 15px;
     cursor: pointer;
-   
 
     i {
         color: $pink-3;
         &:hover {
-              box-shadow: 5px 5px 20px rgba(255, 94, 88, 0.533);
-               
-            }
+            box-shadow: 5px 5px 20px rgba(255, 94, 88, 0.533);
+        }
     }
 
     .number {

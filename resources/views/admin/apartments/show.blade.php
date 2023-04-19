@@ -46,39 +46,44 @@
                         </div>
                         <p class="address card-text">{{ $apartment->address }}</p>
                         <p class="description card-text">{{ $apartment->description }}</p>
-                        <div class="details d-flex align-items-center text-center justify-content-evenly mx-5 mb-5">
-                            <div>
-                                <div class="mb-2">
-                                    <i class="fa-solid fa-person-shelter"></i>
+                        <div
+                            class="details d-flex align-items-center text-center justify-content-evenly mx-5 mb-3 pt-3 text-wrap">
+                            <div class="flex-fill">
+                                <div class="detail-box mb-2">
+                                    <i class="fa-solid fa-person-shelter fa-2x"></i>
+                                    <div class="number">{{ $apartment->rooms }}</div>
                                 </div>
-                                <div class="number">{{ $apartment->rooms }}</div>
+                                <p class="text-color-secondary">Stanze</p>
                             </div>
-                            <div>
-                                <div class="mb-2">
-                                    <i class="fa-solid fa-bed"></i>
+                            <div class="flex-fill">
+                                <div class="detail-box mb-2">
+                                    <i class="fa-solid fa-bed fa-2x"></i>
+                                    <div class="number">{{ $apartment->beds }}</div>
                                 </div>
-                                <div class="number">{{ $apartment->beds }}</div>
+                                <p class="text-color-secondary">Letti</p>
                             </div>
-                            <div>
-                                <div class="mb-2">
-                                    <i class="fa-solid fa-restroom"></i>
+                            <div class="flex-fill">
+                                <div class="detail-box mb-2">
+                                    <i class="fa-solid fa-restroom fa-2x"></i>
+                                    <div class="number">{{ $apartment->bathrooms }}</div>
                                 </div>
-                                <div class="number">{{ $apartment->bathrooms }}</div>
+                                <p class="text-color-secondary">Bagni</p>
                             </div>
                         </div>
-                        <p class="card-text price fw-bold fs-4">{{ $apartment->price }} € / notte</p>
-                        <div class="services row justify-content-end">
-                            @if ($apartment->services)
+
+                        @if (count($apartment->services))
+                            <div class="services row justify-content-center mx-2 border-secondary-color rounded-5 p-3 mb-3">
+                                <h5 class="text-center mb-5">Servizi</h5>
                                 @foreach ($apartment->services as $service)
-                                    <div class="col-4 col-sm-3 col-md-2 text-center">
+                                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
                                         <i class="{{ $service->icon }} my-3 fa-2x"></i>
-                                        <p>{{ $service->name }}</p>
+                                        <p class="mb-0">{{ $service->name }}</p>
                                     </div>
                                 @endforeach
-                            @else
-                                -
-                            @endif
-                        </div>
+                            </div>
+
+                        @endif
+                        <p class="card-text price fw-bold fs-4">{{ $apartment->price }} € / notte</p>
 
                     </div>
                 </div>
@@ -87,10 +92,10 @@
     </div>
 
     <div class="images container">
-        <div class="row gap-2">
+        <div class="row">
             @forelse ($apartment->apartmentPics as $pic)
                 <form action="{{ route('admin.apartment-pics.destroy', $pic->id) }}" method="POST"
-                    class="additional-img col-2 d-flex justify-content-center align-items-center">
+                    class="additional-img col-6 col-md-4 col-xl-2 d-flex justify-content-center align-items-center mb-3">
                     @method('DELETE')
                     @csrf
                     <img src="{{ asset('storage/' . $pic->thumb) }}" alt="{{ $pic->id }}">
@@ -98,7 +103,7 @@
                 </form>
             @empty
             @endforelse
-            <form class="col-2" action="{{ route('admin.apartment-pics.store') }}" method="POST"
+            <form class="col-6 col-md-4 col-xl-2 mb-3" action="{{ route('admin.apartment-pics.store') }}" method="POST"
                 enctype="multipart/form-data">
                 @csrf
                 <div id="img-loader" class="d-flex justify-content-center align-items-center">
@@ -106,7 +111,7 @@
                 </div>
                 <input name="thumb" id="add-image" type="file" class="d-none">
                 <input name="apartment_id" type="hidden" value="{{ $apartment->id }}">
-                <button class="btn-backoffice bordered">Carica Immagine</button>
+                <button id="load-button" class="d-none btn-backoffice bordered">Carica Immagine</button>
             </form>
         </div>
     </div>
@@ -114,22 +119,22 @@
 
     {{-- Bottoni --}}
     <div class="container buttons d-flex my-5 justify-content-end align-items-center">
-        <a class="btn-backoffice py-2 px-3 me-2" href="{{ route('admin.messages.index', $apartment->id) }}">
+        <a class="btn-backoffice py-2 px-1 me-3" href="{{ route('admin.messages.index', $apartment->id) }}">
             <i class="fa-solid fa-envelope"></i>
             @if ($new_messages)
                 <p class="messages-notification text-center">{{ $new_messages }}</p>
             @endif
         </a>
-        <a href="{{ route('admin.sponsorships.index', $apartment->id) }}" class="btn-backoffice py-2 px-3"><i
+        <a href="{{ route('admin.sponsorships.index', $apartment->id) }}" class="btn-backoffice py-2 px-1 me-3"><i
                 class="fa-regular fa-credit-card"></i></a>
-        <a href="{{ route('admin.apartments.edit', $apartment->id) }}" class="btn-backoffice py-2 px-3 me-2"><i
+        <a href="{{ route('admin.apartments.edit', $apartment->id) }}" class="btn-backoffice py-2 px-1 me-3"><i
                 class="fa-regular fa-pen-to-square"></i></a>
         <a href="{{ route('admin.statistics.index', $apartment->id) }}" class="btn-backoffice"><i
-                class="fa-solid fa-chart-line me-2"></i></a>
+                class="fa-solid fa-chart-line me-3"></i></a>
         <form class="deleteForm" action="{{ route('admin.apartments.destroy', $apartment->id) }}" method="POST">
             @method('DELETE')
             @csrf
-            <button class="btn-backoffice py-2 px-3 me-5" type="submit"><i class="fa-regular fa-trash-can"></i></button>
+            <button class="btn-backoffice py-2 px-1 me-5" type="submit"><i class="fa-regular fa-trash-can"></i></button>
         </form>
         <a class="btn-backoffice bordered p-2 d-flex align-items-center justify-content-center"
             href="{{ route('admin.apartments.index') }}"><i class="fa-solid fa-arrow-left"></i></a>
@@ -141,6 +146,7 @@
         const imgLoader = document.getElementById('img-loader');
         const imgInput = document.getElementById('add-image');
         const submitForm = document.getElementById('submit-img');
+        const loadButton = document.getElementById('load-button');
         imgLoader.addEventListener('click', () => {
             imgInput.click()
         })
@@ -155,9 +161,13 @@
                 // Quando sei pronto (ossia quando ha preparato il dato, promemoria: onload è un 'addeventlistener')
                 reader.onload = e => {
                     imgLoader.innerHTML = `<img src="${e.target.result}" alt="preview">`;
+                    loadButton.classList.remove('d-none');
                 }
 
-            } else imgLoader.innerHTML = `<i class="fa-solid fa-plus fa-2x"></i>`;
+            } else {
+                imgLoader.innerHTML = `<i class="fa-solid fa-plus fa-2x"></i>`;
+                loadButton.classList.add('d-none');
+            }
         })
     </script>
 @endsection
