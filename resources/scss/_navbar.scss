@@ -23,6 +23,10 @@
 
     img {
         max-height: 110px;
+
+        &.logo-small {
+            max-height: 50px;
+        }
     }
 
     .dropdown-menu {
@@ -70,7 +74,6 @@
             font-weight: bold;
             font-size: 19px;
 
-
             &:hover {
                 color: $pink-3;
                 filter: brightness(1);
@@ -88,14 +91,11 @@
         .nav-item {
             margin-right: 10px;
         }
-
-
-        #navbarDropdown {
-            position: absolute;
-            top: -13px;
-            right: -4px;
-
-        }
-
     }
+}
+
+.navbar-nav .dropdown-menu.collapsed {
+    position: absolute !important;
+    top: 100%;
+    left: -50px;
 }
