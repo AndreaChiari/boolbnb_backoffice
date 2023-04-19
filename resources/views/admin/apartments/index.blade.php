@@ -53,53 +53,62 @@
                                 </figure>
                                 <div class="card-body">
                                     <h2 class="card-title text-center">{{ $apartment->name }}</h2>
-                                    {{-- <div class="details row text-center justify-content-around mb-3">
-                                        <div class="col">
-                                            <div class="mb-2">
-                                                <i class="fa-solid fa-person-shelter"></i>
-                                            </div>
-                                            <div class="number">{{ $apartment->rooms }}</div>
+                                    <div class="buttons row justify-content-center align-items-center">
+                                        <div class="col-4 d-flex justify-content-center mb-3">
+                                            <a href="{{ route('admin.apartments.show', $apartment->id) }}"
+                                                class="btn-backoffice d-flex flex-column align-items-center txt-small"><i
+                                                    class="fa-solid fa-circle-info mb-1"></i>
+                                                <p class="mb-0 text-center">Dettagli</p>
+                                            </a>
                                         </div>
-                                        <div class="col">
-                                            <div class="mb-2">
-                                                <i class="fa-solid fa-bed"></i>
-                                            </div>
-                                            <div class="number">{{ $apartment->beds }}</div>
+                                        <div class="col-4 d-flex justify-content-center mb-3">
+                                            <a href="{{ route('admin.apartments.edit', $apartment->id) }}"
+                                                class="btn-backoffice d-flex flex-column align-items-center txt-small"><i
+                                                    class="fa-regular fa-pen-to-square mb-1"></i>
+                                                <p class="mb-0 text-center">Modifica</p>
+                                            </a>
                                         </div>
-                                        <div class="col">
-                                            <div class="mb-2">
-                                                <i class="fa-solid fa-restroom"></i>
-                                            </div>
-                                            <div class="number">{{ $apartment->bathrooms }}</div>
+                                        <div class="col-4 d-flex justify-content-center mb-3">
+                                            <form action="{{ route('admin.apartments.destroy', $apartment->id) }}"
+                                                method="POST" class="deleteForm">
+                                                @method('DELETE')
+                                                @csrf
+                                                <button
+                                                    class="btn-backoffice d-flex flex-column align-items-center txt-small"
+                                                    type="submit"><i class="fa-regular fa-trash-can mb-1"></i>
+                                                    <p class="mb-0 text-center">Elimina</p>
+                                                </button>
+                                            </form>
                                         </div>
-                                    </div> --}}
-                                    <div class="buttons d-flex justify-content-center align-items-center">
-                                        <a href="{{ route('admin.apartments.edit', $apartment->id) }}"
-                                            class="btn-backoffice"><i class="fa-regular fa-pen-to-square"></i></a>
-                                        <form action="{{ route('admin.apartments.destroy', $apartment->id) }}"
-                                            method="POST" class="deleteForm">
-                                            @method('DELETE')
-                                            @csrf
-                                            <button class="btn-backoffice" type="submit"><i
-                                                    class="fa-regular fa-trash-can"></i></button>
-                                        </form>
-                                        <a href="{{ route('admin.messages.index', $apartment->id) }}"
-                                            class="btn-backoffice">
-                                            <i class="fa-regular fa-envelope"></i>
-                                            @if ($new_messages_count)
-                                                <div class="messages-notification small text-center">
-                                                    {{ $new_messages_count }}
-                                                </div>
-                                            @endif
-                                        </a>
-                                        <a href="{{ route('admin.sponsorships.index', $apartment->id) }}"
-                                            class="btn-backoffice"><i class="fa-regular fa-credit-card"></i></a>
-                                        <a href="{{ route('admin.statistics.index', $apartment->id) }}"
-                                            class="btn-backoffice"><i class="fa-solid fa-chart-line"></i></a>
+                                        <div class="col-4 d-flex justify-content-center mb-3">
+                                            <a href="{{ route('admin.sponsorships.index', $apartment->id) }}"
+                                                class="btn-backoffice d-flex flex-column align-items-center txt-small"><i
+                                                    class="fa-regular fa-credit-card mb-1"></i>
+                                                <p class="mb-0 text-center">Sponsorizza</p>
+                                            </a>
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-center mb-3">
+                                            <a href="{{ route('admin.messages.index', $apartment->id) }}"
+                                                class="btn-backoffice d-flex flex-column align-items-center txt-small">
+                                                <i class="fa-regular fa-envelope mb-1"></i>
+                                                @if ($new_messages_count)
+                                                    <div class="messages-notification small text-center">
+                                                        {{ $new_messages_count }}
+                                                    </div>
+                                                @endif
+                                                <p class="mb-0 text-center">Messaggi</p></button>
+                                            </a>
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-center mb-3">
+                                            <a href="{{ route('admin.statistics.index', $apartment->id) }}"
+                                                class="btn-backoffice d-flex flex-column align-items-center txt-small"><i
+                                                    class="fa-solid fa-chart-line mb-1"></i>
+                                                <p class="mb-0 text-center">Statistiche</p>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
                         </a>
                     </div>
                 @endforeach
