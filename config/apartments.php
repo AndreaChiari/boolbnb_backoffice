@@ -361,7 +361,7 @@ return [
         'bathrooms' => 2,
         'square_meters' => 80,
         'address' => "Via Monte Grappa 10, 00015 Roma",
-        'thumb' => "https://www.villedasogno.net/wp-content/uploads/2019/03/04/Vendita-casa-Lago-di-Garda-a-Padenghe-sul-Garda_01.jpg",
+        'thumb' => "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/302627922.jpg?k=4dd49dfa5c108349b72c124a5aea820f7439ac25f89acfcf7c3c04ba6244280c&o=",
         'description' => "Appartamento elegante e luminoso nel quartiere Prati, a pochi passi dalla Basilica di San Pietro e dai Musei Vaticani. Composto da soggiorno, cucina attrezzata, due camere da letto, due bagni e balcone. Aria condizionata, riscaldamento autonomo e connessione Wi-Fi gratuita.",
 
     ],
