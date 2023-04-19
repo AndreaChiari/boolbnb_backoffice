@@ -20,4 +20,7 @@
             @endforeach
         </div>
     </section>
+    <div class="d-flex mb-5 justify-content-end mb-2 me-2">
+        <a class="btn-backoffice p-1" href="{{ route('admin.apartments.index') }}"><i class="fa-solid fa-arrow-left"></i></a>
+    </div>
 @endsection
