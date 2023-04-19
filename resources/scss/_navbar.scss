@@ -3,6 +3,10 @@
         margin-left: -24px;
         letter-spacing: 5px;
     }
+
+    &:hover {
+        text-shadow: 0 0 5px red;
+    }
 }
 
 .navbar {
