@@ -46,22 +46,23 @@
                         </div>
                         <p class="address card-text">{{ $apartment->address }}</p>
                         <p class="description card-text">{{ $apartment->description }}</p>
-                        <div class="details d-flex align-items-center text-center justify-content-evenly mx-5 mb-3 pt-3">
-                            <div>
+                        <div
+                            class="details d-flex align-items-center text-center justify-content-evenly mx-5 mb-3 pt-3 text-wrap">
+                            <div class="flex-fill">
                                 <div class="detail-box mb-2">
                                     <i class="fa-solid fa-person-shelter fa-2x"></i>
                                     <div class="number">{{ $apartment->rooms }}</div>
                                 </div>
                                 <p class="text-color-secondary">Stanze</p>
                             </div>
-                            <div>
+                            <div class="flex-fill">
                                 <div class="detail-box mb-2">
                                     <i class="fa-solid fa-bed fa-2x"></i>
                                     <div class="number">{{ $apartment->beds }}</div>
                                 </div>
                                 <p class="text-color-secondary">Letti</p>
                             </div>
-                            <div>
+                            <div class="flex-fill">
                                 <div class="detail-box mb-2">
                                     <i class="fa-solid fa-restroom fa-2x"></i>
                                     <div class="number">{{ $apartment->bathrooms }}</div>
@@ -69,16 +70,18 @@
                                 <p class="text-color-secondary">Bagni</p>
                             </div>
                         </div>
+
                         @if (count($apartment->services))
                             <div class="services row justify-content-center mx-2 border-secondary-color rounded-5 p-3 mb-3">
                                 <h5 class="text-center mb-5">Servizi</h5>
                                 @foreach ($apartment->services as $service)
-                                    <div class="col-4 col-sm-3 col-md-2 text-center">
+                                    <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
                                         <i class="{{ $service->icon }} my-3 fa-2x"></i>
-                                        <p>{{ $service->name }}</p>
+                                        <p class="mb-0">{{ $service->name }}</p>
                                     </div>
                                 @endforeach
                             </div>
+
                         @endif
                         <p class="card-text price fw-bold fs-4">{{ $apartment->price }} € / notte</p>
 
