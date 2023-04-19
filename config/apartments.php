@@ -132,8 +132,7 @@ return [
         'square_meters' => 40,
         'address' => "Via San Lorenzo 5, 73048 Nardò",
         'thumb' => "https://txc5xc6e.cdn.imgeng.in/custom/01505/foto/20211112102212-47.jpg",
-        'description' => "si tratta di una camera matrimoniale ampia  (40mq) con la possibilità di un terzo letto, arredata con stile e confort. 
-        la stanza fa parte di una casa antica, con spazi condivisi tra cui un ampia cucina,  wifi, un giardino di 100 mq arredato.",
+        'description' => "Benvenuti nella nostra camera matrimoniale di 40 mq, un'oasi di lusso e comfort nel cuore di una casa antica piena di fascino. La nostra camera matrimoniale offre ampi spazi per il relax, e la possibilità di un terzo letto aggiuntivo la rende perfetta per famiglie o gruppi di amici. L'arredamento elegante e raffinato si sposa alla perfezione con il carattere rustico della casa antica, creando un'atmosfera unica e accogliente.",
 
     ],
     [
@@ -145,7 +144,7 @@ return [
         'square_meters' => 200,
         'address' => "Via Barletta, 73048 Nardò",
         'thumb' => "https://sulbric.com/wp-content/uploads/2018/07/DSC_0490_edit.jpg",
-        'description' => "si tratta di una camera matrimoniale ampia  (40mq) con la possibilità di un terzo letto, arredata con stile e confort. 
+        'description' => "Si tratta di una camera matrimoniale ampia  (40mq) con la possibilità di un terzo letto, arredata con stile e confort. 
         la stanza fa parte di una casa antica, con spazi condivisi tra cui un ampia cucina,  wifi, un giardino di 100 mq arredato.",
 
     ],
