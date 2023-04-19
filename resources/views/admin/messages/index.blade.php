@@ -22,18 +22,18 @@
             </h2>
         @endif
         <div class="message-header row flex-column flex-xl-row align-items-center p-3 p-lg-0 d-none d-xl-flex">
-            <div class="col-xl-2 d-flex align-items-center justify-content-center py-2 px-0 text-center">
+            <div class="col-xl-2 d-flex align-items-center justify-content-center text-center">
             </div>
-            <div class="col-xl-2 d-flex align-items-center justify-content-center py-2 px-0 text-center">
+            <div class="col-xl-2 d-flex align-items-center pt-3 justify-content-center text-center">
                 <p>Da:</p>
             </div>
-            <div class="col-xl-2 d-flex align-items-center justify-content-center py-2 px-0 text-center">
+            <div class="col-xl-2 d-flex align-items-center pt-3 justify-content-center text-center">
                 <p>E-mail:</p>
             </div>
-            <div class="col-xl-2 d-flex align-items-center justify-content-center py-2 px-0 text-center">
+            <div class="col-xl-2 d-flex align-items-center pt-3 justify-content-center text-center">
                 <p>Oggetto:</p>
             </div>
-            <div class="col-xl-2 d-flex align-items-center justify-content-center py-2 px-0 text-center">
+            <div class="col-xl-2 d-flex align-items-center pt-3 justify-content-center text-center">
                 <p>Il:</p>
             </div>
             <div>
