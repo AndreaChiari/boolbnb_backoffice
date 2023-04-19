@@ -92,10 +92,10 @@
     </div>
 
     <div class="images container">
-        <div class="row gap-2">
+        <div class="row">
             @forelse ($apartment->apartmentPics as $pic)
                 <form action="{{ route('admin.apartment-pics.destroy', $pic->id) }}" method="POST"
-                    class="additional-img col-2 d-flex justify-content-center align-items-center">
+                    class="additional-img col-6 col-md-4 col-xl-2 d-flex justify-content-center align-items-center mb-3">
                     @method('DELETE')
                     @csrf
                     <img src="{{ asset('storage/' . $pic->thumb) }}" alt="{{ $pic->id }}">
@@ -103,7 +103,7 @@
                 </form>
             @empty
             @endforelse
-            <form class="col-2" action="{{ route('admin.apartment-pics.store') }}" method="POST"
+            <form class="col-6 col-md-4 col-xl-2 mb-3" action="{{ route('admin.apartment-pics.store') }}" method="POST"
                 enctype="multipart/form-data">
                 @csrf
                 <div id="img-loader" class="d-flex justify-content-center align-items-center">
@@ -111,7 +111,7 @@
                 </div>
                 <input name="thumb" id="add-image" type="file" class="d-none">
                 <input name="apartment_id" type="hidden" value="{{ $apartment->id }}">
-                <button class="btn-backoffice bordered">Carica Immagine</button>
+                <button id="load-button" class="d-none btn-backoffice bordered">Carica Immagine</button>
             </form>
         </div>
     </div>
@@ -146,6 +146,7 @@
         const imgLoader = document.getElementById('img-loader');
         const imgInput = document.getElementById('add-image');
         const submitForm = document.getElementById('submit-img');
+        const loadButton = document.getElementById('load-button');
         imgLoader.addEventListener('click', () => {
             imgInput.click()
         })
@@ -160,9 +161,13 @@
                 // Quando sei pronto (ossia quando ha preparato il dato, promemoria: onload è un 'addeventlistener')
                 reader.onload = e => {
                     imgLoader.innerHTML = `<img src="${e.target.result}" alt="preview">`;
+                    loadButton.classList.remove('d-none');
                 }
 
-            } else imgLoader.innerHTML = `<i class="fa-solid fa-plus fa-2x"></i>`;
+            } else {
+                imgLoader.innerHTML = `<i class="fa-solid fa-plus fa-2x"></i>`;
+                loadButton.classList.add('d-none');
+            }
         })
     </script>
 @endsection
