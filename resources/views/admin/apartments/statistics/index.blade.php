@@ -4,27 +4,35 @@
 
 @section('content')
     <div id="statistics">
-        <div class="container py-5 text-white">
-            <h1>Statistiche</h1>
-            <form action="{{ route('admin.statistics.index', $apartment->id) }}" class="mb-5">
+        <div class="container p-3 text-white my-5">
+            <h1 class="mb-5 text-center">Statistiche per <span class="text-color-main">"{{$apartment->name}}"</span></h1>
+            <form id="statistics_form" action="{{ route('admin.statistics.index', $apartment->id) }}" class="d-flex flex-column flex-md-row align-items-center justify-content-center mb-5">
                 @csrf
-                <label for="start_date">Data Iniziale</label>
-                <input type="date" id="start_date" name="start_date" value="{{ $start_date }}">
-                <label for="end_date">Data finale</label>
-                <input type="date" id="end_date" name="end_date" value="{{ $end_date }}">
-                <button class="btz">Invia</button>
+                <div class="col-6 col-md-3 d-flex align-items-center me-3 mb-3 mb-md-0">
+                    <label for="start_date" class="col-2 me-3">Dal:</label>
+                    <input class="form-control" type="date" id="start_date" name="start_date" value="{{ $start_date }}">
+
+                </div>
+                <div class="col-6 col-md-3 d-flex align-items-center me-3">
+                    <label for="end_date" class="col-2 me-3">Al:</label>
+                    <input class="form-control" type="date" id="end_date" name="end_date" value="{{ $end_date }}">
+                </div>
             </form>
             <div class="row justify-content-center">
                 <div class="col-12">
-                    <div class="graph-container">
+                    <h4 class="text-center mb-4">Visite totali: {{ $tot_views }}</h4>
+                    <div class="graph-container p-3">
                         @foreach ($views as $view)
+                            <div class="display-flex flex-column">
                             <div class="graph-bar" style="height: calc(50px * {{ $view->count }})">
                                 <div class="graph-bar-inner"></div>
                                 <div class="graph-bar-overlay">
-                                    <span class="graph-count">{{ $view->count }}</span>
-                                    <span class="graph-date">{{ $view->date }}</span>
+                                    <span class="graph-count text-center">{{ $view->count }}</span> 
+                                    <span class="graph-date text-center d-md-none">{{ date('d-m-Y', strtotime( $view->date ))}}</span>
                                 </div>
                             </div>
+                            <div class="d-none d-md-block graph-date mt-5">{{ date('d-m-Y', strtotime( $view->date ))}}</div>
+                        </div>
                         @endforeach
                     </div>
                 </div>
@@ -32,4 +40,20 @@
         </div>
 
     </div>
+@endsection
+
+@section('scripts')
+    <script>
+        const startDate = document.getElementById('start_date');
+        const endDate = document.getElementById('end_date');
+        const statisticsForm = document.getElementById('statistics_form');
+
+        startDate.addEventListener('change', () => {
+            statisticsForm.submit();
+        });
+
+        endDate.addEventListener('change', () => {
+            statisticsForm.submit();
+        });
+    </script>
 @endsection
