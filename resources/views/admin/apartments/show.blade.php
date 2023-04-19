@@ -121,7 +121,7 @@
             @endif
         </a>
         <a href="{{ route('admin.sponsorships.index', $apartment->id) }}" class="btn-backoffice py-2 px-3"><i
-                class="fa-regular fa-circle-up"></i></a>
+                class="fa-regular fa-credit-card"></i></a>
         <a href="{{ route('admin.apartments.edit', $apartment->id) }}" class="btn-backoffice py-2 px-3 me-2"><i
                 class="fa-regular fa-pen-to-square"></i></a>
         <form class="deleteForm" action="{{ route('admin.apartments.destroy', $apartment->id) }}" method="POST">
