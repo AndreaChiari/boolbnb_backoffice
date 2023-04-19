@@ -14,17 +14,18 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
-            <ul class="navbar-nav d-flex align-items-center me-auto justify-content-center">
-                <li class="nav-item me-2 d-flex justify-items-center">
-                    <a class="nav-link logo d-flex align-items-center" href="{{ url('http://localhost:5174/') }}"><img
-                            src="/boolbnb_2.png" alt="logo" class="logo img-fluid">
-                        <p class="mt-3">OOLBNB<p>
+            <ul class="navbar-nav test-dio d-flex align-items-center me-auto justify-content-sm-center flex-row ">
+                <li class="nav-item me-md-2 d-flex justify-items-center">
+                    <a class="nav-link logo logo-test d-flex align-items-center"
+                        href="{{ url('http://localhost:5174/') }}"><img src="/boolbnb_2.png" alt="logo"
+                            class="logo img-fluid">
+                        <p class="mt-3 d-none d-md-block">OOLBNB<p>
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link @if (request()->routeIs('admin.apartments*')) active @endif"
-                        href="{{ route('admin.apartments.index') }}">{{ __('Apartments') }}</a>
+                        href="{{ route('admin.apartments.index') }}">{{ __('Appartamenti') }}</a>
                 </li>
             </ul>
 
@@ -48,7 +49,6 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ url('dashboard') }}">{{ __('Dashboard') }}</a>
                             <a class="dropdown-item" href="{{ url('profile') }}">{{ __('Profile') }}</a>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();

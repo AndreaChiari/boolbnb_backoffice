@@ -5,6 +5,7 @@
 @section('content')
 
     <div class="container py-5">
+
         @if ($messages_count)
             <h2 class="messages-title text-center mb-5">Hai {{ $messages_count }} @if ($messages_count === 1)
                     messaggio

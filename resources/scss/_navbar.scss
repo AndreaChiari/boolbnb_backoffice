@@ -77,4 +77,25 @@
             }
         }
     }
+
+    @media screen and (max-width: 768px) {
+        .test-dio {
+            display: flex;
+            top: -16px;
+            position: absolute;
+        }
+
+        .nav-item {
+            margin-right: 10px;
+        }
+
+
+        #navbarDropdown {
+            position: absolute;
+            top: -13px;
+            right: -4px;
+
+        }
+
+    }
 }
